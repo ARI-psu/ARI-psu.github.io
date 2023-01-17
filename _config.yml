@@ -1,0 +1,80 @@
+# Site Settings
+title: ARI Lab
+tagline: We build intelligent aerial robots
+email: junyigeng@gmail.com
+description: >
+  Advancing aerial autonomy
+baseurl:
+url: "https://ARI-psu.github.io"
+permalink: pretty
+
+paginate: 5
+paginate_path: "/research/page:num"
+
+# Disqus Comments
+disqus:
+  # Leave shortname blank to disable comments site-wide.
+  # Disable comments for any post by adding `comments: false` to that post's YAML Front Matter.
+  # shortname: my_disqus_shortname
+  shortname: jennygeng
+
+
+plugins:
+  - jekyll-sitemap
+  - jekyll-paginate
+  - jekyll-feed
+  - jekyll-seo-tag
+  - jekyll-scholar
+  - kramdown-parser-gfm
+
+exclude:
+  - Gemfile
+  - clean-theme.gemspec
+  - Gemfile.lock
+  - node_modules
+  - vendor/bundle/
+  - vendor/cache/
+  - vendor/gems/
+  - vendor/ruby/
+
+livereload: true
+
+sass:
+  style: compressed
+  source_dir: _sass
+
+google_analytics:
+
+defaults:
+  -
+    scope:
+      path: ""
+      type: "pages"
+    values:
+      show_sidebar: true
+  -
+    scope:
+      path: ""
+      type: "posts"
+    values:
+      author: "Junyi Geng"
+      layout: post
+      show_sidebar: true
+
+markdown: kramdown
+highlighter: rouge
+
+footer_menu: example_footer_menu
+
+collections:
+  team:
+    output: true
+    layout: product
+    image: https://via.placeholder.com/800x600
+    show_sidebar: false
+
+
+scholar:
+  style: simple-ieee.csl
+  bibliography_list_tag: "ul.no-bullet"
+  bibliography_template: bibtemplate

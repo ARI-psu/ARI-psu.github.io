@@ -1,0 +1,13 @@
+<p class="title is-4">Latest Research</p>
+
+{% assign posts = site.posts | where:"categories","research" %}
+<div class="columns is-multiline">
+    {% for post in posts limit:2 %}
+    <div class="column is-12">
+        {% include post-card.html %}
+    </div>
+    {% endfor %}
+</div>
+
+
+
