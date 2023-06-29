@@ -2,7 +2,7 @@
 title: Xiangfu Li
 subtitle: Ph.D. Student
 job_title: Research Associate
-category: phd_student
+category: graduate_student
 layout: team_member_personal_page
 image: 
 link-new-tab: true

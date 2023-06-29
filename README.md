@@ -8,9 +8,10 @@
 3. Get into the directory and create a new branch with any name you want using command `git checkout -b branch-name`.
 4. Then add your profile documentation under the `_team` folder using `Markdown` language. If you are not familiar with `Markdown`, you can follow this [guidance](https://www.markdownguide.org).
 5. In the command line, use `git add .` and `git commit -m 'message'` to save your changes. Replace the message with any word your want.
-6. After finishing your profile, in the command line, use `git push` to push your branch into the github remote repository. If the branch is new, there will be a hint poped by the git command and use that hint to push your branch.
-7. Ask the website maintainer to create a `Pull Request` to merge your PR.
-8. After merging the `Pull Request`, make sure the related `github action` succeed and then your updated profile will show in the website.
+6. In your profile, under the `category` label, input `graduate_student` or `undergraduate` according to your information.
+7. After finishing your profile, in the command line, use `git push` to push your branch into the github remote repository. If the branch is new, there will be a hint poped by the git command and use that hint to push your branch.
+8. Ask the website maintainer to create a `Pull Request` to merge your PR.
+9. After merging the `Pull Request`, make sure the related `github action` succeed and then your updated profile will show in the website.
 
 
 
