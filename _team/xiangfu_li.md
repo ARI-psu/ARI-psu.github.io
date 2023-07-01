@@ -4,7 +4,7 @@ subtitle: Ph.D. Student
 job_title: Research Associate
 category: graduate_student
 layout: team_member_personal_page
-image: 
+image: /img/team/xiangfu_li.jpg
 link-new-tab: true
 ---
 
