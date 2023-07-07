@@ -2,7 +2,7 @@
 title: Aspen Stocking
 subtitle: Undergraduate Student
 job_title: Research Associate
-category: undergraduate_student
+category: undergraduate
 layout: team_member_personal_page
 image: /img/team/aspenstocking.jpg
 link-new-tab: true
