@@ -4,7 +4,7 @@ subtitle: Master's Student
 job_title: Research Associate
 category: graduate_student
 layout: team_member_personal_page
-image: 
+image: /img/team/abhinav_pandey.jpg
 link-new-tab: true
 ---
 
