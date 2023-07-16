@@ -10,6 +10,10 @@ jobs:
     runs-on: ubuntu-20.04
     steps:
       - uses: actions/checkout@v2
+      - name: Run script file
+        run: |
+          git config --global http.postBuffer 1048576000
+        shell: bash
       - uses: actions/cache@v2
         with:
           path: vendor/bundle
