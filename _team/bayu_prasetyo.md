@@ -4,7 +4,7 @@ subtitle: Undergraduate Student
 job_title: Undergraduate Researcher
 category: undergraduate
 layout: team_member_personal_page
-image: 
+image: /img/team/DSC_0662.JPG
 link-new-tab: true
 ---
 
