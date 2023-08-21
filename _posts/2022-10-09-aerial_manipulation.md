@@ -94,11 +94,18 @@ We leverage the fact that the vehicle is always operating on the same surface an
 
 ### Related Paper
 
-*IEEE Style:* 
+*BibTeX:* 
 
 ```
-He, Guanqi, Y. Jangir, J. Geng, M. Mousaei, D. Bai, and S. Scherer, “Image-based Visual Servo Control for Aerial Manipulation Using a Fully-Actuated UAV”, Under review. 
-```
+@inproceedings{he2023image,
+  title={Image-based Visual Servo Control for Aerial Manipulation Using a Fully-Actuated UAV},
+  author={He, Guanqi and Janjir, Yash and Geng, Junyi and Mousaei, Mohammadreza and Bai, Dongwei and Scherer, Sebastian},
+  booktitle={2023 IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS)},
+  url={https://arxiv.org/pdf/2306.16530.pdf},
+  year={2023},
+  organization={IEEE}
+}
 
+```
 <br/>
 

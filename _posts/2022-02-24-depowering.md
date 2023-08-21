@@ -47,16 +47,17 @@ One major challenge for ICP is the target appearance variation. A common practic
 
 We propose a conditional template update strategy for ICP to avoid accumulated template update errors. Specifically, the template is updated only when the part appearance has changed significantly. In depowdering, this happens either when (1) more part surface becomes visible as more powder is cleaned or (2) printed parts have moved either by the depowdering tool or due to the loss of balance. Either scenario causes the powder distribution to change.
 
-<figure>
- <img src="/img/posts/2022-02-24-depowdering/depowdering_trim.gif" style="width:59%" />
- <figcaption>
-        Automatic Robotic Depowdering.
- </figcaption>
-</figure>
+
+## Video
+
+<!-- {% youtube 3AMcM3uUaUw %} -->
+<iframe width="560" height="420" src="https://www.youtube.com/embed/AUIkyULAhqM" frameborder="0" allowfullscreen></iframe>
 
 
 ### Related Paper
+*BibTeX:* 
 
+```
 @article{liu2022robotic,
   title={Robotic Depowdering for Additive Manufacturing Via Pose Tracking},
   author={Liu, Zhenwei and Geng, Junyi and Dai, Xikai and Swierzewski, Tomasz and Shimada, Kenji},
@@ -67,3 +68,5 @@ We propose a conditional template update strategy for ICP to avoid accumulated t
   year={2022},
   publisher={IEEE}
 }
+
+```
