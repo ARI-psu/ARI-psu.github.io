@@ -29,6 +29,9 @@ hide_footer: false
    list-style-type: none;
 }
 </style>
+# 2024
+{% bibliography --query @*[year=2024] %}
+
 # 2023
 {% bibliography --query @*[year=2023] %}
 

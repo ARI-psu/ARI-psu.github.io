@@ -8,23 +8,19 @@ hide_footer: true
 
 ## Openings
 
-We are always welcome **highly motivated** Ph.D. and Master students with **passion for aerial robots**.
+We are always welcome **highly motivated** Ph.D. and Master students with **passion for aerial robots**. We also welcome other type of research collaboration, such as summer intern. visiting scholar, etc.
 
 The perspective students will develop control, motion planning, peception algorithms for aerial robotics, such as aerial manipulator. eVTOL, robotics swarm, etc. 
 
-The ideal candidate should have a strong interest in robotics and aerial autonomy, solid background in math, be comfortable in python/C++ programming and be willing to work with hardware.
+The ideal candidate should have a strong interest in robotics and aerial autonomy, **solid background in math** (e.g. dynamics, control theory, linear algebra, probability and stochastic process, convex optimization, machine learning, etc), be comfortable in **python/C++ programming** (e.g. on ROS, Linux, microcontroller, etc), and be willing to work with **real robots/hardware** (e.g. UAV, mobile robot, robot arm, etc).
 
 ## How to join
 
-If you are interested in joining the lab, please contact [Dr.Junyi Geng](mailto:jgeng@psu.edu) by email containing:
+If you are interested in joining the lab, please fill out this [form](https://forms.gle/TjZ3RCN1mn267gzz6).
 
-* You Resume/CV with your complete educational background
+* We will respond to you as soon as we are available.
 
-* You unoffical transcripts with the GPA
-
-* Your relevant research/academic/industrial experiences 
-
-* A statement on your research interest and goal in the lab
+* For Ph.D. applicants, please send an [email reminder](mailto:jgeng@psu.edu) once you have officially submitted your application to our [department](https://www.aero.psu.edu/academics/graduate/how-to-apply.aspx).
 
 
 ## Lab Head
