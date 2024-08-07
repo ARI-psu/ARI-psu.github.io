@@ -8,7 +8,7 @@ image: /img/team/yufei_jiang.jpg
 link-new-tab: true
 ---
 
-Hello and welcome! I'm Yufei Jiang and I am currently an 1st-year Ph.D. student in Aerospace Engineering at Pennsylvania State University being advised by Prof. Geng and Prof. Huang. I joined aerial robots and interaction (ARI) laboratory in 24 Fall. I received my B.Eng. degree at Nankai University in 2024. 
+Hello and welcome! I'm Yufei Jiang and I am currently a 1st-year Ph.D. student in Aerospace Engineering at Pennsylvania State University being advised by Prof. Geng and Prof. Huang. I joined aerial robots and interaction (ARI) laboratory in 24 Fall. I received my B.Eng. degree at Nankai University in 2024. 
 
 My research area currently focuses on aerial robots planning and perception. I am also interested in the design of various robots, from hardware to software and algorithm, and I hope to become a full-stack robotics scientist. 
 
