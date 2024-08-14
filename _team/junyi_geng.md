@@ -28,7 +28,7 @@ Work Phone: (814) 865-3677
 
 * <span style="color:red">03/2024:</span> I gave a talk for [Penn State Vertical Flight Society (VFS)](https://sites.psu.edu/pennstatevfs/).
 
-* <span style="color:red">03/2023:</span> I gave a talk for [Maryland Robotics Center Microsoft Future Leaders in Robotics and AI seminar series] (https://robotics.umd.edu/futureleaders) at [University of Maryland](https://umd.edu/). 
+* <span style="color:red">03/2023:</span> I gave a talk for [Maryland Robotics Center Microsoft Future Leaders in Robotics and AI seminar series](https://robotics.umd.edu/futureleaders). 
 
 * <span style="color:red">01/2023:</span> I served as the Area Chair of the Autonomy Session of AIAA Intelligent System Technical Committee.
 
