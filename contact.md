@@ -26,7 +26,7 @@ If you are interested in joining the lab, please fill out this [form](https://fo
 ## Lab Head
 
 ### Dr. Junyi Geng
-224 Hammond Building, Pennsylvania State University, University Park, PA 16802
+424 ECoRE Building, 556 White Course Drive, University Park, PA 16802
 
 Email: [jgeng@psu.edu](mailto:jgeng@psu.edu)
 

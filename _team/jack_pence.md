@@ -1,7 +1,7 @@
 ---
 title: Jack Pence
-subtitle: Graduate Student
-job_title: Research Assistant
+subtitle: M.S. Student
+job_title: Graduate Student
 category: graduate_student
 layout: team_member_personal_page
 image: /img/team/jackpence.jpg

@@ -16,11 +16,21 @@ Her research goal is to advance state-of-the-art aerial autonomy by bridging the
 
 Email: [jgeng@psu.edu](mailto:jgeng@psu.edu)
 
-Office: 224 Hammond Building
+Office: 424 ECoRE Building
 
 Work Phone: (814) 865-3677
 
 # Recent News
+
+* <span style="color:red">05/2024:</span> I gave a talk for [Penn State industryXchange 2024: Robotics](https://www.engr.psu.edu/industryxchange/index.aspx).
+
+* <span style="color:red">04/2024:</span> I started serving as an Associate Editor (AE) for IEEE Robotics and Automation Letters (RA-L), one of the top robotics journals.
+
+* <span style="color:red">03/2024:</span> I gave a talk for [Penn State Vertical Flight Society (VFS)](https://sites.psu.edu/pennstatevfs/).
+
+* <span style="color:red">03/2023:</span> I gave a talk for [Maryland Robotics Center Microsoft Future Leaders in Robotics and AI seminar series] (https://robotics.umd.edu/futureleaders) at [University of Maryland](https://umd.edu/). 
+
+* <span style="color:red">01/2023:</span> I served as the Area Chair of the Autonomy Session of AIAA Intelligent System Technical Committee.
 
 * <span style="color:red">01/2023:</span> I started serving as an Associate Editor (AE) for International Journal of Robotics Research (IJRR), one of the top robotics journals.
 

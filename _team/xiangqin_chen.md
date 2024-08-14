@@ -1,7 +1,7 @@
 ---
 title: Xiangqin Chen
 subtitle: Undergraduate Student
-job_title: Research Associate
+job_title: Graduate Student
 category: undergraduate
 layout: team_member_personal_page
 image: /img/team/xiangqin_chen.jpg

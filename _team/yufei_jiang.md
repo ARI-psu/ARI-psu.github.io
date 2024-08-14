@@ -1,7 +1,7 @@
 ---
 title: Yufei Jiang
 subtitle: Ph.D. Student
-job_title: Research Associate
+job_title: Graduate Student
 category: graduate_student
 layout: team_member_personal_page
 image: /img/team/yufei_jiang.jpg
