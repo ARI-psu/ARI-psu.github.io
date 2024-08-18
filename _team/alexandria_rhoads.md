@@ -4,7 +4,7 @@ subtitle: Undergraduate Student
 job_title: Research Associate
 category: undergraduate
 layout: team_member_personal_page
-image: img/team/rhoads_headshot_fa24.jpg
+image: /img/team/rhoads_headshot_fa24.jpg
 link-new-tab: true
 ---
 
