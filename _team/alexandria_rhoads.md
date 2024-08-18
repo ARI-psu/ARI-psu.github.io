@@ -1,4 +1,3 @@
-
 ---
 title: Alexandria Rhoads
 subtitle: Undergraduate Student
