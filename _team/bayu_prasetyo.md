@@ -8,7 +8,7 @@ image: /img/team/DSC_0662.JPG
 link-new-tab: true
 ---
 
-I am a Ph.D. student in Engineering Science, currently working on quadcopter control using Koopman Dynamics. My interests include control, neural networks, and space systems. 
+I am a Ph.D. student in Aerospace Engineering, currently working on quadcopter control using Koopman Dynamics. My interests include autonomous systems, control systems, dynamical modeling and machine learning. 
 
 ## Contact: ##
 
