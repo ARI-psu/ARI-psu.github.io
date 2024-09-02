@@ -2,7 +2,7 @@
 title: James Pifer
 subtitle: Undergraduate Student
 job_title: Research Associate
-category: undergraduate
+category: past_undergraduate
 layout: team_member_personal_page
 image: /img/team/jamespifer.jpg
 link-new-tab: true

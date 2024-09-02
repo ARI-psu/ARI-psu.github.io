@@ -2,7 +2,7 @@
 title: Abhinav Pandey
 subtitle: Master's Student
 job_title: Research Associate
-category: graduate_student
+category: past_master
 layout: team_member_personal_page
 image: /img/team/abhinav_pandey.jpg
 link-new-tab: true
