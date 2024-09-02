@@ -2,8 +2,10 @@
 layout: post
 title: "Flying Calligrapher: Contact-Aware Motion and Force Planning and Control for Aerial Manipulation"
 date: 2024-08-31 12:00:00
-categories: research
-description: "Aerial Writing for Art Work"
+categories: 
+  - highlights
+  - research
+description: "Aerial Writing for Art"
 author: "Xiaofeng Guo"
 published: true
 sidebar:  false
@@ -14,6 +16,7 @@ title_image: None
 link-new-tab: true
 ---
 
+### Aerial Writing for Art
 
 Aerial manipulation has gained interest for completing high-altitude tasks that are challenging for human workers, such 
 as contact inspection and defect detection. Previous research has focused on maintaining static contact points or forces. 
