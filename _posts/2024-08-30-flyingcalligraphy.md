@@ -279,18 +279,18 @@ Users either manually define the target strokes or draw the target letter throug
   </div>
 </section>
 
-<section class="section">
+
   <div class="container">
     <h2 class="title is-2" id="press-coverage">Media</h2>
     <br>
     <div class="columns is-centered">
       <div class="column is-centered has-text-centered">
         <a target="_blank" href="https://spectrum.ieee.org/video-friday-unitree-talks-robots">
-          <img src="https://upload.wikimedia.org/wikipedia/commons/7/7d/IEEE-Spectrum.svg" width="70%"></img>
+          <img src="https://upload.wikimedia.org/wikipedia/commons/7/7d/IEEE-Spectrum.svg" width="70%"/>
         </a>
       </div>
   </div>
-</section>
+
 
 <section class="section" id="Publication">
   <div class="container is-max-desktop content">
