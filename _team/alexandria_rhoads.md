@@ -1,7 +1,7 @@
 ---
 title: Alexandria Rhoads
 subtitle: Undergraduate Student
-job_title: Research Associate
+job_title: Undergraduate Student
 category: undergraduate
 layout: team_member_personal_page
 image: /img/team/alexandria_rhoads.JPG
