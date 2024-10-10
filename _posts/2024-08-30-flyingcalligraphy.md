@@ -301,9 +301,9 @@ Users either manually define the target strokes or draw the target letter throug
     <pre><code>@article{guo2024flying,
        author    = {Guo, Xiaofeng and He, Guanqi and Xu, Jiahe and Mousaei, Mohammadreza and Geng, Junyi and Scherer, Sebastian and Shi, Guanya},
        title     = {Flying Calligrapher: Contact-Aware Motion and Force Planning and Control for Aerial Manipulation},
-       journal   = {IEEE Robotics and Automation Letters},
+       journal   = {IEEE Robotics and Automation Letters (RA-L)},
        year      = {2024},
-       pages     = {Under Review}
+       pages     = {Accepted}
 }</code></pre>
   </div>
 </section>
