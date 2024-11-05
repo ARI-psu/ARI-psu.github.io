@@ -165,6 +165,35 @@ show_sidebar: false
 {% endfor %}
 </div> -->
 
+
+
+{% assign sorted_products = site.team | where:"category","undergraduate" %}
+{% if sorted_products.size > 0 %}
+<h1 style="font-size:35px;">Undergraduate Students</h1>
+<br>
+<div class="columns is-multiline">
+{% for product in sorted_products %}
+<div class="column is-one-fifth-desktop is-6-tablet">
+  <a href="{{ product.url | prepend: site.baseurl }}">
+    <div class="card">
+      {% if product.image %}
+      <div class="card-image">
+        <figure class="image is-4by3">
+          <img src="{{ product.image }}" alt="{{ product.title }}" />
+        </figure>
+      </div>
+      {% endif %}
+      <div class="card-content">
+        <p class="title is-6">{{ product.title }}</h2>
+        <p class="subtitle is-6">{{ product.subtitle }}</p>
+      </div>
+    </div>
+  </a>
+</div>
+{% endfor %}
+</div>
+{% endif %}
+
 <hr>
 <h1 style="font-size:35px;">Visitors & Interns</h1>
 <br>
@@ -193,30 +222,3 @@ show_sidebar: false
 {% endfor %}
 </div>
 <hr>
-
-{% assign sorted_products = site.team | where:"category","undergraduate" %}
-{% if sorted_products.size > 0 %}
-<h1 style="font-size:35px;">Undergraduate Students</h1>
-<br>
-<div class="columns is-multiline">
-{% for product in sorted_products %}
-<div class="column is-one-fifth-desktop is-6-tablet">
-  <a href="{{ product.url | prepend: site.baseurl }}">
-    <div class="card">
-      {% if product.image %}
-      <div class="card-image">
-        <figure class="image is-4by3">
-          <img src="{{ product.image }}" alt="{{ product.title }}" />
-        </figure>
-      </div>
-      {% endif %}
-      <div class="card-content">
-        <p class="title is-6">{{ product.title }}</h2>
-        <p class="subtitle is-6">{{ product.subtitle }}</p>
-      </div>
-    </div>
-  </a>
-</div>
-{% endfor %}
-</div>
-{% endif %}
