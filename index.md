@@ -24,7 +24,7 @@ We are proud to be part of the [Deparment of Aerospace Engineering](https://www.
 {% assign posts = site.posts | where:"categories","highlights" %}
 <div class="columns is-multiline">
     {% for post in posts %}
-    <div class="column is-4-desktop is-6-tablet">
+    <div class="column is-3-desktop is-6-tablet">
         {% include post-card.html %}
     </div>
     {% endfor %}
