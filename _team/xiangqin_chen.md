@@ -16,4 +16,4 @@ My research primarily focuses on 3D reconstruction using sensors deployed on aer
 
 Email: [rexchen@psu.edu](mailto:rexchen@psu.edu)
 
-Office: 131 Hammond Building
+Office: 439 ECoRE Building

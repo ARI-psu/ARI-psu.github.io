@@ -14,4 +14,4 @@ Hello, my name is Hikari and I am a fourth year majoring in mechanical engineeri
 
 Email: [hikari@psu.edu](mailto:hikari@psu.edu)
 
-Office: 131 Hammond Building
+Office: 439 ECoRE Building

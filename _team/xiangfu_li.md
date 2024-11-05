@@ -16,4 +16,4 @@ My research area focuses on aerial robots control and I am also intersted at per
 
 Email: [xml5328@psu.edu](mailto:xml5328@psu.edu)
 
-Office: 131 Hammond Building
+Office: 439 ECoRE Building

@@ -15,4 +15,4 @@ from Penn State in 2024 and plan to complete my M.S. in Aerospace Engineering in
 
 Email: [jvf5621@psu.edu](mailto:jvf5621@psu.edu)
 
-Office: 131 Hammond Building
+Office: 439 ECoRE Building

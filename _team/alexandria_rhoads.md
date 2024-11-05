@@ -15,4 +15,4 @@ My research area focuses on path planning and optimization of an unmanned aerial
 
 Email: [ayr5274@psu.edu](mailto:ayr5274@psu.edu)
 
-Office: 131 Hammond Building
+Office: 439 ECoRE Building
