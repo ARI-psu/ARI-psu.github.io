@@ -1,14 +1,14 @@
 ---
 title: Bayu Prasetyo
-subtitle: Undergraduate Student
-job_title: Undergraduate Researcher
-category: undergraduate
+subtitle: Ph.D. Student
+job_title: Graduate Student
+category: graduate_student
 layout: team_member_personal_page
 image: /img/team/DSC_0662.JPG
 link-new-tab: true
 ---
 
-I am an undergraduate student in Engineering Science, currently working on quadcopter control using Koopman Dynamics. My interests include control, neural networks, and space systems. 
+I am a Ph.D. student in Aerospace Engineering, currently working on quadcopter control using Koopman Dynamics. My interests include autonomous systems, control systems, dynamical modeling and machine learning. 
 
 ## Contact: ##
 

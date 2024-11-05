@@ -96,7 +96,7 @@ show_sidebar: false
 <div class="columns is-multiline">
 {% assign sorted_products = site.team | where:"category","graduate_student" %}
 {% for product in sorted_products %}
-<div class="column is-one-fifth-desktop is-6-tablet">
+<div class="column is-3-desktop is-6-tablet">
   <a href="{{ product.url | prepend: site.baseurl }}">
     <div class="card">
       {% if product.image %}
@@ -202,7 +202,7 @@ show_sidebar: false
 {% assign sorted_intern = site.team | where:"category","intern" %}
 {% assign sorted_products = sorted_visitor | concat: sorted_intern %}
 {% for product in sorted_products %}
-<div class="column is-one-fifth-desktop is-6-tablet">
+<div class="column is-3-desktop is-6-tablet">
   <a href="{{ product.url | prepend: site.baseurl }}">
     <div class="card">
       {% if product.image %}
