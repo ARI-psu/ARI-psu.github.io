@@ -14,4 +14,4 @@ Hello! I am a graduate student in aerospace engineering at Penn State University
 
 Email: [jrp5857@psu.edu](mailto:jrp5857@psu.edu)
 
-Office: 131 Hammond Building
+Office: 439 ECoRE Building

@@ -20,4 +20,4 @@ In my spare time, I am also a model plane amateur. Design and test different typ
 
 Email: [yvz6008@psu.edu](yvz6008@psu.edu)
 
-Office: 131 Hammond Building
+Office: 439 ECoRE Building

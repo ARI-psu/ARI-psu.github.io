@@ -16,4 +16,4 @@ My research area currently focuses on aerial robots planning and perception. I a
 
 Email: [yvj5298@psu.edu](mailto:yvj5298@psu.edu)
 
-Office: 131 Hammond Building
+Office: 439 ECoRE Building

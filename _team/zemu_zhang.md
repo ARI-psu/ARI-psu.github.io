@@ -14,4 +14,4 @@ Hello! I am a second-year undergraduate student at Penn State University studyin
 
 Email: [zqz5459@psu.edu](mailto:zqz5459@psu.edu)
 
-Office: 131 Hammond Building
+Office: 439 ECoRE Building

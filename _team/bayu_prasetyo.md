@@ -14,4 +14,4 @@ I am a Ph.D. student in Aerospace Engineering, currently working on quadcopter c
 
 Email: [mbp5652@psu.edu](mailto:mbp5652@psu.edu)
 
-Office: 131 Hammond Building
+Office: 439 ECoRE Building

@@ -16,6 +16,6 @@ My research interests include various types of aerial drones, with a recent focu
 
 ## Contact: ##
 
-Email: [hmm6167@psu.edu]()
+Email: [hmm6167@psu.edu](hmm6167@psu.edu)
 
-Office: ECoRE 439
+Office: 439 ECoRE Building
