@@ -4,7 +4,7 @@ subtitle: Student Intern
 job_title: Research Associate
 category: visitor
 layout: team_member_personal_page
-image: /img/team/huailing_ma.png
+image: /img/team/huailing_ma.jpg
 link-new-tab: true
 ---
 
