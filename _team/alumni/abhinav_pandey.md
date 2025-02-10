@@ -3,8 +3,11 @@ title: Abhinav Pandey
 subtitle: Master's Student
 job_title: Research Associate
 category: past_master
-layout: team_member_personal_page
+layout: team_past_member_personal_page
 image: /img/team/abhinav_pandey.jpg
+starting_year: 2023
+graduation_year: 2023
+graduation_month: December
 link-new-tab: true
 ---
 

@@ -3,7 +3,7 @@ title: Wentao Wang
 subtitle: Undergrad Student
 job_title: Research Assistant 
 category: past_undergraduate
-layout: team_member_personal_page
+layout: team_past_member_personal_page
 image: /img/team/wentao_wang.jpg
 link-new-tab: true
 ---
