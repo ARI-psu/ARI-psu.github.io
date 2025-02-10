@@ -3,8 +3,11 @@ title: Xiangfu Li
 subtitle: M.Eng. Student
 job_title: Graduate Student
 category: past_master
-layout: team_member_personal_page
+layout: team_past_member_personal_page
 image: /img/team/xiangfu_li.jpg
+starting_year: 2023
+graduation_year: 2024
+graduation_month: December
 link-new-tab: true
 ---
 
