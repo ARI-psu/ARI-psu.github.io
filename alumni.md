@@ -1,7 +1,7 @@
 ---
 title: Alumni
 subtitle: Ordered by year of graduation
-layout: team_member_base
+layout: default
 show_sidebar: false
 hide_footer: false
 ---
