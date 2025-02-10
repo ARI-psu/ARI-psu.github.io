@@ -2,7 +2,7 @@
 title: Xiangfu Li
 subtitle: M.Eng. Student
 job_title: Graduate Student
-category: graduate_student
+category: past_master
 layout: team_member_personal_page
 image: /img/team/xiangfu_li.jpg
 link-new-tab: true
