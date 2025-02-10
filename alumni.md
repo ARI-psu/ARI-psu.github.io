@@ -33,7 +33,7 @@ hide_footer: false
 {% endfor %}
 </div>
 
-<!-- <hr>
+<hr>
 <h1 style="font-size:35px;">Former Master's Students</h1>
 <br>
 <div class="columns is-multiline">
@@ -85,4 +85,4 @@ hide_footer: false
   </a>
 </div>
 {% endfor %}
-</div> -->
+</div>
