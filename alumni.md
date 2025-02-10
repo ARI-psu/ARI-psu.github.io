@@ -6,7 +6,7 @@ show_sidebar: false
 hide_footer: false
 ---
 
-<hr>
+<!-- <hr>
 <h1 style="font-size:35px;">Former Ph.D. Students</h1>
 <br>
 <div class="columns is-multiline">
@@ -31,7 +31,7 @@ hide_footer: false
   </a>
 </div>
 {% endfor %}
-</div>
+</div> -->
 
 <hr>
 <h1 style="font-size:35px;">Former Master's Students</h1>
@@ -60,7 +60,7 @@ hide_footer: false
 {% endfor %}
 </div>
 
-<hr>
+<!-- <hr>
 <h1 style="font-size:35px;">Former Postdoctoral Fellows</h1>
 <br>
 <div class="columns is-multiline">
@@ -85,4 +85,4 @@ hide_footer: false
   </a>
 </div>
 {% endfor %}
-</div>
+</div> -->
