@@ -28,7 +28,7 @@ While Unmanned Aerial Vehicles (UAVs) have gained significant traction across va
 </figure>
 
 ## Corridor Constraints
-Thanks to our iterative ....
+Thanks to our iterative optimization approach ...
 
 ## Experiment Results
 
