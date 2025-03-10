@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Lab Thanksgiving Family Gathering"
-date: 2024-12-13 12:00:00
+date: 2024-11-30 12:00:00
 categories: 
   - news
 author: "Yuanzhu Zhan"
