@@ -29,3 +29,17 @@ We are proud to be part of the [Deparment of Aerospace Engineering](https://www.
     </div>
     {% endfor %}
 </div>
+
+# Latest News
+{% assign news = site.posts | where:"categories","news" | slice: 0, 3 %}
+<div class="columns is-multiline">
+    {% for post in news %}
+    <div class="column is-3-desktop is-6-tablet">
+        {% include post-card.html %}
+    </div>
+    {% endfor %}
+</div>
+
+<p class="has-text-centered">
+    <a href="/news" class="button is-primary">See All News</a>
+</p>

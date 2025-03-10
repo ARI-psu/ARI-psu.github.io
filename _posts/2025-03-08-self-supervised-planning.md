@@ -8,7 +8,7 @@ author: "Yuanzhu Zhan"
 published: true
 sidebar:  false
 permalink: /selfsupervised_planning/
-image: /img/posts/2025-03-08-self-supervised-planning/pipeline.png
+image: /img/posts/2025-03-08-self-supervised-planning/homepage2.gif
 datatable: true
 title_image: None
 link-new-tab: true
