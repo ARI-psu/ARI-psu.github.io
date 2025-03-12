@@ -17,7 +17,7 @@ hide_footer: false
       <span class="date-month">December</span>
     </div>
     <div class="news-content">
-      <h2>Congradulations to Xiangfu Li on Earning His M.Eng. Degree.</h2>
+      <h2>Congradulations to Xiangfu Li on Earning His M.Eng. Degree！</h2>
       <p>We sincerely thank him for his outstanding contributions to the initial setup and development of our lab.</p>
     </div>
   </div>

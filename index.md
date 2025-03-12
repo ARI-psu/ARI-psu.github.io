@@ -31,7 +31,7 @@ We are proud to be part of the [Deparment of Aerospace Engineering](https://www.
 </div>
 
 # Latest News
-{% assign news = site.posts | where:"categories","news" | slice: 0, 3 %}
+<!-- {% assign news = site.posts | where:"categories","news" | slice: 0, 3 %}
 <div class="columns is-multiline">
     {% for post in news %}
     <div class="column is-3-desktop is-6-tablet">
@@ -39,6 +39,21 @@ We are proud to be part of the [Deparment of Aerospace Engineering](https://www.
     </div>
     {% endfor %}
 </div>
+
+<p class="has-text-centered">
+    <a href="/news" class="button is-primary">See All News</a>
+</p> -->
+
+<ul>
+  {% assign news = site.posts | where: "categories", "news" | sort: "date" | reverse %}
+  {% for post in news %}
+    <li>
+      <strong style="color: red;">{{ post.date | date: "%m/%Y" }}</strong>: 
+      {{ post.title | strip_html | truncatewords: 30 }} 
+      <!-- {% if post.url %}<a href="{{ post.url }}" target="_blank">🔗</a>{% endif %} -->
+    </li>
+  {% endfor %}
+</ul>
 
 <p class="has-text-centered">
     <a href="/news" class="button is-primary">See All News</a>
