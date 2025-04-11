@@ -7,7 +7,18 @@ hide_footer: false
 ---
 
 <div class="news-container">
-  
+  <!-- news of 2025 -->
+  <!-- Our Paper iMPC Was Accepted to the L4DC 2025！ -->
+  <div class="year header">2025</div>
+    <div class="news-item" data-aos="fade-right" data-aos-duration="1000">
+        <div class="date-box">
+      <span class="date-day">11</span>
+      <span class="date-month">April</span>
+    </div>
+    <div class="news-content">
+      <h2>Our Paper <a href="/iMPC/" target="_blank">iMPC</a> Was Accepted to the L4DC 2025！</h2>
+    </div>
+  </div>
   <!-- news of 2024 -->
   <!-- Congradulations to Xiangfu Li on Earning His M.Eng. Degree. -->
   <div class="year-header">2024</div>
