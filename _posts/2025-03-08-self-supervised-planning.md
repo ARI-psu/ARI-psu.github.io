@@ -56,4 +56,18 @@ Real-world obstacle avoidance in 3D complex environment
 </video>
 
 <!-- ### Publication -->
-
+<section class="section" id="Publication">
+  <div class="container is-max-desktop content">
+    <h2 class="title">BibTeX</h2>
+    <pre><code>@misc{jiang2025selfsupervised,
+      title={A Self-Supervised Learning Approach with Differentiable Optimization for UAV Trajectory Planning}, 
+      author={Yufei Jiang and Yuanzhu Zhan and Harsh Vardhan Gupta and Chinmay Borde and Junyi Geng},
+      year={2025},
+      eprint={2504.04289},
+      archivePrefix={arXiv},
+      primaryClass={cs.RO},
+      url={https://arxiv.org/abs/2504.04289}, 
+}
+</code></pre>
+  </div>
+</section>
