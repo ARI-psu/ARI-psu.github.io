@@ -2,9 +2,11 @@
 title: Huailing Ma
 subtitle: Student Intern
 job_title: Research Associate
-category: visitor
+category: past_visitor
 layout: team_member_personal_page
 image: /img/team/huailing_ma.jpg
+starting_year: 2024
+graduation_year: 2025
 link-new-tab: true
 ---
 
