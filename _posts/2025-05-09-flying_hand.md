@@ -8,7 +8,7 @@ author: "Yuanzhu Zhan"
 published: true
 sidebar:  false
 permalink: /flying_hand/
-image: /img/posts/2025-05-09-flying_hand/endeffector_control_experiment.mp4
+image: /img/posts/2025-05-09-flying_hand/teaser.gif
 datatable: true
 title_image: None
 link-new-tab: true
@@ -38,6 +38,27 @@ Aerial manipulation has recently attracted increasing interest from both industr
 </video>
 
 ### Autonomous Policy Learning
+<style>
+  .video-row {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 16px;
+  }
+
+  .video-row video {
+    max-width: 100%;
+    border-radius: 8px;
+  }
+
+  .caption {
+    text-align: center;
+    margin-top: 8px;
+    font-size: 14px;
+    color: #333;
+  }
+</style>
+
 <video controls autoplay loop muted playsinline 
        src="/img/posts/2025-05-09-flying_hand/peginhole_2.mp4" type="video/mp4">
 </video>
