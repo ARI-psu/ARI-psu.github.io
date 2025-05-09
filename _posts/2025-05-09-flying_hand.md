@@ -8,7 +8,7 @@ author: "Yuanzhu Zhan"
 published: true
 sidebar:  false
 permalink: /flying_hand/
-image: /img/posts/2025-05-09-flying_hand/pipeline.png
+image: /img/posts/2025-05-09-flying_hand/endeffector_control_experiment.mp4
 datatable: true
 title_image: None
 link-new-tab: true
