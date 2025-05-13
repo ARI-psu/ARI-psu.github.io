@@ -149,8 +149,9 @@ Aerial manipulation has recently attracted increasing interest from both industr
     <pre><code>@article{he2025flying,
       title={Flying Hand: End-Effector-Centric Framework for Versatile Aerial Manipulation Teleoperation and Policy Learning},
       author={He, Guanqi and Guo, Xiaofeng and Tang, Luyi and Zhang, Yuanhang and Mousaei, Mohammadreza and Xu, Jiahe and Geng, Junyi and Scherer, Sebastian and Shi, Guanya},
-      journal={RSS accepted},
-      year={2025}
+      journal={Robotics: Science and Systems},
+      year={2025},
+      pages={accepted}
     }
     </code></pre>
   </div>
