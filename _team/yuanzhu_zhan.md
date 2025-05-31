@@ -18,6 +18,6 @@ In my spare time, I am also a model plane amateur. Design and test different typ
 
 ## Contact: ##
 
-Email: [yvz6008@psu.edu](yvz6008@psu.edu)
+Email: [yvz6008@psu.edu](mailto:yvz6008@psu.edu)
 
 Office: 439 ECoRE Building
