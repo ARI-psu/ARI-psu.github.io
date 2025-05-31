@@ -1,0 +1,574 @@
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.0">Jekyll</generator><link href="https://ari-psu.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://ari-psu.github.io/" rel="alternate" type="text/html" /><updated>2025-05-31T15:49:35+00:00</updated><id>https://ari-psu.github.io/feed.xml</id><title type="html">ARI Lab</title><subtitle>Advancing aerial autonomy
+</subtitle><entry><title type="html">Our Paper Flying Hand Was Accepted to the RSS 2025！</title><link href="https://ari-psu.github.io/news/2025/05/09/news-flying_hand/" rel="alternate" type="text/html" title="Our Paper Flying Hand Was Accepted to the RSS 2025！" /><published>2025-05-09T12:00:00+00:00</published><updated>2025-05-09T12:00:00+00:00</updated><id>https://ari-psu.github.io/news/2025/05/09/news-flying_hand</id><content type="html" xml:base="https://ari-psu.github.io/news/2025/05/09/news-flying_hand/"></content><author><name>Yuanzhu Zhan</name></author><category term="news" /><summary type="html"></summary></entry><entry><title type="html">Flying Hand: End-Effector-Centric Framework for Versatile Aerial Manipulation Teleoperation and Policy Learning</title><link href="https://ari-psu.github.io/flying_hand/" rel="alternate" type="text/html" title="Flying Hand: End-Effector-Centric Framework for Versatile Aerial Manipulation Teleoperation and Policy Learning" /><published>2025-05-09T12:00:00+00:00</published><updated>2025-05-09T12:00:00+00:00</updated><id>https://ari-psu.github.io/flying_hand</id><content type="html" xml:base="https://ari-psu.github.io/flying_hand/">&lt;p&gt;Aerial manipulation has recently attracted increasing interest from both industry and academia. Previous approaches have demonstrated success in various specific tasks. However, their hardware design and control frameworks are often tightly coupled with task specifications, limiting the development of cross-task and cross-platform algorithms. Inspired by the success of robot learning in tabletop manipulation, we propose a unified aerial manipulation framework with an end-effector-centric interface that decouples high-level platform agnostic decision-making from task-agnostic low-level control. Our framework consists of a fully-actuated hexarotor with a 4-DoF robotic arm, an end-effector-centric whole-body model predictive controller, and a high-level policy. The high-precision end-effector controller enables efficient and intuitive aerial teleoperation for versatile tasks and facilitates the development of imitation learning policies. Real-world experiments show that the proposed framework significantly improves end-effector tracking accuracy, and can handle multiple aerial teleoperation and imitation learning tasks, including writing, peg-in-hole, pick and place, changing light bulbs, etc. We believe the proposed framework provides one way to standardize and unify aerial manipulation into the general manipulation community and to advance the field.&lt;/p&gt;
+
+&lt;h2 id=&quot;approach-overview&quot;&gt;Approach Overview&lt;/h2&gt;
+&lt;figure&gt;
+ &lt;img src=&quot;/img/posts/2025-05-09-flying_hand/pipeline.png&quot; /&gt;
+ &lt;figcaption&gt;
+       Pipeline
+ &lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;h2 id=&quot;experiment-results&quot;&gt;Experiment Results&lt;/h2&gt;
+&lt;h3 id=&quot;control-performance&quot;&gt;Control Performance&lt;/h3&gt;
+&lt;video controls=&quot;&quot; autoplay=&quot;&quot; loop=&quot;&quot; muted=&quot;&quot; playsinline=&quot;&quot; src=&quot;/img/posts/2025-05-09-flying_hand/endeffector_control_experiment.mp4&quot; type=&quot;video/mp4&quot;&gt;
+&lt;/video&gt;
+
+&lt;h3 id=&quot;ee-centric-mpc&quot;&gt;EE-Centric MPC&lt;/h3&gt;
+&lt;video controls=&quot;&quot; autoplay=&quot;&quot; loop=&quot;&quot; muted=&quot;&quot; playsinline=&quot;&quot; src=&quot;/img/posts/2025-05-09-flying_hand/collision_avoidence.mp4&quot; type=&quot;video/mp4&quot;&gt;
+&lt;/video&gt;
+
+&lt;h3 id=&quot;autonomous-policy-learning&quot;&gt;Autonomous Policy Learning&lt;/h3&gt;
+&lt;style&gt;
+  .video-row {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 16px;
+  }
+
+  .video-row video {
+    max-width: 100%;
+    border-radius: 8px;
+  }
+
+  .caption {
+    text-align: center;
+    margin-top: 8px;
+    font-size: 14px;
+    color: #333;
+  }
+&lt;/style&gt;
+
+&lt;video controls=&quot;&quot; autoplay=&quot;&quot; loop=&quot;&quot; muted=&quot;&quot; playsinline=&quot;&quot; src=&quot;/img/posts/2025-05-09-flying_hand/peginhole_2.mp4&quot; type=&quot;video/mp4&quot;&gt;
+&lt;/video&gt;
+&lt;div class=&quot;caption&quot;&gt;Peg-in-Hole&lt;/div&gt;
+
+&lt;video controls=&quot;&quot; autoplay=&quot;&quot; loop=&quot;&quot; muted=&quot;&quot; playsinline=&quot;&quot; src=&quot;/img/posts/2025-05-09-flying_hand/valve_rotate_3.mp4&quot; type=&quot;video/mp4&quot;&gt;
+&lt;/video&gt;
+&lt;div class=&quot;caption&quot;&gt;Valve Rotation&lt;/div&gt;
+
+&lt;h3 id=&quot;human-teleoperation&quot;&gt;Human Teleoperation&lt;/h3&gt;
+
+&lt;style&gt;
+  .video-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+    max-width: 800px;
+    margin: auto;
+  }
+
+  .video-item {
+    text-align: center;
+  }
+
+  .video-item video {
+    width: 100%;
+    height: auto;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+  }
+
+  .caption {
+    margin-top: 8px;
+    font-size: 14px;
+    color: #333;
+  }
+&lt;/style&gt;
+
+&lt;div class=&quot;video-grid&quot;&gt;
+  &lt;div class=&quot;video-item&quot;&gt;
+    &lt;video controls=&quot;&quot; autoplay=&quot;&quot; loop=&quot;&quot; muted=&quot;&quot; playsinline=&quot;&quot; src=&quot;/img/posts/2025-05-09-flying_hand/bulb_unmount_2.mp4&quot; type=&quot;video/mp4&quot;&gt;
+    &lt;/video&gt;
+    &lt;div class=&quot;caption&quot;&gt;Light Bulb Unmounting&lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;video-item&quot;&gt;
+    &lt;video controls=&quot;&quot; autoplay=&quot;&quot; loop=&quot;&quot; muted=&quot;&quot; playsinline=&quot;&quot; src=&quot;/img/posts/2025-05-09-flying_hand/bulb_mounting_2.mp4&quot; type=&quot;video/mp4&quot;&gt;
+    &lt;/video&gt;
+    &lt;div class=&quot;caption&quot;&gt;Light Bulb Mounting&lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;video-item&quot;&gt;
+    &lt;video controls=&quot;&quot; autoplay=&quot;&quot; loop=&quot;&quot; muted=&quot;&quot; playsinline=&quot;&quot; src=&quot;/img/posts/2025-05-09-flying_hand/pickandplace_glue.mp4&quot; type=&quot;video/mp4&quot;&gt;
+    &lt;/video&gt;
+    &lt;div class=&quot;caption&quot;&gt;Pick and Place&lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;video-item&quot;&gt;
+    &lt;video controls=&quot;&quot; autoplay=&quot;&quot; loop=&quot;&quot; muted=&quot;&quot; playsinline=&quot;&quot; src=&quot;/img/posts/2025-05-09-flying_hand/pickandplace_bluetape.mp4&quot; type=&quot;video/mp4&quot;&gt;
+    &lt;/video&gt;
+    &lt;div class=&quot;caption&quot;&gt;Pick and Place&lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;!-- &lt;video controls autoplay loop muted playsinline 
+       src=&quot;/img/posts/2025-05-09-flying_hand/bulb_mounting_2.mp4&quot; type=&quot;video/mp4&quot;&gt;
+&lt;/video&gt;
+
+&lt;video controls autoplay loop muted playsinline 
+       src=&quot;/img/posts/2025-05-09-flying_hand/bulb_unmount_2.mp4&quot; type=&quot;video/mp4&quot;&gt;
+&lt;/video&gt;
+
+&lt;video controls autoplay loop muted playsinline 
+       src=&quot;/img/posts/2025-05-09-flying_hand/pickandplace_glue.mp4&quot; type=&quot;video/mp4&quot;&gt;
+&lt;/video&gt;
+
+
+&lt;video controls autoplay loop muted playsinline 
+       src=&quot;/img/posts/2025-05-09-flying_hand/pickandplace_bluetape.mp4&quot; type=&quot;video/mp4&quot;&gt;
+&lt;/video&gt; --&gt;
+
+&lt;!-- ### Publication --&gt;
+&lt;section class=&quot;section&quot; id=&quot;Publication&quot;&gt;
+  &lt;div class=&quot;container is-max-desktop content&quot;&gt;
+    &lt;h2 class=&quot;title&quot;&gt;BibTeX&lt;/h2&gt;
+    &lt;pre&gt;&lt;code&gt;@article{he2025flying,
+      title={Flying Hand: End-Effector-Centric Framework for Versatile Aerial Manipulation Teleoperation and Policy Learning},
+      author={He, Guanqi and Guo, Xiaofeng and Tang, Luyi and Zhang, Yuanhang and Mousaei, Mohammadreza and Xu, Jiahe and Geng, Junyi and Scherer, Sebastian and Shi, Guanya},
+      journal={Robotics: Science and Systems},
+      year={2025},
+      pages={accepted}
+    }
+    &lt;/code&gt;&lt;/pre&gt;
+  &lt;/div&gt;
+&lt;/section&gt;</content><author><name>Yuanzhu Zhan</name></author><category term="research" /><summary type="html">Aerial manipulation has recently attracted increasing interest from both industry and academia. Previous approaches have demonstrated success in various specific tasks. However, their hardware design and control frameworks are often tightly coupled with task specifications, limiting the development of cross-task and cross-platform algorithms. Inspired by the success of robot learning in tabletop manipulation, we propose a unified aerial manipulation framework with an end-effector-centric interface that decouples high-level platform agnostic decision-making from task-agnostic low-level control. Our framework consists of a fully-actuated hexarotor with a 4-DoF robotic arm, an end-effector-centric whole-body model predictive controller, and a high-level policy. The high-precision end-effector controller enables efficient and intuitive aerial teleoperation for versatile tasks and facilitates the development of imitation learning policies. Real-world experiments show that the proposed framework significantly improves end-effector tracking accuracy, and can handle multiple aerial teleoperation and imitation learning tasks, including writing, peg-in-hole, pick and place, changing light bulbs, etc. We believe the proposed framework provides one way to standardize and unify aerial manipulation into the general manipulation community and to advance the field.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://ari-psu.github.io/img/posts/2025-05-09-flying_hand/teaser.gif" /><media:content medium="image" url="https://ari-psu.github.io/img/posts/2025-05-09-flying_hand/teaser.gif" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Our Paper iMPC Was Accepted to the L4DC 2025！</title><link href="https://ari-psu.github.io/news/2025/04/11/news-iMPC/" rel="alternate" type="text/html" title="Our Paper iMPC Was Accepted to the L4DC 2025！" /><published>2025-04-11T12:00:00+00:00</published><updated>2025-04-11T12:00:00+00:00</updated><id>https://ari-psu.github.io/news/2025/04/11/news-iMPC</id><content type="html" xml:base="https://ari-psu.github.io/news/2025/04/11/news-iMPC/"></content><author><name>Yuanzhu Zhan</name></author><category term="news" /><summary type="html"></summary></entry><entry><title type="html">Imperative MPC: An End-to-End Self-Supervised Learning with Differentiable MPC for UAV Attitude Control</title><link href="https://ari-psu.github.io/iMPC/" rel="alternate" type="text/html" title="Imperative MPC: An End-to-End Self-Supervised Learning with Differentiable MPC for UAV Attitude Control" /><published>2025-04-11T12:00:00+00:00</published><updated>2025-04-11T12:00:00+00:00</updated><id>https://ari-psu.github.io/iMPC</id><content type="html" xml:base="https://ari-psu.github.io/iMPC/">&lt;p&gt;Modeling and control of nonlinear dynamics are critical in robotics, especially in scenarios with unpredictable external influences and complex dynamics. Traditional cascaded modular control pipelines often yield suboptimal performance due to conservative assumptions and tedious parameter tuning. Pure data-driven approaches promise robust performance but suffer from low sample efficiency, sim-to-real gaps, and reliance on extensive datasets. Hybrid methods combining learning-based and traditional model-based control in an end-to-end manner offer a promising alternative.
+This work presents a self-supervised learning framework combining learning-based inertial odometry (IO) module and differentiable model predictive control (d-MPC) for Unmanned Aerial Vehicle (UAV) attitude control. The IO denoises raw IMU measurements and predicts UAV attitudes, which are then optimized by MPC for control actions in a bi-level optimization (BLO) setup, where the inner MPC optimizes control actions and the upper level minimizes discrepancy between real-world and predicted performance. The framework is thus end-to-end and can be trained in a self-supervised manner. This approach combines the strength of learning-based perception with the interpretable model-based control. Results show the effectiveness even under strong wind. It can simultaneously enhance both the MPC parameter learning and IMU prediction performance.&lt;/p&gt;
+
+&lt;h2 id=&quot;approach-overview&quot;&gt;Approach Overview&lt;/h2&gt;
+&lt;figure&gt;
+ &lt;img src=&quot;/img/posts/2025-04-11-iMPC/Pipeline.png&quot; /&gt;
+ &lt;figcaption&gt;
+       The proposed framework
+ &lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;Our method integrates a perception network with a physics-based MPC optimizer to enable self-supervised learning for UAV control. The perception network processes raw IMU measurements to predict high-level MPC parameters (e.g., dynamics, objectives, constraints; UAV’s current state here), while the MPC solves for optimal state and control sequences under system dynamics constraints. We define the upper-level loss function as the discrepancy between dynamics calculated states and IMU-driven perception predicted states. Leveraging implicit differentiation via PyPose’s differentiable MPC (d-MPC), our method efficiently avoids costly unrolled gradient computations. This design enables end-to-end joint training, ensuring dynamically feasible and physically grounded learning without relying on labeled data.&lt;/p&gt;
+
+&lt;h2 id=&quot;experiment-results&quot;&gt;Experiment Results&lt;/h2&gt;
+&lt;p&gt;The UAV attitude quickly returns to a stable hover state for an initial condition of 20° using our iMPC as the controller.&lt;/p&gt;
+&lt;figure&gt;
+  &lt;img src=&quot;/img/posts/2025-04-11-iMPC/Response.png&quot; /&gt;
+  &lt;figcaption&gt;
+    UAV performances
+  &lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;h5 id=&quot;control-performance-of-impc-and-reinforcement-learning--proximal-policy-optimization-ppo-under-different-levels-of-wind-disturbance&quot;&gt;Control performance of iMPC and Reinforcement Learning  Proximal Policy Optimization (PPO) under different levels of wind disturbance.&lt;/h5&gt;
+
+&lt;div class=&quot;columns is-centered&quot;&gt;
+       &lt;div class=&quot;column is-6&quot;&gt;
+              &lt;figure&gt;
+              &lt;img src=&quot;/img/posts/2025-04-11-iMPC/wind_impulse6.png&quot; /&gt;
+              &lt;figcaption&gt;
+                     UAV pitch angle response when encountering an &lt;strong&gt; impulse wind &lt;/strong&gt; disturbance at 0.2s for different speeds. PPO loses control at a wind speed of 15 m/s, while iMPC loses control at 45 m/s.
+              &lt;/figcaption&gt;
+              &lt;/figure&gt;
+       &lt;/div&gt;
+       &lt;div class=&quot;column is-6&quot;&gt;
+              &lt;figure&gt;
+              &lt;img src=&quot;/img/posts/2025-04-11-iMPC/wind_step6.png&quot; /&gt;
+              &lt;figcaption&gt;
+                     UAV pitch angle response when the encountering a &lt;strong&gt; step wind &lt;/strong&gt; disturbance at 0.2s and lasting for 0.3s for different speeds. PPO loses control at a wind speed of 15 m/s, while iMPC loses control at 35 m/s.
+              &lt;/figcaption&gt;
+              &lt;/figure&gt;
+       &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;h5 id=&quot;learned-dynamics-parameters&quot;&gt;Learned Dynamics Parameters&lt;/h5&gt;
+&lt;p&gt;We also evaluate the learning performance in the d-MPC. In particular, we treat the UAV mass and moment of inertia (MOI) as the learnable parameters.&lt;/p&gt;
+
+&lt;table&gt;
+  &lt;caption&gt;The learned UAV MOI and mass error using our method under different initial conditions with an initial value of 50% offset.&lt;/caption&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th rowspan=&quot;2&quot;&gt; &lt;/th&gt;
+      &lt;th rowspan=&quot;2&quot;&gt;Initial Offset&lt;/th&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th&gt;Initial&lt;/th&gt;&lt;th&gt;Error&lt;/th&gt;
+      &lt;th&gt;Initial&lt;/th&gt;&lt;th&gt;Error&lt;/th&gt;
+      &lt;th&gt;Initial&lt;/th&gt;&lt;th&gt;Error&lt;/th&gt;
+      &lt;th&gt;Initial&lt;/th&gt;&lt;th&gt;Error&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;MOI&lt;/td&gt;
+      &lt;td&gt;50%&lt;/td&gt;
+      &lt;td&gt;0°&lt;/td&gt;&lt;td&gt;0.96%&lt;/td&gt;
+      &lt;td&gt;10°&lt;/td&gt;&lt;td&gt;2.67%&lt;/td&gt;
+      &lt;td&gt;15°&lt;/td&gt;&lt;td&gt;3.41%&lt;/td&gt;
+      &lt;td&gt;20°&lt;/td&gt;&lt;td&gt;2.22%&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Mass&lt;/td&gt;
+      &lt;td&gt;50%&lt;/td&gt;
+      &lt;td&gt;0°&lt;/td&gt;&lt;td&gt;1.69%&lt;/td&gt;
+      &lt;td&gt;10°&lt;/td&gt;&lt;td&gt;0.85%&lt;/td&gt;
+      &lt;td&gt;15°&lt;/td&gt;&lt;td&gt;1.43%&lt;/td&gt;
+      &lt;td&gt;20°&lt;/td&gt;&lt;td&gt;0.32%&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;!-- ### Publication --&gt;
+&lt;section class=&quot;section&quot; id=&quot;Publication&quot;&gt;
+  &lt;div class=&quot;container is-max-desktop content&quot;&gt;
+    &lt;h2 class=&quot;title&quot;&gt;BibTeX&lt;/h2&gt;
+    &lt;pre&gt;&lt;code&gt;@inproceedings{He2025iMPC,
+       author    = {Haonan He and Yuheng Qiu and Junyi Geng},
+       title     = {Imperative MPC: An End-to-End Self-Supervised Learning with Differentiable MPC for UAV Attitude Control},
+       booktitle = {Proceedings of the 7th Annual Learning for Dynamics &amp;amp; Control Conference},
+       year      = {2025},
+       pages     = {Accepted}
+}&lt;/code&gt;&lt;/pre&gt;
+  &lt;/div&gt;
+&lt;/section&gt;</content><author><name>Yuanzhu Zhan</name></author><category term="research" /><summary type="html">Modeling and control of nonlinear dynamics are critical in robotics, especially in scenarios with unpredictable external influences and complex dynamics. Traditional cascaded modular control pipelines often yield suboptimal performance due to conservative assumptions and tedious parameter tuning. Pure data-driven approaches promise robust performance but suffer from low sample efficiency, sim-to-real gaps, and reliance on extensive datasets. Hybrid methods combining learning-based and traditional model-based control in an end-to-end manner offer a promising alternative. This work presents a self-supervised learning framework combining learning-based inertial odometry (IO) module and differentiable model predictive control (d-MPC) for Unmanned Aerial Vehicle (UAV) attitude control. The IO denoises raw IMU measurements and predicts UAV attitudes, which are then optimized by MPC for control actions in a bi-level optimization (BLO) setup, where the inner MPC optimizes control actions and the upper level minimizes discrepancy between real-world and predicted performance. The framework is thus end-to-end and can be trained in a self-supervised manner. This approach combines the strength of learning-based perception with the interpretable model-based control. Results show the effectiveness even under strong wind. It can simultaneously enhance both the MPC parameter learning and IMU prediction performance.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://ari-psu.github.io/img/posts/2025-04-11-iMPC/Pipeline.png" /><media:content medium="image" url="https://ari-psu.github.io/img/posts/2025-04-11-iMPC/Pipeline.png" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">A Self-Supervised Learning Approach with Differentiable Optimization for UAV Trajectory Planning</title><link href="https://ari-psu.github.io/selfsupervised_planning/" rel="alternate" type="text/html" title="A Self-Supervised Learning Approach with Differentiable Optimization for UAV Trajectory Planning" /><published>2025-03-08T12:00:00+00:00</published><updated>2025-03-08T12:00:00+00:00</updated><id>https://ari-psu.github.io/self-supervised-planning</id><content type="html" xml:base="https://ari-psu.github.io/selfsupervised_planning/">&lt;p&gt;While Unmanned Aerial Vehicles (UAVs) have gained significant traction across various fields, path planning in 3D environments remains a critical challenge, particularly under size, weight, and power (SWAP) constraints. Traditional modular planning systems often introduce latency and suboptimal performance due to limited information sharing and local minima issues. End-to-end learning approaches streamline the pipeline by mapping sensory observations directly to actions but require large-scale datasets, face significant simto-real gaps, or lack dynamical feasibility. In this project, we propose a self-supervised UAV trajectory planning pipeline that integrates a learning-based depth perception with differentiable trajectory optimization. A 3D cost map guides UAV behavior without expert demonstrations or human labels. Additionally, we incorporate a neural network-based time allocation strategy to improve the efficiency and optimality. The system thus combines robust learning-based perception with reliable physicsbased optimization for improved generalizability and interpretability. Both simulation and real-world experiments validate our approach across various environments, demonstrating its effectiveness and robustness. Our method achieves a 31.33% improvement in position tracking error and 49.37% reduction in control effort compared to the state-of-the-art.&lt;/p&gt;
+
+&lt;h2 id=&quot;planning-pipeline&quot;&gt;Planning Pipeline&lt;/h2&gt;
+&lt;figure&gt;
+ &lt;img src=&quot;/img/posts/2025-03-08-self-supervised-planning/pipeline.png&quot; /&gt;
+ &lt;figcaption&gt;
+       Pipeline of the proposed planning method
+ &lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;Our method takes only depth images as input, and directly outputs trajectories through end-to-end pipeline. Each module is fully differentiable, enabling gradient backpropagation through effective joint training. Specifically, a front-end network first predicts key waypoints from the input depth image. Then, back-end trajectory optimization module generates an optimal trajectory based on these waypoints. Additionally, we introduced a time allocation network to handle the challenging timing problem, ensuring both real-time performance and trajectory optimality.
+Compared to other approaches, our method is fully self-supervised thanks to our 3D cost map. Moreover, with iterative trajectory optimization, we can incorporate inequality constraints, further enhancing its practical applicability.&lt;/p&gt;
+
+&lt;h2 id=&quot;experiment-results&quot;&gt;Experiment Results&lt;/h2&gt;
+&lt;p&gt;Navigation in various simulation environments&lt;/p&gt;
+&lt;video controls=&quot;&quot; autoplay=&quot;&quot; loop=&quot;&quot; muted=&quot;&quot; playsinline=&quot;&quot; src=&quot;/img/posts/2025-03-08-self-supervised-planning/simulation.mp4&quot; type=&quot;video/mp4&quot;&gt;
+&lt;/video&gt;
+
+&lt;p&gt;Real-world obstacle avoidance in 3D complex environment&lt;/p&gt;
+&lt;figure&gt;
+  &lt;img src=&quot;/img/posts/2025-03-08-self-supervised-planning/exp_stack.png&quot; /&gt;
+  &lt;figcaption&gt;
+       A sequence of snapshots of real-world flight experiments in complex environment
+  &lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;video controls=&quot;&quot; autoplay=&quot;&quot; loop=&quot;&quot; muted=&quot;&quot; playsinline=&quot;&quot; src=&quot;/img/posts/2025-03-08-self-supervised-planning/real_world.mp4&quot; type=&quot;video/mp4&quot;&gt;
+&lt;/video&gt;
+
+&lt;h2 id=&quot;video&quot;&gt;Video&lt;/h2&gt;
+
+&lt;!-- &lt;div class=&quot;video-wrapper&quot;&gt;&lt;iframe src=&quot;http://www.youtube.com/embed/3AMcM3uUaUw&quot; frameborder=&quot;0&quot; allowfullscreen&gt;&lt;/iframe&gt;&lt;/div&gt; --&gt;
+&lt;video controls=&quot;&quot; autoplay=&quot;&quot; loop=&quot;&quot; muted=&quot;&quot; playsinline=&quot;&quot; src=&quot;/img/posts/2025-03-08-self-supervised-planning/full_video.mp4&quot; type=&quot;video/mp4&quot;&gt;
+&lt;/video&gt;
+
+&lt;!-- ### Publication --&gt;
+&lt;section class=&quot;section&quot; id=&quot;Publication&quot;&gt;
+  &lt;div class=&quot;container is-max-desktop content&quot;&gt;
+    &lt;h2 class=&quot;title&quot;&gt;BibTeX&lt;/h2&gt;
+    &lt;pre&gt;&lt;code&gt;@misc{jiang2025selfsupervised,
+      title={A Self-Supervised Learning Approach with Differentiable Optimization for UAV Trajectory Planning}, 
+      author={Yufei Jiang and Yuanzhu Zhan and Harsh Vardhan Gupta and Chinmay Borde and Junyi Geng},
+      year={2025},
+      eprint={2504.04289},
+      archivePrefix={arXiv},
+      primaryClass={cs.RO},
+      url={https://arxiv.org/abs/2504.04289}, 
+}
+&lt;/code&gt;&lt;/pre&gt;
+  &lt;/div&gt;
+&lt;/section&gt;</content><author><name>Yuanzhu Zhan</name></author><category term="research" /><summary type="html">While Unmanned Aerial Vehicles (UAVs) have gained significant traction across various fields, path planning in 3D environments remains a critical challenge, particularly under size, weight, and power (SWAP) constraints. Traditional modular planning systems often introduce latency and suboptimal performance due to limited information sharing and local minima issues. End-to-end learning approaches streamline the pipeline by mapping sensory observations directly to actions but require large-scale datasets, face significant simto-real gaps, or lack dynamical feasibility. In this project, we propose a self-supervised UAV trajectory planning pipeline that integrates a learning-based depth perception with differentiable trajectory optimization. A 3D cost map guides UAV behavior without expert demonstrations or human labels. Additionally, we incorporate a neural network-based time allocation strategy to improve the efficiency and optimality. The system thus combines robust learning-based perception with reliable physicsbased optimization for improved generalizability and interpretability. Both simulation and real-world experiments validate our approach across various environments, demonstrating its effectiveness and robustness. Our method achieves a 31.33% improvement in position tracking error and 49.37% reduction in control effort compared to the state-of-the-art.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://ari-psu.github.io/img/posts/2025-03-08-self-supervised-planning/homepage2.gif" /><media:content medium="image" url="https://ari-psu.github.io/img/posts/2025-03-08-self-supervised-planning/homepage2.gif" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Our Paper iKap Was Accepted to the ICRA 2025！</title><link href="https://ari-psu.github.io/news/2025/01/28/news-iKap/" rel="alternate" type="text/html" title="Our Paper iKap Was Accepted to the ICRA 2025！" /><published>2025-01-28T12:00:00+00:00</published><updated>2025-01-28T12:00:00+00:00</updated><id>https://ari-psu.github.io/news/2025/01/28/news-iKap</id><content type="html" xml:base="https://ari-psu.github.io/news/2025/01/28/news-iKap/"></content><author><name>Yuanzhu Zhan</name></author><category term="news" /><summary type="html"></summary></entry><entry><title type="html">Congradulations to Xiangfu Li on Earning His M.Eng. Degree！</title><link href="https://ari-psu.github.io/news/2024/12/13/news-congrats-xiangfu-graduation/" rel="alternate" type="text/html" title="Congradulations to Xiangfu Li on Earning His M.Eng. Degree！" /><published>2024-12-13T12:00:00+00:00</published><updated>2024-12-13T12:00:00+00:00</updated><id>https://ari-psu.github.io/news/2024/12/13/news-congrats-xiangfu-graduation</id><content type="html" xml:base="https://ari-psu.github.io/news/2024/12/13/news-congrats-xiangfu-graduation/">&lt;p&gt;We sincerely thank him for his outstanding contributions to the initial setup and development of our lab.&lt;/p&gt;</content><author><name>Yuanzhu Zhan</name></author><category term="news" /><summary type="html">We sincerely thank him for his outstanding contributions to the initial setup and development of our lab.</summary></entry><entry><title type="html">iKap: Kinematics-aware Planning with Imperative Learning</title><link href="https://ari-psu.github.io/iKap/" rel="alternate" type="text/html" title="iKap: Kinematics-aware Planning with Imperative Learning" /><published>2024-12-12T00:00:00+00:00</published><updated>2024-12-12T00:00:00+00:00</updated><id>https://ari-psu.github.io/ikap</id><content type="html" xml:base="https://ari-psu.github.io/iKap/">&lt;p&gt;Trajectory planning in robotics aims to generate collision-free pose sequences that can be reliably executed. Recently, vision-to-planning systems have garnered increasing attention for their efficiency and ability to interpret and adapt to surrounding environments. However, traditional modular systems suffer from increased latency and error propagation, while purely data-driven approaches often overlook the robot’s kinematic constraints. This oversight leads to discrepancies between planned trajectories and those that are executable. To address these challenges, we propose iKap, a novel vision-to-planning system that integrates the robot’s kinematic model directly into the learning pipeline. iKap employs a self-supervised learning approach and incorporates the state transition model within a differentiable bi-level optimization framework. This integration ensures the network learns collision-free waypoints while satisfying kinematic constraints, enabling gradient back-propagation for end-to-end training. Our experimental results demonstrate that iKap achieves higher success rates and reduced latency compared to the state-of-the-art methods. Besides the complete system, iKap offers a visual-to-planning network that seamlessly integrates kinematics into various controllers, providing a robust solution for robots navigating complex and dynamic environments.&lt;/p&gt;
+
+&lt;h2 id=&quot;method-overview&quot;&gt;Method Overview&lt;/h2&gt;
+
+&lt;figure&gt;
+    &lt;img src=&quot;/img/posts/2024-12-12-ikap/flow.jpg&quot; /&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;iKap is trained based on bi-level optimization. In this framework, the networks, generate waypoints based on the given depth perception and goals. Then, the low-level trajectory optimization module tracks a kinematics-feasible trajectory. The embedded kinematics and gradients from the lower-level module are then utilized to supervise and train the networks.&lt;/p&gt;
+
+&lt;h2 id=&quot;video&quot;&gt;Video&lt;/h2&gt;
+
+&lt;iframe width=&quot;850&quot; height=&quot;500&quot; src=&quot;https://www.youtube.com/embed/7HPAMFbHc4U&quot; title=&quot;YouTube video player&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen=&quot;&quot;&gt;
+&lt;/iframe&gt;
+
+&lt;h1 id=&quot;publication&quot;&gt;Publication&lt;/h1&gt;
+&lt;section class=&quot;section&quot; id=&quot;Publication&quot;&gt;
+  &lt;div class=&quot;container is-max-desktop content&quot;&gt;
+    &lt;h2 class=&quot;title&quot;&gt;BibTeX&lt;/h2&gt;
+    &lt;pre&gt;&lt;code&gt;@inproceedings{li2025ikap,
+    title = {iKap: Kinematics-aware Planning with Imperative Learning},
+    author = {Li, Qihang and Chen, Zhuoqun and Zheng, Haoze and He, Haonan and Su, Shaoshu and Geng, Junyi and Wang, Chen},
+    booktitle = {IEEE International Conference on Robotics and Automation (ICRA)},
+    year = {2025},
+    url = {https://arxiv.org/abs/2412.09496},
+    video = {https://youtu.be/7HPAMFbHc4U},
+    website = {https://sairlab.org/iKap}
+}&lt;/code&gt;&lt;/pre&gt;
+  &lt;/div&gt;
+&lt;/section&gt;</content><author><name>Qihang Li</name></author><category term="research" /><summary type="html">Trajectory planning in robotics aims to generate collision-free pose sequences that can be reliably executed. Recently, vision-to-planning systems have garnered increasing attention for their efficiency and ability to interpret and adapt to surrounding environments. However, traditional modular systems suffer from increased latency and error propagation, while purely data-driven approaches often overlook the robot’s kinematic constraints. This oversight leads to discrepancies between planned trajectories and those that are executable. To address these challenges, we propose iKap, a novel vision-to-planning system that integrates the robot’s kinematic model directly into the learning pipeline. iKap employs a self-supervised learning approach and incorporates the state transition model within a differentiable bi-level optimization framework. This integration ensures the network learns collision-free waypoints while satisfying kinematic constraints, enabling gradient back-propagation for end-to-end training. Our experimental results demonstrate that iKap achieves higher success rates and reduced latency compared to the state-of-the-art methods. Besides the complete system, iKap offers a visual-to-planning network that seamlessly integrates kinematics into various controllers, providing a robust solution for robots navigating complex and dynamic environments.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://ari-psu.github.io/img/posts/2024-12-12-ikap/cover.gif" /><media:content medium="image" url="https://ari-psu.github.io/img/posts/2024-12-12-ikap/cover.gif" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Lab Thanksgiving Family Gathering</title><link href="https://ari-psu.github.io/news/2024/11/30/news-thanksgiving-party/" rel="alternate" type="text/html" title="Lab Thanksgiving Family Gathering" /><published>2024-11-30T12:00:00+00:00</published><updated>2024-11-30T12:00:00+00:00</updated><id>https://ari-psu.github.io/news/2024/11/30/news-thanksgiving-party</id><content type="html" xml:base="https://ari-psu.github.io/news/2024/11/30/news-thanksgiving-party/">&lt;p&gt;Our lab celebrated Thanksgiving with a warm and joyful gathering, enjoying great food and fun games together.&lt;/p&gt;</content><author><name>Yuanzhu Zhan</name></author><category term="news" /><summary type="html">Our lab celebrated Thanksgiving with a warm and joyful gathering, enjoying great food and fun games together.</summary></entry><entry><title type="html">Flying Calligrapher: Contact-Aware Motion and Force Planning and Control for Aerial Manipulation</title><link href="https://ari-psu.github.io/flyingcalligraphy/" rel="alternate" type="text/html" title="Flying Calligrapher: Contact-Aware Motion and Force Planning and Control for Aerial Manipulation" /><published>2024-08-31T12:00:00+00:00</published><updated>2024-08-31T12:00:00+00:00</updated><id>https://ari-psu.github.io/flyingcalligraphy</id><content type="html" xml:base="https://ari-psu.github.io/flyingcalligraphy/">&lt;h3 id=&quot;aerial-writing-for-art&quot;&gt;Aerial Writing for Art&lt;/h3&gt;
+
+&lt;p&gt;Aerial manipulation has gained interest for completing high-altitude tasks that are challenging for human workers, such 
+as contact inspection and defect detection. Previous research has focused on maintaining static contact points or forces. 
+This letter addresses a more general and dynamic task: simultaneously tracking time-varying contact force and motion 
+trajectories on tangential surfaces. We propose a pipeline that includes contact-aware trajectory planning to generate 
+dynamic, feasible trajectories and a hybrid motion-force controller to compensate for contact and friction forces. We 
+demonstrate the approach on an aerial calligraphy task using a novel sponge pen design as the end-effector. Additionally, we developed a touchscreen interface for flexible user input. Experiments show our method can effectively draw diverse letters, achieving an IoU of 0.59 and an end-effector position tracking RMSE of 2.93 cm.&lt;/p&gt;
+
+&lt;video width=&quot;1280&quot; height=&quot;960&quot; controls=&quot;&quot;&gt;
+  &lt;source src=&quot;/img/posts/2024-08-30-flyingcalligraphy/teaser.mp4&quot; type=&quot;video/mp4&quot; /&gt;
+  Your browser does not support the video tag.
+&lt;/video&gt;
+
+&lt;h2 id=&quot;approach-overview&quot;&gt;Approach Overview&lt;/h2&gt;
+&lt;figure&gt;
+ &lt;img src=&quot;/img/posts/2024-08-30-flyingcalligraphy/pipeline.png&quot; /&gt;
+ &lt;figcaption&gt;
+         Pipeline of the proposed system. 
+ &lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;Users either manually define the target strokes or draw the target letter through a touchscreen interface. Then, the trajectory planning module generates a dynamic-feasible motion-force trajectory. A hybrid motion and force controller is designed for the UAM to track the reference trajectory. Finally, a novel end-effector pen is designed for the UAM to draw the target letters.&lt;/p&gt;
+
+&lt;!-- &lt;h2 class=&quot;title is-2&quot; style=&quot;text-align: center;&quot;&gt;Experiment Results&lt;/h2&gt; --&gt;
+&lt;section class=&quot;section&quot;&gt;
+  &lt;div class=&quot;container is-max-desktop&quot;&gt;
+    &lt;div class=&quot;columns is-centered&quot;&gt;
+      &lt;div class=&quot;column is-12&quot;&gt;
+        &lt;div class=&quot;columns is-centered&quot;&gt;
+          &lt;div class=&quot;column is-12&quot;&gt;
+            &lt;h2 class=&quot;title is-3&quot;&gt;Experiment Results&lt;/h2&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+          &lt;!-- add text at the top left of these three videos --&gt;
+        &lt;div class=&quot;title is-4&quot;&gt;
+          &lt;p&gt;
+            Single Letter Drawing
+          &lt;/p&gt;  
+        &lt;/div&gt;
+        &lt;div class=&quot;title is-6&quot;&gt;
+          &lt;p&gt;write letter 'A'&lt;/p&gt;        
+        &lt;/div&gt;
+        &lt;div class=&quot;columns is-centered&quot;&gt;
+          &lt;div class=&quot;column is-4&quot;&gt;
+            &lt;video controls=&quot;&quot; autoplay=&quot;&quot; loop=&quot;&quot; muted=&quot;&quot; playsinline=&quot;&quot; src=&quot;/img/posts/2024-08-30-flyingcalligraphy/write_a_20_1.mp4&quot; type=&quot;video/mp4&quot;&gt;
+            &lt;/video&gt;
+            &lt;div class=&quot;content has-text-centered&quot;&gt;
+              &lt;p&gt;trial 1&lt;/p&gt;        
+            &lt;/div&gt;
+          &lt;/div&gt;
+          &lt;div class=&quot;column is-4&quot;&gt;
+            &lt;video controls=&quot;&quot; autoplay=&quot;&quot; loop=&quot;&quot; muted=&quot;&quot; playsinline=&quot;&quot; src=&quot;/img/posts/2024-08-30-flyingcalligraphy/write_a_21_1.mp4&quot; type=&quot;video/mp4&quot;&gt;
+            &lt;/video&gt;
+            &lt;div class=&quot;content has-text-centered&quot;&gt;
+              &lt;p&gt;trial 2&lt;/p&gt;        
+            &lt;/div&gt;
+          &lt;/div&gt;
+          &lt;div class=&quot;column is-4&quot;&gt;
+            &lt;video controls=&quot;&quot; autoplay=&quot;&quot; loop=&quot;&quot; muted=&quot;&quot; playsinline=&quot;&quot; src=&quot;/img/posts/2024-08-30-flyingcalligraphy/write_a_22_1.mp4&quot; type=&quot;video/mp4&quot;&gt;
+            &lt;/video&gt;
+            &lt;div class=&quot;content has-text-centered&quot;&gt;
+              &lt;p&gt;trial 3&lt;/p&gt;        
+            &lt;/div&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;title is-6&quot;&gt;
+          &lt;p&gt;write letter 'I'&lt;/p&gt;        
+        &lt;/div&gt;
+        &lt;div class=&quot;columns is-centered&quot;&gt;
+          &lt;div class=&quot;column is-4&quot;&gt;
+            &lt;video controls=&quot;&quot; autoplay=&quot;&quot; loop=&quot;&quot; muted=&quot;&quot; playsinline=&quot;&quot; src=&quot;/img/posts/2024-08-30-flyingcalligraphy/write_i_20_1.mp4&quot; type=&quot;video/mp4&quot;&gt;
+            &lt;/video&gt;
+            &lt;div class=&quot;content has-text-centered&quot;&gt;
+              &lt;p&gt;trial 1&lt;/p&gt;        
+            &lt;/div&gt;
+          &lt;/div&gt;
+          &lt;div class=&quot;column is-4&quot;&gt;
+            &lt;video controls=&quot;&quot; autoplay=&quot;&quot; loop=&quot;&quot; muted=&quot;&quot; playsinline=&quot;&quot; src=&quot;/img/posts/2024-08-30-flyingcalligraphy/write_i_21_1.mp4&quot; type=&quot;video/mp4&quot;&gt;
+            &lt;/video&gt;
+            &lt;div class=&quot;content has-text-centered&quot;&gt;
+              &lt;p&gt;trial 2&lt;/p&gt;        
+            &lt;/div&gt;
+          &lt;/div&gt;
+          &lt;div class=&quot;column is-4&quot;&gt;
+            &lt;video controls=&quot;&quot; autoplay=&quot;&quot; loop=&quot;&quot; muted=&quot;&quot; playsinline=&quot;&quot; src=&quot;/img/posts/2024-08-30-flyingcalligraphy/write_i_22_1.mp4&quot; type=&quot;video/mp4&quot;&gt;
+            &lt;/video&gt;
+            &lt;div class=&quot;content has-text-centered&quot;&gt;
+              &lt;p&gt;trial 3&lt;/p&gt;        
+            &lt;/div&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;title is-6&quot;&gt;
+          &lt;p&gt;write letter 'R'&lt;/p&gt;        
+        &lt;/div&gt;
+        &lt;div class=&quot;columns is-centered&quot;&gt;
+          &lt;div class=&quot;column is-4&quot;&gt;
+            &lt;video controls=&quot;&quot; autoplay=&quot;&quot; loop=&quot;&quot; muted=&quot;&quot; playsinline=&quot;&quot; src=&quot;/img/posts/2024-08-30-flyingcalligraphy/write_r_20_1.mp4&quot; type=&quot;video/mp4&quot;&gt;
+            &lt;/video&gt;
+            &lt;div class=&quot;content has-text-centered&quot;&gt;
+              &lt;p&gt;trial 1&lt;/p&gt;        
+            &lt;/div&gt;
+          &lt;/div&gt;
+          &lt;div class=&quot;column is-4&quot;&gt;
+            &lt;video controls=&quot;&quot; autoplay=&quot;&quot; loop=&quot;&quot; muted=&quot;&quot; playsinline=&quot;&quot; src=&quot;/img/posts/2024-08-30-flyingcalligraphy/write_r_21_1.mp4&quot; type=&quot;video/mp4&quot;&gt;
+            &lt;/video&gt;
+            &lt;div class=&quot;content has-text-centered&quot;&gt;
+              &lt;p&gt;trial 2&lt;/p&gt;        
+            &lt;/div&gt;
+          &lt;/div&gt;
+          &lt;div class=&quot;column is-4&quot;&gt;
+            &lt;video controls=&quot;&quot; autoplay=&quot;&quot; loop=&quot;&quot; muted=&quot;&quot; playsinline=&quot;&quot; src=&quot;/img/posts/2024-08-30-flyingcalligraphy/write_r_22.mp4&quot; type=&quot;video/mp4&quot;&gt;
+            &lt;/video&gt;
+            &lt;div class=&quot;content has-text-centered&quot;&gt;
+              &lt;p&gt;trial 3&lt;/p&gt;        
+            &lt;/div&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+
+  &lt;div class=&quot;container is-max-desktop&quot;&gt;
+    &lt;div class=&quot;columns is-centered&quot;&gt;
+      &lt;div class=&quot;column is-12&quot;&gt;
+        &lt;div class=&quot;title is-4&quot;&gt;
+          &lt;p&gt;
+            Complex Letter Drawing
+          &lt;/p&gt;  
+        &lt;/div&gt;
+        &lt;div class=&quot;columns is-centered&quot;&gt;
+          &lt;div class=&quot;column is-12&quot;&gt;
+            &lt;video controls=&quot;&quot; autoplay=&quot;&quot; loop=&quot;&quot; muted=&quot;&quot; playsinline=&quot;&quot; src=&quot;/img/posts/2024-08-30-flyingcalligraphy/write_2024_10x.mp4&quot; type=&quot;video/mp4&quot;&gt;
+            &lt;/video&gt;
+            &lt;div class=&quot;content has-text-centered&quot;&gt;
+              &lt;p&gt;writing '2024'&lt;/p&gt;        
+            &lt;/div&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;columns is-centered&quot;&gt;
+          &lt;div class=&quot;column is-12&quot;&gt;
+            &lt;video controls=&quot;&quot; autoplay=&quot;&quot; loop=&quot;&quot; muted=&quot;&quot; playsinline=&quot;&quot; src=&quot;/img/posts/2024-08-30-flyingcalligraphy/zhixingheyi_10x.mp4&quot; type=&quot;video/mp4&quot;&gt;
+            &lt;/video&gt;
+            &lt;div class=&quot;content has-text-centered&quot;&gt;
+              &lt;p&gt;writing a Chinese idiom &quot;知行合一&quot; (meaning: Unity of Knowledge and Action)
+              &lt;/p&gt;        
+            &lt;/div&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+
+  &lt;div class=&quot;container is-max-desktop&quot;&gt;
+    &lt;div class=&quot;columns is-centered&quot;&gt;
+      &lt;div class=&quot;column is-12&quot;&gt;
+        &lt;div class=&quot;title is-4&quot;&gt;
+          &lt;p&gt;
+            Ablation Study
+          &lt;/p&gt;  
+        &lt;/div&gt;
+        &lt;div class=&quot;title is-6&quot;&gt;
+          &lt;p&gt;
+            Control Comparison  
+          &lt;/p&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;columns is-centered&quot;&gt;
+          &lt;div class=&quot;column is-6&quot;&gt;
+            &lt;video controls=&quot;&quot; autoplay=&quot;&quot; loop=&quot;&quot; muted=&quot;&quot; playsinline=&quot;&quot; src=&quot;/img/posts/2024-08-30-flyingcalligraphy/write_r_control_baseline.mp4&quot; type=&quot;video/mp4&quot;&gt;
+            &lt;/video&gt;
+            &lt;div class=&quot;content has-text-centered&quot;&gt;
+              &lt;p&gt;without contact-related ff&lt;/p&gt;        
+            &lt;/div&gt;
+          &lt;/div&gt;
+          &lt;div class=&quot;column is-6&quot;&gt;
+            &lt;video controls=&quot;&quot; autoplay=&quot;&quot; loop=&quot;&quot; muted=&quot;&quot; playsinline=&quot;&quot; src=&quot;/img/posts/2024-08-30-flyingcalligraphy/write_r_21_1.mp4&quot; type=&quot;video/mp4&quot;&gt;
+            &lt;/video&gt;
+            &lt;div class=&quot;content has-text-centered&quot;&gt;
+              &lt;p&gt;our method
+              &lt;/p&gt;        
+            &lt;/div&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;title is-6&quot;&gt;
+          &lt;p&gt;
+            Trajectory Planning Comparison
+          &lt;/p&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;columns is-centered&quot;&gt;
+          &lt;div class=&quot;column is-6&quot;&gt;
+            &lt;video controls=&quot;&quot; autoplay=&quot;&quot; loop=&quot;&quot; muted=&quot;&quot; playsinline=&quot;&quot; src=&quot;/img/posts/2024-08-30-flyingcalligraphy/write_i_0_planning_baseline.mp4&quot; type=&quot;video/mp4&quot;&gt;
+            &lt;/video&gt;
+            &lt;div class=&quot;content has-text-centered&quot;&gt;
+              &lt;p&gt;with equal distance sample trajecotry generation&lt;/p&gt;        
+            &lt;/div&gt;
+          &lt;/div&gt;
+          &lt;div class=&quot;column is-6&quot;&gt;
+            &lt;video controls=&quot;&quot; autoplay=&quot;&quot; loop=&quot;&quot; muted=&quot;&quot; playsinline=&quot;&quot; src=&quot;/img/posts/2024-08-30-flyingcalligraphy/write_i_21_1.mp4&quot; type=&quot;video/mp4&quot;&gt;
+            &lt;/video&gt;
+            &lt;div class=&quot;content has-text-centered&quot;&gt;
+              &lt;p&gt;our method
+              &lt;/p&gt;        
+            &lt;/div&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;container is-max-desktop&quot;&gt;
+    &lt;div class=&quot;columns is-centered&quot;&gt;
+      &lt;div class=&quot;column is-12&quot;&gt;
+        &lt;div class=&quot;title is-4&quot;&gt;
+          &lt;p&gt;
+            Speed Comparison
+          &lt;/p&gt;  
+        &lt;/div&gt;
+        &lt;div class=&quot;columns is-centered&quot;&gt;
+          &lt;div class=&quot;column is-4&quot;&gt;
+            &lt;video controls=&quot;&quot; autoplay=&quot;&quot; loop=&quot;&quot; muted=&quot;&quot; playsinline=&quot;&quot; src=&quot;/img/posts/2024-08-30-flyingcalligraphy/write_i_21_1.mp4&quot; type=&quot;video/mp4&quot;&gt;
+            &lt;/video&gt;
+            &lt;div class=&quot;content has-text-centered&quot;&gt;
+              &lt;p&gt;vmax = 24.3 cm/s&lt;/p&gt;        
+            &lt;/div&gt;
+          &lt;/div&gt;
+          &lt;div class=&quot;column is-4&quot;&gt;
+            &lt;video controls=&quot;&quot; autoplay=&quot;&quot; loop=&quot;&quot; muted=&quot;&quot; playsinline=&quot;&quot; src=&quot;/img/posts/2024-08-30-flyingcalligraphy/write-i-15.mp4&quot; type=&quot;video/mp4&quot;&gt;
+            &lt;/video&gt;
+            &lt;div class=&quot;content has-text-centered&quot;&gt;
+              &lt;p&gt;vmax = 33.1 cm/s
+              &lt;/p&gt;        
+            &lt;/div&gt;
+          &lt;/div&gt;
+          &lt;div class=&quot;column is-4&quot;&gt;
+            &lt;video controls=&quot;&quot; autoplay=&quot;&quot; loop=&quot;&quot; muted=&quot;&quot; playsinline=&quot;&quot; src=&quot;/img/posts/2024-08-30-flyingcalligraphy/write-i-17.mp4&quot; type=&quot;video/mp4&quot;&gt;
+            &lt;/video&gt;
+            &lt;div class=&quot;content has-text-centered&quot;&gt;
+              &lt;p&gt;vmax = 40.2 cm/s
+              &lt;/p&gt;        
+            &lt;/div&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/section&gt;
+
+&lt;div class=&quot;container&quot;&gt;
+    &lt;h2 class=&quot;title is-2&quot; id=&quot;press-coverage&quot;&gt;Media&lt;/h2&gt;
+    &lt;br /&gt;
+    &lt;div class=&quot;columns is-centered&quot;&gt;
+      &lt;div class=&quot;column is-centered has-text-centered&quot;&gt;
+        &lt;a target=&quot;_blank&quot; href=&quot;https://spectrum.ieee.org/video-friday-unitree-talks-robots&quot;&gt;
+          &lt;img src=&quot;https://upload.wikimedia.org/wikipedia/commons/7/7d/IEEE-Spectrum.svg&quot; width=&quot;70%&quot; /&gt;
+        &lt;/a&gt;
+      &lt;/div&gt;
+  &lt;/div&gt;
+
+
+&lt;section class=&quot;section&quot; id=&quot;Publication&quot;&gt;
+  &lt;div class=&quot;container is-max-desktop content&quot;&gt;
+    &lt;h2 class=&quot;title&quot;&gt;BibTeX&lt;/h2&gt;
+    &lt;pre&gt;&lt;code&gt;@article{guo2024flying,
+       author    = {Guo, Xiaofeng and He, Guanqi and Xu, Jiahe and Mousaei, Mohammadreza and Geng, Junyi and Scherer, Sebastian and Shi, Guanya},
+       title     = {Flying Calligrapher: Contact-Aware Motion and Force Planning and Control for Aerial Manipulation},
+       journal   = {IEEE Robotics and Automation Letters (RA-L)},
+       year      = {2024},
+       pages     = {Accepted}
+}&lt;/code&gt;&lt;/pre&gt;
+  &lt;/div&gt;
+&lt;/section&gt;
+&lt;/div&gt;</content><author><name>Xiaofeng Guo</name></author><category term="highlights" /><category term="research" /><summary type="html">Aerial Writing for Art</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://ari-psu.github.io/img/posts/2024-08-30-flyingcalligraphy/aerialwriting.gif" /><media:content medium="image" url="https://ari-psu.github.io/img/posts/2024-08-30-flyingcalligraphy/aerialwriting.gif" xmlns:media="http://search.yahoo.com/mrss/" /></entry></feed>
