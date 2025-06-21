@@ -45,7 +45,7 @@ We are proud to be part of the [Deparment of Aerospace Engineering](https://www.
 </p> -->
 
 <ul>
-  {% assign news = site.posts | where: "categories", "news" | sort: "date" | reverse %}
+  {% assign news = site.posts | where: "categories", "news" | sort: "date" | reverse | slice: 0, 5 %}
   {% for post in news %}
     <li>
       <strong style="color: red;">{{ post.date | date: "%m/%Y" }}</strong>: 

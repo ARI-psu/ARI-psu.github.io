@@ -8,16 +8,26 @@ hide_footer: false
 
 <div class="news-container">
   <!-- news of 2025 -->
-  <!-- Our Paper Flying Hand Was Accepted to the RSS 2025！ -->
   <div class="year-header">2025</div>
-    <div class="news-item" data-aos="fade-down" data-aos-duration="1000">
-        <div class="date-box">
+  <!-- Our Paper AirIO Was Accepted to RAL！ -->
+  <div class="news-item" data-aos="fade-left" data-aos-duration="1000">
+      <div class="date-box">
+        <span class="date-day">17</span>
+        <span class="date-month">June</span>
+      </div>
+  <div class="news-content">
+    <h2>Our Paper <a href="/AirIO/" target="_blank">AirIO</a> Was Accepted to RAL！</h2>
+  </div>
+  </div>
+  <!-- Our Paper Flying Hand Was Accepted to the RSS 2025！ -->
+  <div class="news-item" data-aos="fade-up" data-aos-duration="1000">
+      <div class="date-box">
       <span class="date-day">09</span>
       <span class="date-month">May</span>
-    </div>
-    <div class="news-content">
+      </div>
+  <div class="news-content">
       <h2>Our Paper <a href="/flying_hand/" target="_blank">Flying Hand</a> Was Accepted to the RSS 2025！</h2>
-    </div>
+  </div>
   </div>
   <!-- Our Paper iMPC Was Accepted to the L4DC 2025！ -->
   <div class="news-item" data-aos="fade-right" data-aos-duration="1000">
@@ -30,7 +40,7 @@ hide_footer: false
     </div>
   </div>
   <!-- Our Paper iKap Was Accepted to the ICRA 2025！ -->
-  <div class="news-item" data-aos="fade-up" data-aos-duration="1000">
+  <div class="news-item" data-aos="fade-down" data-aos-duration="1000">
     <div class="date-box">
       <span class="date-day">28</span>
       <span class="date-month">January</span>
