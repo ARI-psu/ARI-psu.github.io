@@ -2,9 +2,11 @@
 title: Hikari Inaoka
 subtitle: Undergraduate Student
 job_title: Undergraduate Student
-category: undergraduate
-layout: team_member_personal_page
+category: past_undergraduate
+layout: team_past_member_personal_page
 image: /img/team/hikari_inaoka.png
+starting_year: 2024
+graduation_year: 2025
 link-new-tab: true
 ---
 
