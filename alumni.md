@@ -34,7 +34,7 @@ hide_footer: false
 </div> -->
 
 <hr>
-<h1 style="font-size:35px;">Former Master's Students</h1>
+<h1 style="font-size:35px;">Former Graduate Students</h1>
 <br>
 <div class="columns is-multiline">
 {% assign sorted_person = site.team | where:"category","past_master" | sort: "graduation_year" | reverse %}

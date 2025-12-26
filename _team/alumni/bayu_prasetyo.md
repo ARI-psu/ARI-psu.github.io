@@ -1,10 +1,13 @@
 ---
 title: Bayu Prasetyo
-subtitle: Ph.D. Student
+subtitle: Graduate Student
 job_title: Graduate Student
-category: graduate_student
-layout: team_member_personal_page
+category: past_master
+layout: team_past_member_personal_page
 image: /img/team/DSC_0662.JPG
+starting_year: 2024
+graduation_year: 2025
+graduation_month: May
 link-new-tab: true
 ---
 
