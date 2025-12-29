@@ -9,6 +9,16 @@ hide_footer: false
 <div class="news-container">
   <!-- news of 2025 -->
   <div class="year-header">2025</div>
+  <!-- Two Paper Was Accepted to AIAA SciTech Forum 2026！ -->
+  <div class="news-item" data-aos="fade-left" data-aos-duration="1000">
+      <div class="date-box">
+        <span class="date-day">29</span>
+        <span class="date-month">December</span>
+      </div>
+  <div class="news-content">
+    <h2><a href="/publications" target="_blank">Two Paper</a> Was Accepted to AIAA SciTech Forum 2026！</h2>
+  </div>
+  </div>
   <!-- Our Paper AirIO Was Accepted to RAL！ -->
   <div class="news-item" data-aos="fade-left" data-aos-duration="1000">
       <div class="date-box">
