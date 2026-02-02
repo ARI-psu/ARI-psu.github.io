@@ -16,7 +16,7 @@ hide_footer: false
         <span class="date-month">Feburary</span>
       </div>
   <div class="news-content">
-    <h2><a href="/publications" target="_blank">Two Paper</a> Was Accepted to the ICRA 2026！</h2>
+    <h2><a href="/publications" target="_blank">Two Papers</a> Were Accepted to the ICRA 2026！</h2>
   </div>
   </div>
   <!-- news of 2025 -->
@@ -28,7 +28,7 @@ hide_footer: false
         <span class="date-month">December</span>
       </div>
   <div class="news-content">
-    <h2><a href="/publications" target="_blank">Two Paper</a> Was Accepted to AIAA SciTech Forum 2026！</h2>
+    <h2><a href="/publications" target="_blank">Two Papers</a> Were Accepted to AIAA SciTech Forum 2026！</h2>
   </div>
   </div>
   <!-- Our Paper AirIO Was Accepted to RAL！ -->
