@@ -9,6 +9,21 @@ hide_footer: false
 <div class="news-container">
   <!-- news of 2026 -->
   <div class="year-header">2026</div>
+  <!-- Dr. Muqing Cao visted our lab and gave a talk -->
+  <div class="news-item" data-aos="fade-up" data-aos-duration="1000">
+    <div class="date-box">
+      <span class="date-day">05</span>
+      <span class="date-month">February</span>
+    </div>
+    <div class="news-content">
+      <h2>Dr. Muqing Cao visted our lab and gave a talk</h2>
+      <p><a href="https://caomuqing.github.io/" target="_blank">Dr. Muqing Cao</a>, a Postdoctoral Fellow from the Robotics Institute of Carnegie Mellon University, visted our lab and gave a talk titled in <strong>Planning Cooperative Robots for Tethered Long-duration Operation and Aerial Inspection</strong>.</p>
+    </div>
+  </div>
+  <div class="news-image" style="clear: both;">
+      <img src="{{ '/img/news/20260205-muqing-seminar1.jpg' | relative_url }}" alt="20260205-muqing-seminar1" width="627"/>
+      <img src="{{ '/img/news/20260205-muqing-seminar2.jpg' | relative_url }}" alt="20260205-muqing-seminar2" width="629"/>
+  </div>
   <!-- Two Paper Was Accepted to the ICRA 2026！ -->
   <div class="news-item" data-aos="fade-right" data-aos-duration="1000">
       <div class="date-box">
