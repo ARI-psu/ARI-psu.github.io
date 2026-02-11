@@ -2,7 +2,9 @@
 layout: post
 title: "Flying Hand: End-Effector-Centric Framework for Versatile Aerial Manipulation Teleoperation and Policy Learning"
 date: 2025-05-09 12:00:00
-categories: research
+categories: 
+  - research
+  - highlights
 description: ""
 author: "Yuanzhu Zhan"
 published: true

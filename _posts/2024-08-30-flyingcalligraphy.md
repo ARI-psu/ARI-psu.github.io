@@ -3,7 +3,6 @@ layout: post
 title: "Flying Calligrapher: Contact-Aware Motion and Force Planning and Control for Aerial Manipulation"
 date: 2024-08-31 12:00:00
 categories: 
-  - highlights
   - research
 description: "Aerial Writing for Art"
 author: "Xiaofeng Guo"
