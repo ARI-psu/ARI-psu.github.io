@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "A Self-Supervised Learning Approach with Differentiable Optimization for UAV Trajectory Planning"
-date: 2025-03-08 12:00:00
+date: 2026-02-09 12:00:00
 categories: research
 description: "A Category-level Object 6D Pose and Shape Estimation Framework"
 author: "Yuanzhu Zhan"
