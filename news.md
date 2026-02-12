@@ -9,6 +9,21 @@ hide_footer: false
 <div class="news-container">
   <!-- news of 2026 -->
   <div class="year-header">2026</div>
+  <!-- Yufei presented our new work on this week's aerospace seminar series -->
+  <div class="news-item" data-aos="fade-left" data-aos-duration="1000">
+    <div class="date-box">
+      <span class="date-day">05</span>
+      <span class="date-month">February</span>
+    </div>
+    <div class="news-content">
+      <h2>Yufei presented our new work on this week's aerospace seminar series</h2>
+      <p><a href="https://jiang-yufei.github.io/" target="_blank">Yufei</a> presented our new paper just got accepted by ICRA 2026 on this weeks' aerospace seminar series, titled in <strong>"A Self-Supervised Learning Approach with Differentiable Optimization for UAV Trajectory Planning"</strong>.</p>
+    </div>
+  </div>
+  <div class="news-image" style="clear: both;">
+      <img src="{{ '/img/news/20260212-yufei-seminar1.jpg' | relative_url }}" alt="20260212-yufei-seminar1.jpg" width="627"/>
+      <img src="{{ '/img/news/20260212-yufei-seminar2.jpg' | relative_url }}" alt="20260212-yufei-seminar2.jpg" width="629"/>
+  </div>
   <!-- Dr. Muqing Cao visited our lab and gave a talk -->
   <div class="news-item" data-aos="fade-up" data-aos-duration="1000">
     <div class="date-box">
