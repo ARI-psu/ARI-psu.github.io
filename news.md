@@ -57,7 +57,7 @@ hide_footer: false
       </div>
   <div class="news-content">
     <h2><a href="/selfsupervised_planning" target="_blank">Our Work</a> Was Reported in the AIAA Year in Review Articles！</h2>
-    <p>Congratulations! Our paper "A Self-Supervised Learning Approach with Differentiable Optimization for UAV Trajectory Planning" was included in the 2026 AIAA year in review articles</strong>.</p>
+    <p>Congratulations! Our paper <strong>A Self-Supervised Learning Approach with Differentiable Optimization for UAV Trajectory Planning</strong> was included in the 2026 AIAA year in review articles.</p>
   </div>
   </div>
   <!-- news of 2025 -->
