@@ -2,7 +2,9 @@
 layout: post
 title: "A Self-Supervised Learning Approach with Differentiable Optimization for UAV Trajectory Planning"
 date: 2026-02-09 12:00:00
-categories: research
+categories: 
+  - research
+  - highlights
 description: "A Category-level Object 6D Pose and Shape Estimation Framework"
 author: "Yuanzhu Zhan"
 published: true
@@ -54,6 +56,18 @@ Real-world obstacle avoidance in 3D complex environment
 <video controls autoplay loop muted playsinline 
        src="/img/posts/2025-03-08-self-supervised-planning/full_video.mp4" type="video/mp4">
 </video>
+
+
+<div class="container">
+  <h2 class="title is-2" id="press-coverage">Media</h2>
+  <br>
+  <div class="columns is-centered">
+    <div class="column is-centered has-text-centered">
+      <a target="_blank" href="https://aerospaceamerica.aiaa.org/year-in-review/intelligent-systems-advance-in-communication-planning-perception-and-safety/">
+        <img src="https://aiaa.org/wp-content/uploads/2025/05/AIAA-New-Logo-SMC.png" width="90%"/>
+      </a>
+    </div>
+</div>
 
 <!-- ### Publication -->
 <section class="section" id="Publication">

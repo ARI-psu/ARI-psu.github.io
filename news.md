@@ -10,7 +10,7 @@ hide_footer: false
   <!-- news of 2026 -->
   <div class="year-header">2026</div>
   <!-- Yufei presented our new work on this week's aerospace seminar series -->
-  <div class="news-item" data-aos="fade-left" data-aos-duration="1000">
+  <div class="news-item" data-aos="fade-down" data-aos-duration="1000">
     <div class="date-box">
       <span class="date-day">12</span>
       <span class="date-month">February</span>
@@ -25,7 +25,7 @@ hide_footer: false
       <img src="{{ '/img/news/20260212-yufei-seminar2.jpg' | relative_url }}" alt="20260212-yufei-seminar2.jpg" width="629"/>
   </div>
   <!-- Dr. Muqing Cao visited our lab and gave a talk -->
-  <div class="news-item" data-aos="fade-up" data-aos-duration="1000">
+  <div class="news-item" data-aos="fade-left" data-aos-duration="1000">
     <div class="date-box">
       <span class="date-day">05</span>
       <span class="date-month">February</span>
@@ -40,13 +40,24 @@ hide_footer: false
       <img src="{{ '/img/news/20260205-muqing-seminar2.jpg' | relative_url }}" alt="20260205-muqing-seminar2" width="629"/>
   </div>
   <!-- Two Paper Was Accepted to the ICRA 2026！ -->
-  <div class="news-item" data-aos="fade-right" data-aos-duration="1000">
+  <div class="news-item" data-aos="fade-up" data-aos-duration="1000">
       <div class="date-box">
         <span class="date-day">2</span>
         <span class="date-month">Feburary</span>
       </div>
   <div class="news-content">
     <h2><a href="/publications" target="_blank">Two Papers</a> Were Accepted to the ICRA 2026！</h2>
+  </div>
+  </div>
+  <!-- Our Work Was Reported in the AIAA Year in Review Articles! -->
+  <div class="news-item" data-aos="fade-right" data-aos-duration="1000">
+      <div class="date-box">
+        <span class="date-day">1</span>
+        <span class="date-month">Janurary</span>
+      </div>
+  <div class="news-content">
+    <h2><a href="/selfsupervised_planning" target="_blank">Our Work</a> Was Reported in the AIAA Year in Review Articles！</h2>
+    <p>Congratulations! Our paper "A Self-Supervised Learning Approach with Differentiable Optimization for UAV Trajectory Planning" was included in the 2026 AIAA year in review articles</strong>.</p>
   </div>
   </div>
   <!-- news of 2025 -->
