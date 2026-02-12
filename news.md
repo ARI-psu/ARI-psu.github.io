@@ -12,7 +12,7 @@ hide_footer: false
   <!-- Yufei presented our new work on this week's aerospace seminar series -->
   <div class="news-item" data-aos="fade-left" data-aos-duration="1000">
     <div class="date-box">
-      <span class="date-day">05</span>
+      <span class="date-day">12</span>
       <span class="date-month">February</span>
     </div>
     <div class="news-content">
