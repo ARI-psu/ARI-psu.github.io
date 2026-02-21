@@ -1,0 +1,623 @@
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <title>Off-Policy Evaluation with Online Adaptation for Robot Exploration in Challenging Environments - ARI Lab</title>
+    
+    <link rel="stylesheet" href="/assets/css/app.css">
+
+    <link rel="shortcut icon" type="image/ico" href="/img/favicon/favicon.ico" />
+
+    <link rel="apple-touch-icon" sizes="180x180" href="/img/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/img/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/img/favicon/favicon-16x16.png">
+    <link rel="manifest" href="/img/favicon/site.webmanifest">
+    <link rel="mask-icon" href="/img/favicon/safari-pinned-tab.svg" color="#0F173D">
+    <meta name="msapplication-TileColor" content="#b91d47">
+    <meta name="theme-color" content="#ffffff">
+
+    <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  
+  <!-- Include the standard DataTables bits -->
+  <link rel="stylesheet" type="text/css" href="//cdn.datatables.net/1.10.13/css/jquery.dataTables.css">
+  <script type="text/javascript" charset="utf8" src="//cdn.datatables.net/1.10.13/js/jquery.dataTables.js"></script>
+  <script>
+    $(document).ready(function () {
+      $('div.datatable-begin').nextUntil('div.datatable-end', 'table').addClass('display');
+      $('table.display').DataTable({
+        paging: false,
+        stateSave: true,
+        searching: true
+      });
+    });
+  </script>
+  
+  
+    <script>
+      $(document).ready(function () {
+          $('.content a').attr({'target':'_blank', 'rel':'noopener noreferrer'});
+        });
+    </script>
+  
+
+    <!-- Begin Jekyll SEO tag v2.7.1 -->
+<title>Off-Policy Evaluation with Online Adaptation for Robot Exploration in Challenging Environments | ARI Lab</title>
+<meta name="generator" content="Jekyll v4.2.0" />
+<meta property="og:title" content="Off-Policy Evaluation with Online Adaptation for Robot Exploration in Challenging Environments" />
+<meta name="author" content="Yafei Hu" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="A Learning-based Exploration Method Using Learned Value Function" />
+<meta property="og:description" content="A Learning-based Exploration Method Using Learned Value Function" />
+<link rel="canonical" href="https://ari-psu.github.io/opere/" />
+<meta property="og:url" content="https://ari-psu.github.io/opere/" />
+<meta property="og:site_name" content="ARI Lab" />
+<meta property="og:image" content="https://ari-psu.github.io/img/posts/2022-12-16-opere/video23-new.gif" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2022-12-16T12:00:00+00:00" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta property="twitter:image" content="https://ari-psu.github.io/img/posts/2022-12-16-opere/video23-new.gif" />
+<meta property="twitter:title" content="Off-Policy Evaluation with Online Adaptation for Robot Exploration in Challenging Environments" />
+<script type="application/ld+json">
+{"mainEntityOfPage":{"@type":"WebPage","@id":"https://ari-psu.github.io/opere/"},"author":{"@type":"Person","name":"Yafei Hu"},"description":"A Learning-based Exploration Method Using Learned Value Function","url":"https://ari-psu.github.io/opere/","@type":"BlogPosting","image":"https://ari-psu.github.io/img/posts/2022-12-16-opere/video23-new.gif","headline":"Off-Policy Evaluation with Online Adaptation for Robot Exploration in Challenging Environments","dateModified":"2022-12-16T12:00:00+00:00","datePublished":"2022-12-16T12:00:00+00:00","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<!-- head scripts --><!-- Added by Chen -->
+    <script type='text/javascript' src='https://platform-api.sharethis.com/js/sharethis.js#property=5ee902d30e78e50012567eb4&product=inline-follow-buttons&cms=sop' async='async'></script>
+
+    <!-- for mathjax support -->
+    
+
+</head>
+
+<body>
+    
+<nav class="navbar is-primary" >
+    <div class="container">
+        <div class="navbar-brand">
+            <a href="/" class="navbar-item navbar-logo">
+                ARI Lab
+            </a>
+            <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navMenu">
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+            </a>
+        </div>
+        <div class="navbar-menu" id="navMenu">
+            <div class="navbar-start">
+                <a href="/" class="navbar-item ">Home</a>
+                
+                
+                    
+                    <div class="navbar-item has-dropdown is-hoverable">
+                        <a href="/current-members/" class="navbar-link ">Team</a>
+                        <div class="navbar-dropdown">
+                            
+                            <a href="/current-members/" class="navbar-item ">Current Members</a>
+                            
+                            <a href="/alumni/" class="navbar-item ">Alumni</a>
+                            
+                        </div>
+                    </div>
+                    
+                
+                    
+                    <a href="/research/" class="navbar-item ">Research</a>
+                    
+                
+                    
+                    <a href="/publications/" class="navbar-item ">Publications</a>
+                    
+                
+                    
+                    <a href="/news/" class="navbar-item ">News</a>
+                    
+                
+                    
+                    <a href="/contact/" class="navbar-item ">Contact</a>
+                    
+                
+                
+            </div>
+        </div>
+    </div>
+</nav>
+  <section class="hero  is-medium  is-bold is-primary" >
+    <div class="hero-body">
+        <div class="container">
+            
+                <p class="title is-2">Off-Policy Evaluation with Online Adaptation for Robot Exploration in Challenging Environments</p>
+                <p class="subtitle is-3"></p>
+                <p class="subtitle is-3">
+            
+            
+            
+        </p>
+        </div>
+    </div>
+</section>
+
+<style>
+    .button.is-info {
+     background-color:#0F173D;
+     border-color:transparent;
+     color:#fff
+    }
+    .button.is-info.is-hovered {
+     background-color:#0F173D;
+     border-color:transparent;
+     color:#fff
+    }
+</style>
+  
+
+
+    <section class="section">
+        <div class="container">
+            <div class="columns">
+                
+
+                
+                <div class="column is-8">
+                      
+	
+
+
+<!-- Figure out the relative link to the author -->
+
+
+
+
+
+
+<div class="content">
+
+    <p><div style="font-size: 13px">Published: 
+		<time datetime="2022-12-16T12:00:00+00:00">Dec 16, 2022</time> by 
+		<div style="font-weight: bold; color: #3399ff; display: inline">
+		
+			Yafei Hu
+		
+		</div>
+	</div></p>
+
+    <h1>Off-Policy Evaluation with Online Adaptation for Robot Exploration in Challenging Environments</h1>
+
+    <p>Autonomous exploration has many important applications. However, classic information gain-based or frontier-based exploration only relies on the robot current state to determine the immediate exploration goal, which lacks the capability of predicting the value of future states and thus leads to inefficient exploration decisions. This paper presents a method to learn how “good” states are, measured by the state value function, to provide a guidance for robot exploration in real-world challenging environments. We formulate our work as a off-policy evaluation (OPE) problem for robot exploration (OPERE). It consists of offline Monte-Carlo training on real-world data and performs Temporal Difference (TD) online adaptation to optimize the trained value estimator. We also design an intrinsic reward function based on sensor information coverage to enable the robot to gain more information with sparse extrinsic rewards. Results demonstrate that our method enables the robot to predict the value of future states so as to better guide robot exploration. The proposed algorithm achieves better prediction performance compared with other state-of-the-art OPE methods. To the best of our knowledge, this work for the first time demonstrates value function prediction on real-world dataset for robot exploration in challenging subterranean and urban environments.</p>
+
+<h2 id="method-overview">Method Overview</h2>
+
+<figure>
+ <img src="/img/posts/2022-12-16-opere/method_website.gif" style="width:90%" />
+</figure>
+
+<p>Our method consisits of offline learning and online adaptation. First we collect datasets which consist of camera images and projected map images. Then we feed the data to the value function network and perform offline MC learning, where the camera image and map projection image are sent to the encoders in parallel and then aggregated together to obtain the state value function. During the online deployment, we perform one additional TD adaptation step and get the refined value function.</p>
+
+<h2 id="datasets-collection-environments">Datasets Collection Environments</h2>
+
+<figure>
+ <img src="/img/posts/2022-12-16-opere/snapshots.pdf.png" style="width:80%" />
+ <figcaption>
+       Snapshots of the data collection environments. Here we show the 3D reconstructed occupancy grid map as well as the captured images captured (At the corner of each subfigure) during exploration. From left to right and top to bottom:  Auditorium corridor, Large open room, Limestone mine and Natural cave.
+ </figcaption>
+</figure>
+
+<h2 id="experiment-results">Experiment Results</h2>
+
+<p>With the learned value function, robot could make better decisions.</p>
+
+<p>Regret Analysis in Corridor Environment (left) and Cave Environment (right).</p>
+
+<section class="section">
+  <div class="container is-max-desktop">
+
+    <div class="columns is-centered has-text-centered">
+      
+      <!-- video 1 -->
+      <div class="column">
+        <div class="content">
+          <!-- <h2 class="title is-4">Third person views</h2> -->
+          <video controls="" autoplay="">
+            <source src="/img/posts/2022-12-16-opere/corridor_regret_demo.mp4" type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
+        </div>
+      </div>
+      <!-- video 1 -->
+
+      <!-- video 1 -->
+       <div class="column">
+        <div class="content">
+          <!-- <h2 class="title is-4">Bag files replay</h2> -->
+          <video controls="" autoplay="">
+            <source src="/img/posts/2022-12-16-opere/cave_regret_demo.mp4" type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
+        </div>
+      </div>
+      <!-- video 1 -->
+    </div>
+    
+  </div>
+</section>
+
+<h2 id="real-robot-experiments">Real Robot Experiments</h2>
+
+<h3 id="robot-explores-with-learned-value-function">Robot explores with learned value function.</h3>
+
+<p>Third person views (left column), bag files replay (right column).</p>
+
+<section class="section">
+  <div class="container is-max-desktop">
+
+    <div class="columns is-centered has-text-centered">
+      
+      <!-- video 1 -->
+      <div class="column">
+        <div class="content">
+          <!-- <h2 class="title is-4">Third person views</h2> -->
+          <video controls="" autoplay="">
+            <source src="/img/posts/2022-12-16-opere/video2+3_new.mp4" type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
+        </div>
+      </div>
+      <!-- video 1 -->
+
+      <!-- video 1 -->
+       <div class="column">
+        <div class="content">
+          <!-- <h2 class="title is-4">Bag files replay</h2> -->
+          <video controls="" autoplay="">
+            <source src="/img/posts/2022-12-16-opere/video-bag-2+3_new.mp4" type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
+        </div>
+      </div>
+      <!-- video 1 -->
+    </div>
+
+    
+
+    <div class="columns is-centered has-text-centered">
+      
+      <!-- video 1 -->
+      <div class="column">
+        <div class="content">
+          <!-- <h2 class="title is-3">Third person view</h2> -->
+          <video controls="" autoplay="">
+            <source src="/img/posts/2022-12-16-opere/video5_new.mp4" type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
+        </div>
+      </div>
+      <!-- video 1 -->
+
+      <!-- video 1 -->
+       <div class="column">
+        <div class="content">
+          <!-- <h2 class="title is-3">Third person view</h2> -->
+          <video controls="" autoplay="">
+            <source src="/img/posts/2022-12-16-opere/video-bag-5_new.mp4" type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
+        </div>
+      </div>
+      <!-- video 1 -->
+    </div>
+
+
+
+    <div class="columns is-centered has-text-centered">
+      
+      <!-- video 1 -->
+      <div class="column">
+        <div class="content">
+          <!-- <h2 class="title is-3">Third person view</h2> -->
+          <video controls="" autoplay="">
+            <source src="/img/posts/2022-12-16-opere/video6_new.mp4" type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
+        </div>
+      </div>
+      <!-- video 1 -->
+
+      <!-- video 1 -->
+       <div class="column">
+        <div class="content">
+          <!-- <h2 class="title is-3">Third person view</h2> -->
+          <video controls="" autoplay="">
+            <source src="/img/posts/2022-12-16-opere/video-bag-6_new.mp4" type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
+        </div>
+      </div>
+      <!-- video 1 -->
+    </div>
+    
+
+    
+  </div>
+</section>
+
+<h3 id="exploration-behaviors-compared-with-frontier-based-method">Exploration Behaviors Compared with Frontier-based Method</h3>
+
+<p>Ours with Learned Value (left column), Frontier-based Method (right column). With learned value function, our method is able to explore high value regions which frontier-based method fails.</p>
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- <h2 class="title is-4", style="text-align: center;">Exploration Behaviors Compared with Frontier-based Method</h2> -->
+
+    <div class="columns is-centered has-text-centered">
+      
+      <!-- video 1 -->
+      <div class="column">
+        <div class="content">
+          <!-- <h2 class="title is-5">Ours with Learned Value</h2> -->
+          <video controls="" autoplay="">
+            <source src="/img/posts/2022-12-16-opere/behavior_ours_1_trimmed.mp4" type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
+        </div>
+      </div>
+      <!-- video 1 -->
+
+      <!-- video 1 -->
+       <div class="column">
+        <div class="content">
+          <!-- <h2 class="title is-5">Frontier-based Method</h2> -->
+          <video controls="" autoplay="">
+            <source src="/img/posts/2022-12-16-opere/behavior_frontier_1_trimmed.mp4" type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
+        </div>
+      </div>
+      <!-- video 1 -->
+    </div>
+
+
+    <div class="columns is-centered has-text-centered">
+      
+      <!-- video 1 -->
+      <div class="column">
+        <div class="content">
+          <!-- <h2 class="title is-5">Ours with Learned Value</h2> -->
+          <video controls="" autoplay="">
+            <source src="/img/posts/2022-12-16-opere/behavior_ours_2.mp4" type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
+        </div>
+      </div>
+      <!-- video 1 -->
+
+      <!-- video 1 -->
+       <div class="column">
+        <div class="content">
+          <!-- <h2 class="title is-5">Frontier-based Method</h2> -->
+          <!-- <video controls autoplay loop muted> -->
+          <video controls="" autoplay="">
+            <source src="/img/posts/2022-12-16-opere/behavior_frontier_2_trimmed.mp4" type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
+        </div>
+      </div>
+      <!-- video 1 -->
+    </div>
+
+  </div>
+</section>
+
+<section class="section" id="BibTeX">
+  <div class="container is-max-desktop content">
+    <h2 class="title">BibTeX</h2>
+    <pre><code>@article{2022opere,
+       author    = {Yafei Hu and Junyi Geng and Chen Wang and John Keller and Sebastian Scherer},
+       title     = {Off-Policy Evaluation with Online Adaptation for Robot Exploration in Challenging Environments},
+       journal   = {IEEE Robotics and Automation Letters},
+       year      = {2023},
+       volume    = {8},
+       number    = {6},
+       pages     = {3780-3787},
+       doi       = {10.1109/LRA.2023.3271520}
+}</code></pre>
+  </div>
+</section>
+
+</div>
+
+<div class="tags">
+    
+</div>
+
+
+  
+
+  <div id="disqus_thread"></div>
+  <script>
+    var disqus_config = function () {
+      this.page.url = 'https://ari-psu.github.io/opere/';
+      this.page.identifier = 'https://ari-psu.github.io/opere/';
+    };
+    (function() {
+      var d = document, s = d.createElement('script');
+      s.src = 'https://jennygeng.disqus.com/embed.js';
+      s.setAttribute('data-timestamp', +new Date());
+      (d.head || d.body).appendChild(s);
+    })();
+  </script>
+  <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+
+
+
+                </div>
+                
+                <div class="column is-4-desktop is-12-tablet">
+                    <p class="title is-4">Latest Research</p>
+
+
+<div class="columns is-multiline">
+    
+    <div class="column is-12">
+        <a href="/contact-aware-vio/">
+<div class="card" style="height: 100%; display: flex; flex-direction: column; align-items: center;">
+    
+        <div style="height: 200px;">
+            <img src="/img/posts/2026-02-09-contact-aware-vio/real_world.gif" alt="Aerial Manipulation with Contact-Aware Onboard Perception and Hybrid Control" style="object-fit: contain; height: 100%;">
+        </div>
+    
+    <div class="card-content" style="flex-grow: 3;">
+        <div class="content">
+            
+            <div class="title is-5">Aerial Manipulation with Contact-Aware Onboard Perception and Hybrid Control</div>
+            
+            <p>Aerial manipulation (AM) promises to move Unmanned Aerial Vehicles (UAVs) beyond passive inspecti...</p>
+        </div>
+    </div>
+    <footer class="card-footer">
+        <p class="card-footer-item">Published: Feb 9, 2026</p>
+    </footer>
+</div>
+</a>
+
+    </div>
+    
+    <div class="column is-12">
+        <a href="/selfsupervised_planning/">
+<div class="card" style="height: 100%; display: flex; flex-direction: column; align-items: center;">
+    
+        <div style="height: 200px;">
+            <img src="/img/posts/2025-03-08-self-supervised-planning/homepage2.gif" alt="A Self-Supervised Learning Approach with Differentiable Optimization for UAV Trajectory Planning" style="object-fit: contain; height: 100%;">
+        </div>
+    
+    <div class="card-content" style="flex-grow: 3;">
+        <div class="content">
+            
+            <div class="title is-5">A Self-Supervised Learning Approach with Differentiable Optimization for UAV Trajectory Planning</div>
+            
+            <p>While Unmanned Aerial Vehicles (UAVs) have gained significant traction across various fields, pat...</p>
+        </div>
+    </div>
+    <footer class="card-footer">
+        <p class="card-footer-item">Published: Feb 9, 2026</p>
+    </footer>
+</div>
+</a>
+
+    </div>
+    
+</div>
+
+
+
+
+                </div>
+                
+            </div>
+        </div>
+    </section>
+     <style>
+  #blocks {
+      width:100%;
+      height:60px;
+      margin:0 auto;
+      /* background-color: #ffe; */
+  }
+  #block1 {
+      height:33.33%;
+      width:30%;
+      /* background: red; */
+      float: left;
+      padding-left: 50px;
+  }
+  #block2 {
+      height:33.33%;
+      width:40%;
+      /* background: yellow; */
+      float: left;
+  }
+  #block3 {
+      height:33.33%;
+      width:30%;
+      /* background: green; */
+      float: right;
+      padding-top: 30px;
+  }
+</style>
+
+<footer class="footer">
+    <div class="container">
+        <!-- 
+        <div class="columns is-multiline">
+            
+            <div class="column has-text-centered">
+                <div>
+                    <a href="/" class="link">Home</a>
+                </div>
+            </div>
+            
+            <div class="column has-text-centered">
+                <div>
+                    <a href="/blog/" class="link">Blog</a>
+                </div>
+            </div>
+            
+            <div class="column has-text-centered">
+                <div>
+                    <a href="/products/" class="link">Products</a>
+                </div>
+            </div>
+            
+            <div class="column has-text-centered">
+                <div>
+                    <a href="/privacy-policy/" class="link">Privacy Policy</a>
+                </div>
+            </div>
+            
+        </div>
+         -->
+        <div id="blocks">
+          <div id="block1"><img src="/img/logos/Horizontal@2x.png" alt="ARI Lab Logo" style="width:100%; margin-top: -5%;"></div>
+          <div id="block2">
+            <center>
+              <!-- <a class="button" itemprop="email" href="https://www.facebook.com" target="_blank">
+                <i class="fab fa-github"></i>
+              </a> -->
+              <!-- <a class="button" itemprop="email" href="https://www.facebook.com" target="_blank">
+                <i class="fab fa-facebook"</i>
+              </a> -->
+              <a class="button" itemprop="google scholar" href="https://scholar.google.com/citations?user=psUhJgcAAAAJ&hl=en&oi=sra" target="_blank">
+                <i class="fab fa-google scholar fa-lg"></i>
+              </a>
+              <a class="button" itemprop="github" href="https://github.com/aerogjy" target="_blank">
+                <i class="fab fa-github fa-lg"></i>
+              </a>
+              <a class="button" itemprop="linkedin" href="https://www.linkedin.com/in/junyi-geng-ph-d-9823a3b5/" target="_blank">
+                <i class="fab fa-linkedin fa-lg"></i>
+              </a>
+              <br>
+              <br>
+              <p class="">&copy; 2021 | Built using the <a href="https://github.com/chrisrhymes/bulma-clean-theme">Bulma Clean Theme</a></p>
+            </center>
+          </div>
+          <div id="block3"><img src="/img/logos/psuaero.png" alt="PSU Logo" style="width:100%; margin-top: -5%"></div>
+        </div>
+        <!-- <div>
+          <a href="" class="button is-large"><div class="icon"><i class="fab fa-facebook"</i></div></a>
+        </div> -->
+        <!-- <div class="content is-small has-text-centered">
+            <p class="">© 2020</p>
+        </div> -->
+    </div>
+
+
+</footer>
+ 
+    <script src="/assets/js/app.js" type="text/javascript"></script><!-- footer scripts --></body>
+
+</html>

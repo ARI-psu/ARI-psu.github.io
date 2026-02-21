@@ -1,0 +1,475 @@
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <title>Image-based Visual Servo Control for Aerial Manipulation Using a Fully-Actuated UAV - ARI Lab</title>
+    
+    <link rel="stylesheet" href="/assets/css/app.css">
+
+    <link rel="shortcut icon" type="image/ico" href="/img/favicon/favicon.ico" />
+
+    <link rel="apple-touch-icon" sizes="180x180" href="/img/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/img/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/img/favicon/favicon-16x16.png">
+    <link rel="manifest" href="/img/favicon/site.webmanifest">
+    <link rel="mask-icon" href="/img/favicon/safari-pinned-tab.svg" color="#0F173D">
+    <meta name="msapplication-TileColor" content="#b91d47">
+    <meta name="theme-color" content="#ffffff">
+
+    <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  
+  <!-- Include the standard DataTables bits -->
+  <link rel="stylesheet" type="text/css" href="//cdn.datatables.net/1.10.13/css/jquery.dataTables.css">
+  <script type="text/javascript" charset="utf8" src="//cdn.datatables.net/1.10.13/js/jquery.dataTables.js"></script>
+  <script>
+    $(document).ready(function () {
+      $('div.datatable-begin').nextUntil('div.datatable-end', 'table').addClass('display');
+      $('table.display').DataTable({
+        paging: false,
+        stateSave: true,
+        searching: true
+      });
+    });
+  </script>
+  
+  
+    <script>
+      $(document).ready(function () {
+          $('.content a').attr({'target':'_blank', 'rel':'noopener noreferrer'});
+        });
+    </script>
+  
+
+    <!-- Begin Jekyll SEO tag v2.7.1 -->
+<title>Image-based Visual Servo Control for Aerial Manipulation Using a Fully-Actuated UAV | ARI Lab</title>
+<meta name="generator" content="Jekyll v4.2.0" />
+<meta property="og:title" content="Image-based Visual Servo Control for Aerial Manipulation Using a Fully-Actuated UAV" />
+<meta name="author" content="Junyi Geng" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Image-based Visual Servo Control for Aerial Manipulation Using a Fully-Actuated UAV" />
+<meta property="og:description" content="Image-based Visual Servo Control for Aerial Manipulation Using a Fully-Actuated UAV" />
+<link rel="canonical" href="https://ari-psu.github.io/aerial_manipulation/" />
+<meta property="og:url" content="https://ari-psu.github.io/aerial_manipulation/" />
+<meta property="og:site_name" content="ARI Lab" />
+<meta property="og:image" content="https://ari-psu.github.io/img/posts/2022-10-09-aerial_manipulation/painting_title.gif" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2022-10-09T12:00:00+00:00" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta property="twitter:image" content="https://ari-psu.github.io/img/posts/2022-10-09-aerial_manipulation/painting_title.gif" />
+<meta property="twitter:title" content="Image-based Visual Servo Control for Aerial Manipulation Using a Fully-Actuated UAV" />
+<script type="application/ld+json">
+{"mainEntityOfPage":{"@type":"WebPage","@id":"https://ari-psu.github.io/aerial_manipulation/"},"author":{"@type":"Person","name":"Junyi Geng"},"description":"Image-based Visual Servo Control for Aerial Manipulation Using a Fully-Actuated UAV","url":"https://ari-psu.github.io/aerial_manipulation/","@type":"BlogPosting","image":"https://ari-psu.github.io/img/posts/2022-10-09-aerial_manipulation/painting_title.gif","headline":"Image-based Visual Servo Control for Aerial Manipulation Using a Fully-Actuated UAV","dateModified":"2022-10-09T12:00:00+00:00","datePublished":"2022-10-09T12:00:00+00:00","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<!-- head scripts --><!-- Added by Chen -->
+    <script type='text/javascript' src='https://platform-api.sharethis.com/js/sharethis.js#property=5ee902d30e78e50012567eb4&product=inline-follow-buttons&cms=sop' async='async'></script>
+
+    <!-- for mathjax support -->
+    
+
+</head>
+
+<body>
+    
+<nav class="navbar is-primary" >
+    <div class="container">
+        <div class="navbar-brand">
+            <a href="/" class="navbar-item navbar-logo">
+                ARI Lab
+            </a>
+            <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navMenu">
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+            </a>
+        </div>
+        <div class="navbar-menu" id="navMenu">
+            <div class="navbar-start">
+                <a href="/" class="navbar-item ">Home</a>
+                
+                
+                    
+                    <div class="navbar-item has-dropdown is-hoverable">
+                        <a href="/current-members/" class="navbar-link ">Team</a>
+                        <div class="navbar-dropdown">
+                            
+                            <a href="/current-members/" class="navbar-item ">Current Members</a>
+                            
+                            <a href="/alumni/" class="navbar-item ">Alumni</a>
+                            
+                        </div>
+                    </div>
+                    
+                
+                    
+                    <a href="/research/" class="navbar-item ">Research</a>
+                    
+                
+                    
+                    <a href="/publications/" class="navbar-item ">Publications</a>
+                    
+                
+                    
+                    <a href="/news/" class="navbar-item ">News</a>
+                    
+                
+                    
+                    <a href="/contact/" class="navbar-item ">Contact</a>
+                    
+                
+                
+            </div>
+        </div>
+    </div>
+</nav>
+  <section class="hero  is-large  is-bold is-primary"  style="background: linear-gradient(180deg, rgba(204,0,44,.1),rgba(204,0,44,0)), url('/img/posts/2022-10-09-aerial_manipulation/flight.gif') no-repeat center center; background-size: cover;" >
+    <div class="hero-body">
+        <div class="container">
+            
+            
+            
+        </p>
+        </div>
+    </div>
+</section>
+
+<style>
+    .button.is-info {
+     background-color:#0F173D;
+     border-color:transparent;
+     color:#fff
+    }
+    .button.is-info.is-hovered {
+     background-color:#0F173D;
+     border-color:transparent;
+     color:#fff
+    }
+</style>
+  
+
+
+    <section class="section">
+        <div class="container">
+            <div class="columns">
+                
+
+                
+                <div class="column is-8">
+                      
+	
+
+
+<!-- Figure out the relative link to the author -->
+
+
+
+
+
+
+<div class="content">
+
+    <p><div style="font-size: 13px">Published: 
+		<time datetime="2022-10-09T12:00:00+00:00">Oct 9, 2022</time> by 
+		<div style="font-weight: bold; color: #3399ff; display: inline">
+		
+			Junyi Geng
+		
+		</div>
+	</div></p>
+
+    <h1>Image-based Visual Servo Control for Aerial Manipulation Using a Fully-Actuated UAV</h1>
+
+    <p>Using Unmanned Aerial Vehicles (UAVs) to perform high-altitude manipulation tasks beyond just passive visual application can reduce human workers’ time, cost, and risk. Prior research on aerial manipulation has relied on either ground truth state estimate or GPS/total station with some Simultaneous Localization and Mapping (SLAM) algorithms, which may not be practical for many applications close to infrastructure with degraded GPS signal or featureless environments. Visual servo can eliminate the need to estimate robot pose. Existing works on visual servo for aerial manipulation either address solely end-effector position control or rely on precise velocity measurement and pre-defined visual guidance Furthermore, most of previous work used under-actuated UAVs, resulting in complicated mechanical and hence control designs for the end-effector. This paper develops an image-based visual servo control strategy for bridge maintenance applications using a fully-actuated UAV.</p>
+
+<p>The main components are (1) a visual line detection and tracking system, (2) a hybrid force and
+motion controller based on an impedance force control system with estimated velocity using visual features. Our approach does not rely on either robot pose/velocity estimation from an external localization system or pre-defined visual guidance. The complexity of the mechanical system and controller architecture is also minimized due to the fully-actuated nature of the vehicle. To the best of our knowledge, this is one of the first studies on aerial manipulation using visual servo that is capable of achieving both motion and force control without the need of external pose/velocity information or pre-defined visual guidance.</p>
+
+<figure>
+    <img src="/img/posts/2022-10-09-aerial_manipulation/letterA.png" style="width:46%" />
+    <img src="/img/posts/2022-10-09-aerial_manipulation/title.PNG" style="width:48%" />
+    <figcaption>
+        Left: Our previous work with the UAV writing the letter ''A'' on a whiteboard; Right: A full-actuated UAV performs the painting task.
+    </figcaption>
+</figure>
+
+<p>Main contributions of this work are:</p>
+
+<ol>
+  <li>
+    <p>We develop an image-based visual servo control strategy for bridge maintenance application using a fully-actuated UAV. Our approach does not rely on either robot pose/velocity estimation from an external localization system, such as GPS/motion capture system, or the pre-defined visual markers.</p>
+  </li>
+  <li>
+    <p>We develop a hybrid motion and impedance force controller so that the aerial manipulator can maintain constant force while tracking the lateral motion. Benefiting from the fully-actuated UAV platform, the complexity of the controller design gets reduced significantly.</p>
+  </li>
+  <li>
+    <p>We design an efficient line detection and tracking algorithm, which leverages the surface normal to provide the filtered surface. Our method can be run at a high computation rate, which is critical for real-time usage.</p>
+  </li>
+  <li>
+    <p>We present experiments to evaluate the whole motion tracking and force holding performance under visual
+guidance.</p>
+  </li>
+</ol>
+
+<h2 id="painting-strategy">Painting Strategy</h2>
+<p>The vehicle first flies close to the bridge to a pre-selected starting point, such as the bottom right corner, under other guidance methods. Then, we switch to visual servo control by detecting and tracking the bottom edge (green line) and perform the painting from right to left. As the robot reaches the other side of the bridge, it starts tracking the vertical edge to move up and then switches to the lateral direction to paint back. During the painting process, the newly painted line generates new edges (horizontal red line), which serve as visual guidance for future painting.</p>
+
+<figure>
+ <img src="/img/posts/2022-10-09-aerial_manipulation/tracking.PNG" style="width:70%" />
+ <figcaption>
+        Illustration of bridge painting strategy.
+ </figcaption>
+</figure>
+
+<p>We only leverage the visual line feature during the painting process without relying on external guidance to estimate vehicle pose or velocity. This indicates that the system needs a reliable line detection and tracking module to provide real-time visual feature. In addition, to satisfy the mission requirement – good painting quality in this scenario, the aerial manipulator needs to hold a constant force in the orthogonal direction of the bridge surface while maintaining an effective lateral motion.</p>
+
+<figure>
+ <img src="/img/posts/2022-10-09-aerial_manipulation/Full_Diagram.png" style="width:100%" />
+ <figcaption>
+        Architecture of the vision-guided hybrid motion and impedance controller.
+ </figcaption>
+</figure>
+
+<h2 id="hybrid-motion-and-impedance-control-system-based-on-visual-line-guidance">Hybrid Motion and Impedance Control System Based on Visual Line Guidance</h2>
+<p>we leverage the advantages of the fully-actuated UAV to design the control system. Based on our previous work, we select the zero-tilt attitude strategy to keep the vehicle’s tilt (roll and pitch) at zero at all times and stay completely horizontal during the flight. Thanks to the fully-actuated nature of our aerial manipulator. The control system is designed in a decoupled way, which consists of three major components: (1) an impedance force controller maintains a constant pushing force while the vehicle is moving; (2) an image-based visual-servo tracking controller ensures the motion of the end-effector is aligned with the detected visual line; (3) a lateral motion controller leverages the estimated velocity from the IMU information.</p>
+
+<h2 id="line-detection-and-tracking">Line Detection and Tracking</h2>
+<p>We leverage the fact that the vehicle is always operating on the same surface and perform the filtering based on the surface normal. Our algorithm can be run at a high computation rate, which is critical for real-time usage. The overall algorithm consists of three main components: (1) Normal Image generation; (2) Bounding Box estimation; (3) Segmentation and Line detection.</p>
+
+<figure>
+ <img src="/img/posts/2022-10-09-aerial_manipulation/Seq_Lines.png" style="width:70%" />
+ <figcaption>
+        Line detection performance. The top row shows three snapshots with the detected lines when the vehicle was moving from right to the left of a while board. The bottom row shows the corresponding surface normal and detected bounding box.
+ </figcaption>
+</figure>
+
+<h1 id="validation">Validation</h1>
+
+<figure>
+ <img src="/img/posts/2022-10-09-aerial_manipulation/compare.gif" style="width:95%" />
+ <figcaption>
+        Experimental results of the aerial manipulator tracks a desired force and the comparison with the direct force control. Without impedance, the force tracking runs into significant oscillation
+ </figcaption>
+</figure>
+
+<figure>
+ <img src="/img/posts/2022-10-09-aerial_manipulation/demo.gif" style="width:95%" />
+ <figcaption>
+        Experimental results of the aerial manipulator conducts a complete demonstrations.
+ </figcaption>
+</figure>
+
+<h3 id="related-paper">Related Paper</h3>
+
+<p><em>BibTeX:</em></p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>@inproceedings{he2023image,
+  title={Image-based Visual Servo Control for Aerial Manipulation Using a Fully-Actuated UAV},
+  author={He, Guanqi and Janjir, Yash and Geng, Junyi and Mousaei, Mohammadreza and Bai, Dongwei and Scherer, Sebastian},
+  booktitle={2023 IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS)},
+  url={https://arxiv.org/pdf/2306.16530.pdf},
+  year={2023},
+  organization={IEEE}
+}
+
+</code></pre></div></div>
+<p><br /></p>
+
+
+</div>
+
+<div class="tags">
+    
+</div>
+
+
+  
+
+  <div id="disqus_thread"></div>
+  <script>
+    var disqus_config = function () {
+      this.page.url = 'https://ari-psu.github.io/aerial_manipulation/';
+      this.page.identifier = 'https://ari-psu.github.io/aerial_manipulation/';
+    };
+    (function() {
+      var d = document, s = d.createElement('script');
+      s.src = 'https://jennygeng.disqus.com/embed.js';
+      s.setAttribute('data-timestamp', +new Date());
+      (d.head || d.body).appendChild(s);
+    })();
+  </script>
+  <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+
+
+
+                </div>
+                
+                <div class="column is-4-desktop is-12-tablet">
+                    <p class="title is-4">Latest Research</p>
+
+
+<div class="columns is-multiline">
+    
+    <div class="column is-12">
+        <a href="/contact-aware-vio/">
+<div class="card" style="height: 100%; display: flex; flex-direction: column; align-items: center;">
+    
+        <div style="height: 200px;">
+            <img src="/img/posts/2026-02-09-contact-aware-vio/real_world.gif" alt="Aerial Manipulation with Contact-Aware Onboard Perception and Hybrid Control" style="object-fit: contain; height: 100%;">
+        </div>
+    
+    <div class="card-content" style="flex-grow: 3;">
+        <div class="content">
+            
+            <div class="title is-5">Aerial Manipulation with Contact-Aware Onboard Perception and Hybrid Control</div>
+            
+            <p>Aerial manipulation (AM) promises to move Unmanned Aerial Vehicles (UAVs) beyond passive inspecti...</p>
+        </div>
+    </div>
+    <footer class="card-footer">
+        <p class="card-footer-item">Published: Feb 9, 2026</p>
+    </footer>
+</div>
+</a>
+
+    </div>
+    
+    <div class="column is-12">
+        <a href="/selfsupervised_planning/">
+<div class="card" style="height: 100%; display: flex; flex-direction: column; align-items: center;">
+    
+        <div style="height: 200px;">
+            <img src="/img/posts/2025-03-08-self-supervised-planning/homepage2.gif" alt="A Self-Supervised Learning Approach with Differentiable Optimization for UAV Trajectory Planning" style="object-fit: contain; height: 100%;">
+        </div>
+    
+    <div class="card-content" style="flex-grow: 3;">
+        <div class="content">
+            
+            <div class="title is-5">A Self-Supervised Learning Approach with Differentiable Optimization for UAV Trajectory Planning</div>
+            
+            <p>While Unmanned Aerial Vehicles (UAVs) have gained significant traction across various fields, pat...</p>
+        </div>
+    </div>
+    <footer class="card-footer">
+        <p class="card-footer-item">Published: Feb 9, 2026</p>
+    </footer>
+</div>
+</a>
+
+    </div>
+    
+</div>
+
+
+
+
+                </div>
+                
+            </div>
+        </div>
+    </section>
+     <style>
+  #blocks {
+      width:100%;
+      height:60px;
+      margin:0 auto;
+      /* background-color: #ffe; */
+  }
+  #block1 {
+      height:33.33%;
+      width:30%;
+      /* background: red; */
+      float: left;
+      padding-left: 50px;
+  }
+  #block2 {
+      height:33.33%;
+      width:40%;
+      /* background: yellow; */
+      float: left;
+  }
+  #block3 {
+      height:33.33%;
+      width:30%;
+      /* background: green; */
+      float: right;
+      padding-top: 30px;
+  }
+</style>
+
+<footer class="footer">
+    <div class="container">
+        <!-- 
+        <div class="columns is-multiline">
+            
+            <div class="column has-text-centered">
+                <div>
+                    <a href="/" class="link">Home</a>
+                </div>
+            </div>
+            
+            <div class="column has-text-centered">
+                <div>
+                    <a href="/blog/" class="link">Blog</a>
+                </div>
+            </div>
+            
+            <div class="column has-text-centered">
+                <div>
+                    <a href="/products/" class="link">Products</a>
+                </div>
+            </div>
+            
+            <div class="column has-text-centered">
+                <div>
+                    <a href="/privacy-policy/" class="link">Privacy Policy</a>
+                </div>
+            </div>
+            
+        </div>
+         -->
+        <div id="blocks">
+          <div id="block1"><img src="/img/logos/Horizontal@2x.png" alt="ARI Lab Logo" style="width:100%; margin-top: -5%;"></div>
+          <div id="block2">
+            <center>
+              <!-- <a class="button" itemprop="email" href="https://www.facebook.com" target="_blank">
+                <i class="fab fa-github"></i>
+              </a> -->
+              <!-- <a class="button" itemprop="email" href="https://www.facebook.com" target="_blank">
+                <i class="fab fa-facebook"</i>
+              </a> -->
+              <a class="button" itemprop="google scholar" href="https://scholar.google.com/citations?user=psUhJgcAAAAJ&hl=en&oi=sra" target="_blank">
+                <i class="fab fa-google scholar fa-lg"></i>
+              </a>
+              <a class="button" itemprop="github" href="https://github.com/aerogjy" target="_blank">
+                <i class="fab fa-github fa-lg"></i>
+              </a>
+              <a class="button" itemprop="linkedin" href="https://www.linkedin.com/in/junyi-geng-ph-d-9823a3b5/" target="_blank">
+                <i class="fab fa-linkedin fa-lg"></i>
+              </a>
+              <br>
+              <br>
+              <p class="">&copy; 2021 | Built using the <a href="https://github.com/chrisrhymes/bulma-clean-theme">Bulma Clean Theme</a></p>
+            </center>
+          </div>
+          <div id="block3"><img src="/img/logos/psuaero.png" alt="PSU Logo" style="width:100%; margin-top: -5%"></div>
+        </div>
+        <!-- <div>
+          <a href="" class="button is-large"><div class="icon"><i class="fab fa-facebook"</i></div></a>
+        </div> -->
+        <!-- <div class="content is-small has-text-centered">
+            <p class="">© 2020</p>
+        </div> -->
+    </div>
+
+
+</footer>
+ 
+    <script src="/assets/js/app.js" type="text/javascript"></script><!-- footer scripts --></body>
+
+</html>

@@ -1,0 +1,251 @@
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.0">Jekyll</generator><link href="https://ari-psu.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://ari-psu.github.io/" rel="alternate" type="text/html" /><updated>2026-02-21T14:30:14+00:00</updated><id>https://ari-psu.github.io/feed.xml</id><title type="html">ARI Lab</title><subtitle>Advancing aerial autonomy
+</subtitle><entry><title type="html">Congratulations to Yufei and Yuanzhu on passing the PhD qualifying exam!</title><link href="https://ari-psu.github.io/news/2026/02/20/news-yufei-yuanzhu-qualify/" rel="alternate" type="text/html" title="Congratulations to Yufei and Yuanzhu on passing the PhD qualifying exam!" /><published>2026-02-20T19:00:00+00:00</published><updated>2026-02-20T19:00:00+00:00</updated><id>https://ari-psu.github.io/news/2026/02/20/news-yufei-yuanzhu-qualify</id><content type="html" xml:base="https://ari-psu.github.io/news/2026/02/20/news-yufei-yuanzhu-qualify/">&lt;p&gt;Big congratulations to Yufei and Yuanzhu on passing their PhD qualifying exam taken on February 7, 2026! Now they are official Doctoral students in the Ph.D. program of the Aerospace Engineering Program.&lt;/p&gt;</content><author><name>Yuanzhu Zhan</name></author><category term="news" /><summary type="html">Big congratulations to Yufei and Yuanzhu on passing their PhD qualifying exam taken on February 7, 2026! Now they are official Doctoral students in the Ph.D. program of the Aerospace Engineering Program.</summary></entry><entry><title type="html">Yufei presented our new work on this week’s aerospace seminar series</title><link href="https://ari-psu.github.io/news/2026/02/12/news-yufei-seminar/" rel="alternate" type="text/html" title="Yufei presented our new work on this week’s aerospace seminar series" /><published>2026-02-12T12:00:00+00:00</published><updated>2026-02-12T12:00:00+00:00</updated><id>https://ari-psu.github.io/news/2026/02/12/news-yufei-seminar</id><content type="html" xml:base="https://ari-psu.github.io/news/2026/02/12/news-yufei-seminar/">&lt;p&gt;Yufei presented our new paper just got accepted by ICRA 2026 on this weeks’ aerospace seminar series, titled in “A Self-Supervised Learning Approach with Differentiable Optimization for UAV Trajectory Planning”.&lt;/p&gt;</content><author><name>Yuanzhu Zhan</name></author><category term="news" /><summary type="html">Yufei presented our new paper just got accepted by ICRA 2026 on this weeks’ aerospace seminar series, titled in “A Self-Supervised Learning Approach with Differentiable Optimization for UAV Trajectory Planning”.</summary></entry><entry><title type="html">Aerial Manipulation with Contact-Aware Onboard Perception and Hybrid Control</title><link href="https://ari-psu.github.io/contact-aware-vio/" rel="alternate" type="text/html" title="Aerial Manipulation with Contact-Aware Onboard Perception and Hybrid Control" /><published>2026-02-09T12:00:00+00:00</published><updated>2026-02-09T12:00:00+00:00</updated><id>https://ari-psu.github.io/contact-aware-vio</id><content type="html" xml:base="https://ari-psu.github.io/contact-aware-vio/">&lt;p&gt;Aerial manipulation (AM) promises to move Unmanned Aerial Vehicles (UAVs) beyond passive inspection to contact-rich tasks such as grasping, assembly, and in-situ maintenance. Most prior AM demonstrations rely on external motion capture (MoCap) and emphasize position control for coarse interactions, limiting deployability. We present a fully onboard perception–control pipeline for contact-rich AM that achieves accurate motion tracking and regulated contact wrenches without MoCap. The main components are (1) an augmented visual–inertial odometry (VIO) estimator with contact-consistency factors that activate only during interaction, tightening uncertainty around the contact frame and reducing drift, and (2) image-based visual servoing (IBVS) to mitigate perception–control coupling, together with a hybrid force–motion controller that regulates contact wrenches and lateral motion for stable contact. Experiments show that our approach closes the perception-to-wrench loop using only onboard sensing, yielding an velocity estimation improvement of 66.01% at contact, reliable target approach, and stable force holding—pointing toward deployable, in-the-wild aerial manipulation.&lt;/p&gt;
+
+&lt;h2 id=&quot;proposed-pipeline&quot;&gt;Proposed Pipeline&lt;/h2&gt;
+&lt;figure&gt;
+ &lt;img src=&quot;/img/posts/2026-02-09-contact-aware-vio/Pipeline.png&quot; /&gt;
+ &lt;figcaption&gt;
+       Overview of the proposed pipeline
+ &lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;The proposed pipeline has three key components: (1) A contact-aware VIO processes stereo imagery to produce vehicle/end-effector state estimates, activating contact factors only during interaction. (2) During approach, image-based visual servoing (IBVS) drives the platform using only the VIO-estimated body velocity. (3) Upon contact, a hybrid force–motion controller regulates the normal wrench while IBVS continues to track lateral motion, closing the perception-to-wrench loop with onboard sensing.&lt;/p&gt;
+
+&lt;h2 id=&quot;contact-aware-visual-inertial-odometry&quot;&gt;Contact-Aware Visual-Inertial Odometry&lt;/h2&gt;
+&lt;figure&gt;
+ &lt;img src=&quot;/img/posts/2026-02-09-contact-aware-vio/pose_graph.png&quot; /&gt;
+ &lt;figcaption&gt;
+       Pose graph of the proposed contact-aware VIO
+ &lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;Our method builds upon VINS-Fusion, where visual–inertial state estimation is expressed within a factor graph framework, and the system state is recovered through joint optimization of camera reprojection errors and IMU pre-integration constraints. While this formulation achieves high accuracy in general scenarios, it may suffer from drift when external interactions occur. To mitigate this issue, we extend it by introducing contact factors that leverage robot–environment interactions. In particular, when the system is in contact with a wall, the relative motion at the contact point is constrained, and this information is encoded as an additional factor in the graph. By incorporating such constraints, the estimator gains improved robustness and reduced drift, especially in environments with limited visual features or long-term operation.&lt;/p&gt;
+
+&lt;h2 id=&quot;experiment&quot;&gt;Experiment&lt;/h2&gt;
+&lt;div class=&quot;container is-max-desktop&quot;&gt;
+    &lt;div class=&quot;columns is-centered&quot;&gt;
+      &lt;div class=&quot;column is-12&quot;&gt;
+        &lt;div class=&quot;title is-4&quot;&gt;
+          &lt;p&gt;
+            Peg-in-hole simulation
+          &lt;/p&gt;  
+        &lt;/div&gt;
+        &lt;div class=&quot;columns is-centered&quot;&gt;
+          &lt;div class=&quot;column is-6&quot;&gt;
+            &lt;figure&gt; 
+              &lt;img src=&quot;/img/posts/2026-02-09-contact-aware-vio/peginhole_view.png&quot; /&gt;
+            &lt;/figure&gt;
+            &lt;div class=&quot;content has-text-centered&quot;&gt;
+              &lt;p&gt;peg in hole Gazebo sim&lt;/p&gt;        
+            &lt;/div&gt;
+          &lt;/div&gt;
+          &lt;div class=&quot;column is-6&quot;&gt;
+            &lt;figure&gt; 
+              &lt;img src=&quot;/img/posts/2026-02-09-contact-aware-vio/peginhole_vs_error.png&quot; /&gt;
+            &lt;/figure&gt;
+            &lt;div class=&quot;content has-text-centered&quot;&gt;
+              &lt;p&gt;alignment error&lt;/p&gt;        
+            &lt;/div&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;columns is-centered&quot;&gt;
+          &lt;div class=&quot;column is-6&quot;&gt;
+            &lt;figure&gt; 
+              &lt;img src=&quot;/img/posts/2026-02-09-contact-aware-vio/peginhole_vs_radius_error.png&quot; /&gt;
+            &lt;/figure&gt;
+            &lt;div class=&quot;content has-text-centered&quot;&gt;
+              &lt;p&gt;scaling error&lt;/p&gt;        
+            &lt;/div&gt;
+          &lt;/div&gt;
+          &lt;div class=&quot;column is-6&quot;&gt;
+            &lt;figure&gt; 
+              &lt;img src=&quot;/img/posts/2026-02-09-contact-aware-vio/peginhole_force.png&quot; /&gt;
+            &lt;/figure&gt;
+            &lt;div class=&quot;content has-text-centered&quot;&gt;
+              &lt;p&gt;force measurement&lt;/p&gt;        
+            &lt;/div&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+
+&lt;p&gt;Real-world experiment&lt;/p&gt;
+&lt;figure&gt;
+  &lt;img src=&quot;/img/posts/2026-02-09-contact-aware-vio/realshooting_stack.png&quot; /&gt;
+  &lt;figcaption&gt;
+       Snapshots of real-world experiments. (a) Visual servoing initialized. (b) Approaching the target. (c) Force holding.
+  &lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;figure&gt; 
+  &lt;img src=&quot;/img/posts/2026-02-09-contact-aware-vio/realshooting_force.png&quot; /&gt;
+  &lt;figcaption&gt;
+    force measurement
+  &lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;figure&gt; 
+  &lt;img src=&quot;/img/posts/2026-02-09-contact-aware-vio/realshooting_vx.png&quot; /&gt;
+  &lt;figcaption&gt;
+    velocity estimation error in contact direction
+  &lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;h2 id=&quot;video&quot;&gt;Video&lt;/h2&gt;
+
+&lt;!-- &lt;div class=&quot;video-wrapper&quot;&gt;&lt;iframe src=&quot;http://www.youtube.com/embed/3AMcM3uUaUw&quot; frameborder=&quot;0&quot; allowfullscreen&gt;&lt;/iframe&gt;&lt;/div&gt; --&gt;
+&lt;video controls=&quot;&quot; autoplay=&quot;&quot; loop=&quot;&quot; muted=&quot;&quot; playsinline=&quot;&quot; src=&quot;/img/posts/2026-02-09-contact-aware-vio/full-video.mp4&quot; type=&quot;video/mp4&quot;&gt;
+&lt;/video&gt;
+
+&lt;!-- ### Publication --&gt;
+&lt;section class=&quot;section&quot; id=&quot;Publication&quot;&gt;
+  &lt;div class=&quot;container is-max-desktop content&quot;&gt;
+    &lt;h2 class=&quot;title&quot;&gt;BibTeX&lt;/h2&gt;
+    &lt;pre&gt;&lt;code&gt;@misc{zhan2026aerialmanipulationcontactawareonboard,
+      title={Aerial Manipulation with Contact-Aware Onboard Perception and Hybrid Control}, 
+      author={Yuanzhu Zhan and Yufei Jiang and Muqing Cao and Junyi Geng},
+      year={2026},
+      eprint={2602.08251},
+      archivePrefix={arXiv},
+      primaryClass={cs.RO},
+      url={https://arxiv.org/abs/2602.08251},
+    }
+&lt;/code&gt;&lt;/pre&gt;
+  &lt;/div&gt;
+&lt;/section&gt;</content><author><name>Yuanzhu Zhan</name></author><category term="research" /><summary type="html">Aerial manipulation (AM) promises to move Unmanned Aerial Vehicles (UAVs) beyond passive inspection to contact-rich tasks such as grasping, assembly, and in-situ maintenance. Most prior AM demonstrations rely on external motion capture (MoCap) and emphasize position control for coarse interactions, limiting deployability. We present a fully onboard perception–control pipeline for contact-rich AM that achieves accurate motion tracking and regulated contact wrenches without MoCap. The main components are (1) an augmented visual–inertial odometry (VIO) estimator with contact-consistency factors that activate only during interaction, tightening uncertainty around the contact frame and reducing drift, and (2) image-based visual servoing (IBVS) to mitigate perception–control coupling, together with a hybrid force–motion controller that regulates contact wrenches and lateral motion for stable contact. Experiments show that our approach closes the perception-to-wrench loop using only onboard sensing, yielding an velocity estimation improvement of 66.01% at contact, reliable target approach, and stable force holding—pointing toward deployable, in-the-wild aerial manipulation.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://ari-psu.github.io/img/posts/2026-02-09-contact-aware-vio/real_world.gif" /><media:content medium="image" url="https://ari-psu.github.io/img/posts/2026-02-09-contact-aware-vio/real_world.gif" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">A Self-Supervised Learning Approach with Differentiable Optimization for UAV Trajectory Planning</title><link href="https://ari-psu.github.io/selfsupervised_planning/" rel="alternate" type="text/html" title="A Self-Supervised Learning Approach with Differentiable Optimization for UAV Trajectory Planning" /><published>2026-02-09T12:00:00+00:00</published><updated>2026-02-09T12:00:00+00:00</updated><id>https://ari-psu.github.io/self-supervised-planning</id><content type="html" xml:base="https://ari-psu.github.io/selfsupervised_planning/">&lt;p&gt;While Unmanned Aerial Vehicles (UAVs) have gained significant traction across various fields, path planning in 3D environments remains a critical challenge, particularly under size, weight, and power (SWAP) constraints. Traditional modular planning systems often introduce latency and suboptimal performance due to limited information sharing and local minima issues. End-to-end learning approaches streamline the pipeline by mapping sensory observations directly to actions but require large-scale datasets, face significant simto-real gaps, or lack dynamical feasibility. In this project, we propose a self-supervised UAV trajectory planning pipeline that integrates a learning-based depth perception with differentiable trajectory optimization. A 3D cost map guides UAV behavior without expert demonstrations or human labels. Additionally, we incorporate a neural network-based time allocation strategy to improve the efficiency and optimality. The system thus combines robust learning-based perception with reliable physicsbased optimization for improved generalizability and interpretability. Both simulation and real-world experiments validate our approach across various environments, demonstrating its effectiveness and robustness. Our method achieves a 31.33% improvement in position tracking error and 49.37% reduction in control effort compared to the state-of-the-art.&lt;/p&gt;
+
+&lt;h2 id=&quot;planning-pipeline&quot;&gt;Planning Pipeline&lt;/h2&gt;
+&lt;figure&gt;
+ &lt;img src=&quot;/img/posts/2025-03-08-self-supervised-planning/pipeline.png&quot; /&gt;
+ &lt;figcaption&gt;
+       Pipeline of the proposed planning method
+ &lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;Our method takes only depth images as input, and directly outputs trajectories through end-to-end pipeline. Each module is fully differentiable, enabling gradient backpropagation through effective joint training. Specifically, a front-end network first predicts key waypoints from the input depth image. Then, back-end trajectory optimization module generates an optimal trajectory based on these waypoints. Additionally, we introduced a time allocation network to handle the challenging timing problem, ensuring both real-time performance and trajectory optimality.
+Compared to other approaches, our method is fully self-supervised thanks to our 3D cost map. Moreover, with iterative trajectory optimization, we can incorporate inequality constraints, further enhancing its practical applicability.&lt;/p&gt;
+
+&lt;h2 id=&quot;experiment-results&quot;&gt;Experiment Results&lt;/h2&gt;
+&lt;p&gt;Navigation in various simulation environments&lt;/p&gt;
+&lt;video controls=&quot;&quot; autoplay=&quot;&quot; loop=&quot;&quot; muted=&quot;&quot; playsinline=&quot;&quot; src=&quot;/img/posts/2025-03-08-self-supervised-planning/simulation.mp4&quot; type=&quot;video/mp4&quot;&gt;
+&lt;/video&gt;
+
+&lt;p&gt;Real-world obstacle avoidance in 3D complex environment&lt;/p&gt;
+&lt;figure&gt;
+  &lt;img src=&quot;/img/posts/2025-03-08-self-supervised-planning/exp_stack.png&quot; /&gt;
+  &lt;figcaption&gt;
+       A sequence of snapshots of real-world flight experiments in complex environment
+  &lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;video controls=&quot;&quot; autoplay=&quot;&quot; loop=&quot;&quot; muted=&quot;&quot; playsinline=&quot;&quot; src=&quot;/img/posts/2025-03-08-self-supervised-planning/real_world.mp4&quot; type=&quot;video/mp4&quot;&gt;
+&lt;/video&gt;
+
+&lt;h2 id=&quot;video&quot;&gt;Video&lt;/h2&gt;
+
+&lt;!-- &lt;div class=&quot;video-wrapper&quot;&gt;&lt;iframe src=&quot;http://www.youtube.com/embed/3AMcM3uUaUw&quot; frameborder=&quot;0&quot; allowfullscreen&gt;&lt;/iframe&gt;&lt;/div&gt; --&gt;
+&lt;video controls=&quot;&quot; autoplay=&quot;&quot; loop=&quot;&quot; muted=&quot;&quot; playsinline=&quot;&quot; src=&quot;/img/posts/2025-03-08-self-supervised-planning/full_video.mp4&quot; type=&quot;video/mp4&quot;&gt;
+&lt;/video&gt;
+
+&lt;div class=&quot;container&quot;&gt;
+  &lt;h2 class=&quot;title is-2&quot; id=&quot;press-coverage&quot;&gt;Media&lt;/h2&gt;
+  &lt;br /&gt;
+  &lt;div class=&quot;columns is-centered&quot;&gt;
+    &lt;div class=&quot;column is-centered has-text-centered&quot;&gt;
+      &lt;a target=&quot;_blank&quot; href=&quot;https://aerospaceamerica.aiaa.org/year-in-review/intelligent-systems-advance-in-communication-planning-perception-and-safety/&quot;&gt;
+        &lt;img src=&quot;https://aiaa.org/wp-content/uploads/2025/05/AIAA-New-Logo-SMC.png&quot; width=&quot;90%&quot; /&gt;
+      &lt;/a&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;!-- ### Publication --&gt;
+&lt;section class=&quot;section&quot; id=&quot;Publication&quot;&gt;
+  &lt;div class=&quot;container is-max-desktop content&quot;&gt;
+    &lt;h2 class=&quot;title&quot;&gt;BibTeX&lt;/h2&gt;
+    &lt;pre&gt;&lt;code&gt;@inproceedings{jiang2025selfsupervised,
+      title={A Self-Supervised Learning Approach with Differentiable Optimization for UAV Trajectory Planning}, 
+      author={Yufei Jiang and Yuanzhu Zhan and Harsh Vardhan Gupta and Chinmay Borde and Junyi Geng},  
+      booktitle={IEEE International Conference on Robotics and Automation (ICRA)},
+      pages={Accepted},
+      url={https://arxiv.org/abs/2504.04289}, 
+      year={2026},
+      organization={IEEE}
+}
+&lt;/code&gt;&lt;/pre&gt;
+  &lt;/div&gt;
+&lt;/section&gt;
+&lt;/div&gt;</content><author><name>Yuanzhu Zhan</name></author><category term="research" /><category term="highlights" /><summary type="html">While Unmanned Aerial Vehicles (UAVs) have gained significant traction across various fields, path planning in 3D environments remains a critical challenge, particularly under size, weight, and power (SWAP) constraints. Traditional modular planning systems often introduce latency and suboptimal performance due to limited information sharing and local minima issues. End-to-end learning approaches streamline the pipeline by mapping sensory observations directly to actions but require large-scale datasets, face significant simto-real gaps, or lack dynamical feasibility. In this project, we propose a self-supervised UAV trajectory planning pipeline that integrates a learning-based depth perception with differentiable trajectory optimization. A 3D cost map guides UAV behavior without expert demonstrations or human labels. Additionally, we incorporate a neural network-based time allocation strategy to improve the efficiency and optimality. The system thus combines robust learning-based perception with reliable physicsbased optimization for improved generalizability and interpretability. Both simulation and real-world experiments validate our approach across various environments, demonstrating its effectiveness and robustness. Our method achieves a 31.33% improvement in position tracking error and 49.37% reduction in control effort compared to the state-of-the-art.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://ari-psu.github.io/img/posts/2025-03-08-self-supervised-planning/homepage2.gif" /><media:content medium="image" url="https://ari-psu.github.io/img/posts/2025-03-08-self-supervised-planning/homepage2.gif" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Dr. Muqing Cao visited our lab and gave a talk</title><link href="https://ari-psu.github.io/news/2026/02/08/news-muqing-seminar/" rel="alternate" type="text/html" title="Dr. Muqing Cao visited our lab and gave a talk" /><published>2026-02-08T12:00:00+00:00</published><updated>2026-02-08T12:00:00+00:00</updated><id>https://ari-psu.github.io/news/2026/02/08/news-muqing-seminar</id><content type="html" xml:base="https://ari-psu.github.io/news/2026/02/08/news-muqing-seminar/">&lt;p&gt;Dr. Muqing Cao, a Postdoctoral Fellow from the Robotics Institute of Carnegie Mellon University, visited our lab and gave a talk titled in &lt;strong&gt;Planning Cooperative Robots for Tethered Long-duration Operation and Aerial Inspection&lt;/strong&gt;.&lt;/p&gt;</content><author><name>Yuanzhu Zhan</name></author><category term="news" /><summary type="html">Dr. Muqing Cao, a Postdoctoral Fellow from the Robotics Institute of Carnegie Mellon University, visited our lab and gave a talk titled in Planning Cooperative Robots for Tethered Long-duration Operation and Aerial Inspection.</summary></entry><entry><title type="html">Two Papers Were Accepted to the ICRA 2026！</title><link href="https://ari-psu.github.io/news/2026/02/02/news-ICRA/" rel="alternate" type="text/html" title="Two Papers Were Accepted to the ICRA 2026！" /><published>2026-02-02T12:00:00+00:00</published><updated>2026-02-02T12:00:00+00:00</updated><id>https://ari-psu.github.io/news/2026/02/02/news-ICRA</id><content type="html" xml:base="https://ari-psu.github.io/news/2026/02/02/news-ICRA/"></content><author><name>Yuanzhu Zhan</name></author><category term="news" /><summary type="html"></summary></entry><entry><title type="html">Our Work Was Reported in the AIAA Year in Review Articles!</title><link href="https://ari-psu.github.io/news/2026/01/01/news-AIAA-year-in-review/" rel="alternate" type="text/html" title="Our Work Was Reported in the AIAA Year in Review Articles!" /><published>2026-01-01T12:00:00+00:00</published><updated>2026-01-01T12:00:00+00:00</updated><id>https://ari-psu.github.io/news/2026/01/01/news-AIAA-year-in-review</id><content type="html" xml:base="https://ari-psu.github.io/news/2026/01/01/news-AIAA-year-in-review/">&lt;p&gt;Congratulations! Our paper “A Self-Supervised Learning Approach with Differentiable Optimization for UAV Trajectory Planning” was included in the 2026 AIAA year in review articles&lt;/p&gt;</content><author><name>Yuanzhu Zhan</name></author><category term="news" /><summary type="html">Congratulations! Our paper “A Self-Supervised Learning Approach with Differentiable Optimization for UAV Trajectory Planning” was included in the 2026 AIAA year in review articles</summary></entry><entry><title type="html">Two Papers Were Accepted to AIAA SciTech Forum 2026！</title><link href="https://ari-psu.github.io/news/2025/12/29/news-SciTech/" rel="alternate" type="text/html" title="Two Papers Were Accepted to AIAA SciTech Forum 2026！" /><published>2025-12-29T12:00:00+00:00</published><updated>2025-12-29T12:00:00+00:00</updated><id>https://ari-psu.github.io/news/2025/12/29/news-SciTech</id><content type="html" xml:base="https://ari-psu.github.io/news/2025/12/29/news-SciTech/"></content><author><name>Yuanzhu Zhan</name></author><category term="news" /><summary type="html"></summary></entry><entry><title type="html">Our Paper AirIO Was Accepted to the RAL!</title><link href="https://ari-psu.github.io/news/2025/06/17/news-AirIO/" rel="alternate" type="text/html" title="Our Paper AirIO Was Accepted to the RAL!" /><published>2025-06-17T12:00:00+00:00</published><updated>2025-06-17T12:00:00+00:00</updated><id>https://ari-psu.github.io/news/2025/06/17/news-AirIO</id><content type="html" xml:base="https://ari-psu.github.io/news/2025/06/17/news-AirIO/"></content><author><name>Yuanzhu Zhan</name></author><category term="news" /><summary type="html"></summary></entry><entry><title type="html">AirIO: Learning Inertial Odometry with Enhanced IMU Feature Observability</title><link href="https://ari-psu.github.io/AirIO/" rel="alternate" type="text/html" title="AirIO: Learning Inertial Odometry with Enhanced IMU Feature Observability" /><published>2025-06-17T12:00:00+00:00</published><updated>2025-06-17T12:00:00+00:00</updated><id>https://ari-psu.github.io/AirIO</id><content type="html" xml:base="https://ari-psu.github.io/AirIO/">&lt;h2 id=&quot;abstract&quot;&gt;Abstract&lt;/h2&gt;
+&lt;p&gt;Inertial odometry (IO) using only Inertial Measurement Units (IMUs) offers a lightweight and cost-effective solution for Unmanned Aerial Vehicle (UAV) applications, yet existing learning-based IO models often fail to generalize to UAVs due to the highly dynamic and non-linear-flight patterns that differ from pedestrain motion. In this work, we identify that the conventional practice of transforming raw IMU data to global coordinates undermines the observability of critical kinematic information in UAVs. By preserving the body-frame representation, our method achieves substantial performance improvements, with a 66.7% average increase in accuracy across three datasets. Furthermore, explicitly encoding attitude information into the motion network results in an additional 23.8% improvement over prior results. Combined with a data-driven IMU correction model (AirIMU) and an uncertainty-aware Extended Kalman Filter (EKF), our approach ensures robutst state estimation under aggressive UAV maneuvers without relying on external sensors or control inputs. Notably, our method also demonstrates strong generalizability to unseen data not included in the training set, underscoring its potential for real-world UAV applications.&lt;/p&gt;
+
+&lt;h2 id=&quot;introduction&quot;&gt;Introduction&lt;/h2&gt;
+&lt;video controls=&quot;&quot; autoplay=&quot;&quot; loop=&quot;&quot; muted=&quot;&quot; playsinline=&quot;&quot; src=&quot;/img/posts/2025-06-17-AirIO/1_AirIO_introduction.mp4&quot; type=&quot;video/mp4&quot;&gt;
+&lt;/video&gt;
+
+&lt;h2 id=&quot;results&quot;&gt;Results&lt;/h2&gt;
+&lt;p&gt;Without external sensors or control information, AirIO achieves &lt;strong&gt;up to a 86.6% performance boost&lt;/strong&gt; over SOTA methods.&lt;/p&gt;
+&lt;video controls=&quot;&quot; autoplay=&quot;&quot; loop=&quot;&quot; muted=&quot;&quot; playsinline=&quot;&quot; src=&quot;/img/posts/2025-06-17-AirIO/blackbird_for_web.mp4&quot; type=&quot;video/mp4&quot;&gt;
+&lt;/video&gt;
+
+&lt;h2 id=&quot;methods&quot;&gt;Methods&lt;/h2&gt;
+
+&lt;p&gt;We identify the commonly used global-coordinate approach is suboptimal for UAVs due to their dynamic nature. Two simple steps to achieve significant gains:&lt;/p&gt;
+&lt;ol&gt;
+  &lt;li&gt;Predicting velocity using body-coordinate frmae representation.&lt;/li&gt;
+  &lt;li&gt;Explicitly encoding UAV attitude information.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;figure&gt;
+  &lt;img src=&quot;/img/posts/2025-06-17-AirIO/Fig1_Blackbird.gif&quot; /&gt;
+  &lt;figcaption&gt;
+       Figure 1. Blackbird
+  &lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;figure&gt;
+  &lt;img src=&quot;/img/posts/2025-06-17-AirIO/Fig2_EuRoC.gif&quot; /&gt;
+  &lt;figcaption&gt;
+       Figure 2. EuROC
+  &lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;figure&gt;
+  &lt;img src=&quot;/img/posts/2025-06-17-AirIO/Fig3_Pegasus.gif&quot; /&gt;
+  &lt;figcaption&gt;
+       Figure 3. Pegasus
+  &lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;video controls=&quot;&quot; autoplay=&quot;&quot; loop=&quot;&quot; muted=&quot;&quot; playsinline=&quot;&quot; src=&quot;/img/posts/2025-06-17-AirIO/website_insight.mp4&quot; type=&quot;video/mp4&quot;&gt;
+&lt;/video&gt;
+
+&lt;h2 id=&quot;system-pipeline&quot;&gt;System Pipeline&lt;/h2&gt;
+&lt;figure&gt;
+  &lt;img src=&quot;/img/posts/2025-06-17-AirIO/Pipeline.png&quot; /&gt;
+  &lt;figcaption&gt;
+       Figure 4. By integrating the novel AirIO network and an uncertainty-aware IMU perintegration model into an EKF, we achieve robust odometry even under aggressive maneuvers.
+  &lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;h2 id=&quot;video&quot;&gt;Video&lt;/h2&gt;
+
+&lt;!-- &lt;div class=&quot;video-wrapper&quot;&gt;&lt;iframe src=&quot;http://www.youtube.com/embed/3AMcM3uUaUw&quot; frameborder=&quot;0&quot; allowfullscreen&gt;&lt;/iframe&gt;&lt;/div&gt; --&gt;
+&lt;iframe width=&quot;850&quot; height=&quot;500&quot; src=&quot;https://www.youtube.com/embed/342ZfxoL7_0&quot; title=&quot;YouTube video player&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen=&quot;&quot;&gt;
+&lt;/iframe&gt;
+
+&lt;!-- ### Publication --&gt;
+&lt;section class=&quot;section&quot; id=&quot;Publication&quot;&gt;
+  &lt;div class=&quot;container is-max-desktop content&quot;&gt;
+    &lt;h2 class=&quot;title&quot;&gt;BibTeX&lt;/h2&gt;
+    &lt;pre&gt;&lt;code&gt;@article{11045120,
+    author={Qiu, Yuheng and Xu, Can and Chen, Yutian and Zhao, Shibo and Geng, Junyi and Scherer, Sebastian},
+    journal={IEEE Robotics and Automation Letters}, 
+    title={AirIO: Learning Inertial Odometry with Enhanced IMU Feature Observability}, 
+    year={2025},
+    volume={},
+    number={},
+    pages={1-8},
+    keywords={Autonomous aerial vehicles;Sensors;Vehicle dynamics;Odometry;Principal component analysis;Pedestrians;Gravity;Feature extraction;Accuracy;Decoding;Aerial Systems: Perception and Autonomy;Deep Learning Methods;Localization},
+    doi={10.1109/LRA.2025.3581130}}
+    &lt;/code&gt;&lt;/pre&gt;
+  &lt;/div&gt;
+&lt;/section&gt;</content><author><name>Yuanzhu Zhan</name></author><category term="research" /><summary type="html">Abstract Inertial odometry (IO) using only Inertial Measurement Units (IMUs) offers a lightweight and cost-effective solution for Unmanned Aerial Vehicle (UAV) applications, yet existing learning-based IO models often fail to generalize to UAVs due to the highly dynamic and non-linear-flight patterns that differ from pedestrain motion. In this work, we identify that the conventional practice of transforming raw IMU data to global coordinates undermines the observability of critical kinematic information in UAVs. By preserving the body-frame representation, our method achieves substantial performance improvements, with a 66.7% average increase in accuracy across three datasets. Furthermore, explicitly encoding attitude information into the motion network results in an additional 23.8% improvement over prior results. Combined with a data-driven IMU correction model (AirIMU) and an uncertainty-aware Extended Kalman Filter (EKF), our approach ensures robutst state estimation under aggressive UAV maneuvers without relying on external sensors or control inputs. Notably, our method also demonstrates strong generalizability to unseen data not included in the training set, underscoring its potential for real-world UAV applications.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://ari-psu.github.io/img/posts/2025-06-17-AirIO/blackbird_github.gif" /><media:content medium="image" url="https://ari-psu.github.io/img/posts/2025-06-17-AirIO/blackbird_github.gif" xmlns:media="http://search.yahoo.com/mrss/" /></entry></feed>
