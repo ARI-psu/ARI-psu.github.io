@@ -1,6 +1,6 @@
 ---
 title: Yufei Jiang
-subtitle: Ph.D. Student
+subtitle: Ph.D. Candidate
 job_title: Graduate Student
 category: graduate_student
 layout: team_member_personal_page

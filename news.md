@@ -9,6 +9,17 @@ hide_footer: false
 <div class="news-container">
   <!-- news of 2026 -->
   <div class="year-header">2026</div>
+  <!-- Congratulations to Yufei and Yuanzhu on passing their PhD qualifying exam! -->
+  <div class="news-item" data-aos="fade-right" data-aos-duration="1000">
+    <div class="date-box">
+      <span class="date-day">20</span>
+      <span class="date-month">February</span>
+    </div>
+    <div class="news-content">
+      <h2>Congratulations to Yufei and Yuanzhu on passing the PhD qualifying exam!</h2>
+      <p>Big congratulations to Yufei and Yuanzhu on passing their PhD qualifying exam taken on February 7, 2026! Now they are official Doctoral students in the Ph.D. program of the Aerospace Engineering Program.</p>
+    </div>
+  </div>
   <!-- Yufei presented our new work on this week's aerospace seminar series -->
   <div class="news-item" data-aos="fade-down" data-aos-duration="1000">
     <div class="date-box">
