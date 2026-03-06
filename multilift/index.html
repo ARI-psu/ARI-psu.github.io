@@ -1,0 +1,481 @@
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <title>Control, Estimation and Planning for Coordinated Transport of a Slung Load by a Team of Aerial Robots - ARI Lab</title>
+    
+    <link rel="stylesheet" href="/assets/css/app.css">
+
+    <link rel="shortcut icon" type="image/ico" href="/img/favicon/favicon.ico" />
+
+    <link rel="apple-touch-icon" sizes="180x180" href="/img/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/img/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/img/favicon/favicon-16x16.png">
+    <link rel="manifest" href="/img/favicon/site.webmanifest">
+    <link rel="mask-icon" href="/img/favicon/safari-pinned-tab.svg" color="#0F173D">
+    <meta name="msapplication-TileColor" content="#b91d47">
+    <meta name="theme-color" content="#ffffff">
+
+    <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  
+  <!-- Include the standard DataTables bits -->
+  <link rel="stylesheet" type="text/css" href="//cdn.datatables.net/1.10.13/css/jquery.dataTables.css">
+  <script type="text/javascript" charset="utf8" src="//cdn.datatables.net/1.10.13/js/jquery.dataTables.js"></script>
+  <script>
+    $(document).ready(function () {
+      $('div.datatable-begin').nextUntil('div.datatable-end', 'table').addClass('display');
+      $('table.display').DataTable({
+        paging: false,
+        stateSave: true,
+        searching: true
+      });
+    });
+  </script>
+  
+  
+    <script>
+      $(document).ready(function () {
+          $('.content a').attr({'target':'_blank', 'rel':'noopener noreferrer'});
+        });
+    </script>
+  
+
+    <!-- Begin Jekyll SEO tag v2.7.1 -->
+<title>Control, Estimation and Planning for Coordinated Transport of a Slung Load by a Team of Aerial Robots | ARI Lab</title>
+<meta name="generator" content="Jekyll v4.2.0" />
+<meta property="og:title" content="Control, Estimation and Planning for Coordinated Transport of a Slung Load by a Team of Aerial Robots" />
+<meta name="author" content="Junyi Geng" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Cooperative Transport of a Slung Load using a Team of Aerial Robots" />
+<meta property="og:description" content="Cooperative Transport of a Slung Load using a Team of Aerial Robots" />
+<link rel="canonical" href="https://ari-psu.github.io/multilift/" />
+<meta property="og:url" content="https://ari-psu.github.io/multilift/" />
+<meta property="og:site_name" content="ARI Lab" />
+<meta property="og:image" content="https://ari-psu.github.io/img/posts/2020-12-19-multilift/outdoor_short.gif" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2020-12-19T12:00:00+00:00" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta property="twitter:image" content="https://ari-psu.github.io/img/posts/2020-12-19-multilift/outdoor_short.gif" />
+<meta property="twitter:title" content="Control, Estimation and Planning for Coordinated Transport of a Slung Load by a Team of Aerial Robots" />
+<script type="application/ld+json">
+{"mainEntityOfPage":{"@type":"WebPage","@id":"https://ari-psu.github.io/multilift/"},"author":{"@type":"Person","name":"Junyi Geng"},"description":"Cooperative Transport of a Slung Load using a Team of Aerial Robots","url":"https://ari-psu.github.io/multilift/","@type":"BlogPosting","image":"https://ari-psu.github.io/img/posts/2020-12-19-multilift/outdoor_short.gif","headline":"Control, Estimation and Planning for Coordinated Transport of a Slung Load by a Team of Aerial Robots","dateModified":"2020-12-19T12:00:00+00:00","datePublished":"2020-12-19T12:00:00+00:00","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<!-- head scripts --><!-- Added by Chen -->
+    <script type='text/javascript' src='https://platform-api.sharethis.com/js/sharethis.js#property=5ee902d30e78e50012567eb4&product=inline-follow-buttons&cms=sop' async='async'></script>
+
+    <!-- for mathjax support -->
+    
+
+</head>
+
+<body>
+    
+<nav class="navbar is-primary" >
+    <div class="container">
+        <div class="navbar-brand">
+            <a href="/" class="navbar-item navbar-logo">
+                ARI Lab
+            </a>
+            <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navMenu">
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+            </a>
+        </div>
+        <div class="navbar-menu" id="navMenu">
+            <div class="navbar-start">
+                <a href="/" class="navbar-item ">Home</a>
+                
+                
+                    
+                    <div class="navbar-item has-dropdown is-hoverable">
+                        <a href="/current-members/" class="navbar-link ">Team</a>
+                        <div class="navbar-dropdown">
+                            
+                            <a href="/current-members/" class="navbar-item ">Current Members</a>
+                            
+                            <a href="/alumni/" class="navbar-item ">Alumni</a>
+                            
+                        </div>
+                    </div>
+                    
+                
+                    
+                    <a href="/research/" class="navbar-item ">Research</a>
+                    
+                
+                    
+                    <a href="/publications/" class="navbar-item ">Publications</a>
+                    
+                
+                    
+                    <a href="/news/" class="navbar-item ">News</a>
+                    
+                
+                    
+                    <a href="/contact/" class="navbar-item ">Contact</a>
+                    
+                
+                
+            </div>
+        </div>
+    </div>
+</nav>
+  <section class="hero  is-large  is-bold is-primary"  style="background: linear-gradient(180deg, rgba(204,0,44,.1),rgba(204,0,44,0)), url('/img/posts/2020-12-19-multilift/fly-payload.png') no-repeat center center; background-size: cover;" >
+    <div class="hero-body">
+        <div class="container">
+            
+            
+            
+        </p>
+        </div>
+    </div>
+</section>
+
+<style>
+    .button.is-info {
+     background-color:#0F173D;
+     border-color:transparent;
+     color:#fff
+    }
+    .button.is-info.is-hovered {
+     background-color:#0F173D;
+     border-color:transparent;
+     color:#fff
+    }
+</style>
+  
+
+
+    <section class="section">
+        <div class="container">
+            <div class="columns">
+                
+
+                
+                <div class="column is-8">
+                      
+	
+
+
+<!-- Figure out the relative link to the author -->
+
+
+
+
+
+
+<div class="content">
+
+    <p><div style="font-size: 13px">Published: 
+		<time datetime="2020-12-19T12:00:00+00:00">Dec 19, 2020</time> by 
+		<div style="font-weight: bold; color: #3399ff; display: inline">
+		
+			Junyi Geng
+		
+		</div>
+	</div></p>
+
+    <h1>Control, Estimation and Planning for Coordinated Transport of a Slung Load by a Team of Aerial Robots</h1>
+
+    <p>Transporting slung load using a team of cooperative aerial robots, or denoted by the term multilift, can increase the utility of a fleet of smaller aerial robots by enabling the transport of large, heavy payloads via coordinated transport, which frees us from developing vehicles for extra-large payloads that occur only infrequently. However, the complexity of the coupled system dynamics and the difficulty of payload manipulation and coordinated control lead to challenges in operational development.</p>
+
+<h2 id="a-comprehensive-hierarchical-load-leading-control-strategy">A Comprehensive Hierarchical Load-leading Control Strategy</h2>
+<p>The first challenge is what strategy to use to coordinately control the multilift so that the payload can be well manipulated. This is the core ingredient that determines the solutions of other parts of the system. The difficulty arises from the complexity of the multilift – the coupling between the aerial robots and the slung load. The complex coupling produces not only the high nonlinearity of the system, but also
+imposes differing control requirements for each component.</p>
+
+<p>We have developed a comprehensive hierarchical control strategy for the multilift problem, where the payload can sense itself and lead the whole fleet. The strategy employs a “load-leading” design where the payload pose control, cable force computation, and robot kinematics commanding are achieved in a hierarchical manner. Unlike the conventional approach where the slung load is treated as an external disturbance of the robot formation, this approach proposes to attach sensors onboard the payload. It directly controls the payload pose while computing the required cable forces and robot states in real time. In this manner, the robots behaving as the actuator guarantees the feasibility of the desired payload pose. The strategy also enables convenient motion planning. The payload can either follow a pre-planned trajectory autonomously, or fly by human-in-the-loop control.</p>
+
+<p>Furthermore, We have developed a testbed consisting of four quadrotor robots and a payload. Flight tests have been successfully conducted in an indoor motion capture studio as well as outdoor with GPS
+information.</p>
+
+<figure>
+ <img src="/img/posts/2020-12-19-multilift/scheme.png" style="width:59%" />
+ <figcaption>
+        Hierarchical Load-leading conrol strategy.
+ </figcaption>
+</figure>
+
+<figure>
+    <img src="/img/posts/2020-12-19-multilift/37deg_disturbance_trim.gif" style="width:41%" />
+    <img src="/img/posts/2020-12-19-multilift/fly_payload_trim_480.gif" style="width:55%" />
+    <figcaption>
+        Left: The system can reject impulse response; Right: The system can receive online command from a human pilot, instead of tracking a pre-planned trajectory thanks to the payload as the team leader.
+    </figcaption>
+</figure>
+
+<figure>
+ <img src="/img/posts/2020-12-19-multilift/outdoor_short.gif" style="width:70%" />
+ <figcaption>
+        Outdoor lateral trajectory tracking test.
+ </figcaption>
+</figure>
+
+<h2 id="slung-load-inertial-property-estimation">Slung Load Inertial Property Estimation</h2>
+<p>The second challenge hinges on the model accuracy needed in the load-leading strategy. This requires augmented perception capability of the payload. In scenarios such as search and rescue, payload properties may be unknown. However, accurate payload inertial properties, such as mass, center of
+mass, and moments of inertia, is important for achieving good transportation performance.</p>
+
+<p>The ``load-leading’’ framework enables a strategy for estimating payload parameters so as to improve the model accuracy. I have developed an inertial properties estimation strategy for a multilift slung load without introducing any cable tension load cells, so as to reduce the total weight and system cost. The difficulty is how to design excitation strategy for the system to observe the unknown parameters. Here, additional challenge arises from the lack of cable tension sensor. I created an indirect method on the aerial robot side to estimate the cable force. Then, I designed a sequence of flight patterns that excite different inertial properties to be observable.</p>
+
+<p>The estimation strategy has been validated indoor. Incorporating the estimated payload parameters into the loop significantly improves the tracking performance for the aerial robots. This study provides motivation and guidance on experiment design for system identification for complex system.</p>
+
+<figure>
+    <img src="/img/posts/2020-12-19-multilift/figure_8.png" style="width:39%" />
+    <img src="/img/posts/2020-12-19-multilift/tracking_error.png" style="width:55%" />
+    <figcaption>
+        Left: Controller compensation test. We flew the figure-8 pattern to excite the payload motion, and compared the case with or without controller compensation (with estimated parameters involved); Right: Rotor tracking error. Uncompensated case shows a significantly greater tracking error.
+    </figcaption>
+</figure>
+
+<h2 id="trajectory-planning-and-control-based-on-load-distribution">Trajectory Planning and Control Based on Load Distribution</h2>
+<p>The third challenge is the power allocation of the individual robots for sustainable manipulation tasks. This limits the global transportation performance: if one of the robots runs out of energy, the transportation will breakdown due to highly coupled mechanism. In the case of a homogeneous fleet of robots carrying a payload, it is intuitively appealing to operate the robots at near-equal load, leaving little room for unequal load distribution and thus maximizing the energy efficiency.</p>
+
+<p>The ``load-leading’’ framework also leads to convenient cooperative trajectory planning, which reduces to a simpler planning problem for the payload. I have developed a trajectory planning approach that simultaneously plans the slung load trajectory and cable forces while satisfying path and force
+constraints and minimizing the variance in cable tension. The load distribution based planning problem can thus be formulated as an optimal control problem.</p>
+
+<p>The proposed approach has been validated both in simulation and indoor flight test. The robots ended up with near-equal energy consumption and less total power. The approach developed can be extended to other general multi-robot system to lower the power consumption and extend the flight range and endurance. Therefore, it has the potential for saving considerable costs in real cooperative mission.</p>
+
+<figure>
+ <img src="/img/posts/2020-12-19-multilift/load_distribution.png" style="width:59%" />
+ <figcaption>
+        Comparison between with/without planning based on load distribution. Planning based on load distribution clearly reduced the cable tension variance.
+ </figcaption>
+</figure>
+
+<h2 id="related-papers">Related Papers</h2>
+
+<h3 id="citation">Citation</h3>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>@article{geng2020cooperative,
+  title={Cooperative transport of a slung load using load-leading control},
+  author={Geng, Junyi and Langelaan, Jack W},
+  journal={Journal of Guidance, Control, and Dynamics},
+  volume={43},
+  number={7},
+  pages={1313--1331},
+  year={2020},
+  publisher={American Institute of Aeronautics and Astronautics}
+}
+
+@article{geng2021estimation,
+  title={Estimation of Inertial Properties for a Multilift Slung Load},
+  author={Geng, Junyi and Langelaan, Jack W},
+  journal={Journal of Guidance, Control, and Dynamics},
+  volume={44},
+  number={2},
+  pages={220--237},
+  year={2021},
+  publisher={American Institute of Aeronautics and Astronautics}
+}
+
+@article{geng2022load,
+  title={Load-Distribution-Based Trajectory Planning and Control for a Multilift System},
+  author={Geng, Junyi and Singla, Puneet and Langelaan, Jack W},
+  journal={Journal of Aerospace Information Systems},
+  volume={19},
+  number={5},
+  pages={366--381},
+  year={2022},
+  publisher={American Institute of Aeronautics and Astronautics}
+}
+
+</code></pre></div></div>
+
+</div>
+
+<div class="tags">
+    
+</div>
+
+
+  
+
+  <div id="disqus_thread"></div>
+  <script>
+    var disqus_config = function () {
+      this.page.url = 'https://ari-psu.github.io/multilift/';
+      this.page.identifier = 'https://ari-psu.github.io/multilift/';
+    };
+    (function() {
+      var d = document, s = d.createElement('script');
+      s.src = 'https://jennygeng.disqus.com/embed.js';
+      s.setAttribute('data-timestamp', +new Date());
+      (d.head || d.body).appendChild(s);
+    })();
+  </script>
+  <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+
+
+
+                </div>
+                
+                <div class="column is-4-desktop is-12-tablet">
+                    <p class="title is-4">Latest Research</p>
+
+
+<div class="columns is-multiline">
+    
+    <div class="column is-12">
+        <a href="/contact-aware-vio/">
+<div class="card" style="height: 100%; display: flex; flex-direction: column; align-items: center;">
+    
+        <div style="height: 200px;">
+            <img src="/img/posts/2026-02-09-contact-aware-vio/real_world.gif" alt="Aerial Manipulation with Contact-Aware Onboard Perception and Hybrid Control" style="object-fit: contain; height: 100%;">
+        </div>
+    
+    <div class="card-content" style="flex-grow: 3;">
+        <div class="content">
+            
+            <div class="title is-5">Aerial Manipulation with Contact-Aware Onboard Perception and Hybrid Control</div>
+            
+            <p>Aerial manipulation (AM) promises to move Unmanned Aerial Vehicles (UAVs) beyond passive inspecti...</p>
+        </div>
+    </div>
+    <footer class="card-footer">
+        <p class="card-footer-item">Published: Feb 9, 2026</p>
+    </footer>
+</div>
+</a>
+
+    </div>
+    
+    <div class="column is-12">
+        <a href="/selfsupervised_planning/">
+<div class="card" style="height: 100%; display: flex; flex-direction: column; align-items: center;">
+    
+        <div style="height: 200px;">
+            <img src="/img/posts/2025-03-08-self-supervised-planning/homepage2.gif" alt="A Self-Supervised Learning Approach with Differentiable Optimization for UAV Trajectory Planning" style="object-fit: contain; height: 100%;">
+        </div>
+    
+    <div class="card-content" style="flex-grow: 3;">
+        <div class="content">
+            
+            <div class="title is-5">A Self-Supervised Learning Approach with Differentiable Optimization for UAV Trajectory Planning</div>
+            
+            <p>While Unmanned Aerial Vehicles (UAVs) have gained significant traction across various fields, pat...</p>
+        </div>
+    </div>
+    <footer class="card-footer">
+        <p class="card-footer-item">Published: Feb 9, 2026</p>
+    </footer>
+</div>
+</a>
+
+    </div>
+    
+</div>
+
+
+
+
+                </div>
+                
+            </div>
+        </div>
+    </section>
+     <style>
+  #blocks {
+      width:100%;
+      height:60px;
+      margin:0 auto;
+      /* background-color: #ffe; */
+  }
+  #block1 {
+      height:33.33%;
+      width:30%;
+      /* background: red; */
+      float: left;
+      padding-left: 50px;
+  }
+  #block2 {
+      height:33.33%;
+      width:40%;
+      /* background: yellow; */
+      float: left;
+  }
+  #block3 {
+      height:33.33%;
+      width:30%;
+      /* background: green; */
+      float: right;
+      padding-top: 30px;
+  }
+</style>
+
+<footer class="footer">
+    <div class="container">
+        <!-- 
+        <div class="columns is-multiline">
+            
+            <div class="column has-text-centered">
+                <div>
+                    <a href="/" class="link">Home</a>
+                </div>
+            </div>
+            
+            <div class="column has-text-centered">
+                <div>
+                    <a href="/blog/" class="link">Blog</a>
+                </div>
+            </div>
+            
+            <div class="column has-text-centered">
+                <div>
+                    <a href="/products/" class="link">Products</a>
+                </div>
+            </div>
+            
+            <div class="column has-text-centered">
+                <div>
+                    <a href="/privacy-policy/" class="link">Privacy Policy</a>
+                </div>
+            </div>
+            
+        </div>
+         -->
+        <div id="blocks">
+          <div id="block1"><img src="/img/logos/Horizontal@2x.png" alt="ARI Lab Logo" style="width:100%; margin-top: -5%;"></div>
+          <div id="block2">
+            <center>
+              <!-- <a class="button" itemprop="email" href="https://www.facebook.com" target="_blank">
+                <i class="fab fa-github"></i>
+              </a> -->
+              <!-- <a class="button" itemprop="email" href="https://www.facebook.com" target="_blank">
+                <i class="fab fa-facebook"</i>
+              </a> -->
+              <a class="button" itemprop="google scholar" href="https://scholar.google.com/citations?user=psUhJgcAAAAJ&hl=en&oi=sra" target="_blank">
+                <i class="fab fa-google scholar fa-lg"></i>
+              </a>
+              <a class="button" itemprop="github" href="https://github.com/aerogjy" target="_blank">
+                <i class="fab fa-github fa-lg"></i>
+              </a>
+              <a class="button" itemprop="linkedin" href="https://www.linkedin.com/in/junyi-geng-ph-d-9823a3b5/" target="_blank">
+                <i class="fab fa-linkedin fa-lg"></i>
+              </a>
+              <br>
+              <br>
+              <p class="">&copy; 2021 | Built using the <a href="https://github.com/chrisrhymes/bulma-clean-theme">Bulma Clean Theme</a></p>
+            </center>
+          </div>
+          <div id="block3"><img src="/img/logos/psuaero.png" alt="PSU Logo" style="width:100%; margin-top: -5%"></div>
+        </div>
+        <!-- <div>
+          <a href="" class="button is-large"><div class="icon"><i class="fab fa-facebook"</i></div></a>
+        </div> -->
+        <!-- <div class="content is-small has-text-centered">
+            <p class="">© 2020</p>
+        </div> -->
+    </div>
+
+
+</footer>
+ 
+    <script src="/assets/js/app.js" type="text/javascript"></script><!-- footer scripts --></body>
+
+</html>

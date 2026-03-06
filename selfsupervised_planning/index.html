@@ -1,0 +1,447 @@
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <title>A Self-Supervised Learning Approach with Differentiable Optimization for UAV Trajectory Planning - ARI Lab</title>
+    
+    <link rel="stylesheet" href="/assets/css/app.css">
+
+    <link rel="shortcut icon" type="image/ico" href="/img/favicon/favicon.ico" />
+
+    <link rel="apple-touch-icon" sizes="180x180" href="/img/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/img/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/img/favicon/favicon-16x16.png">
+    <link rel="manifest" href="/img/favicon/site.webmanifest">
+    <link rel="mask-icon" href="/img/favicon/safari-pinned-tab.svg" color="#0F173D">
+    <meta name="msapplication-TileColor" content="#b91d47">
+    <meta name="theme-color" content="#ffffff">
+
+    <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  
+  <!-- Include the standard DataTables bits -->
+  <link rel="stylesheet" type="text/css" href="//cdn.datatables.net/1.10.13/css/jquery.dataTables.css">
+  <script type="text/javascript" charset="utf8" src="//cdn.datatables.net/1.10.13/js/jquery.dataTables.js"></script>
+  <script>
+    $(document).ready(function () {
+      $('div.datatable-begin').nextUntil('div.datatable-end', 'table').addClass('display');
+      $('table.display').DataTable({
+        paging: false,
+        stateSave: true,
+        searching: true
+      });
+    });
+  </script>
+  
+  
+    <script>
+      $(document).ready(function () {
+          $('.content a').attr({'target':'_blank', 'rel':'noopener noreferrer'});
+        });
+    </script>
+  
+
+    <!-- Begin Jekyll SEO tag v2.7.1 -->
+<title>A Self-Supervised Learning Approach with Differentiable Optimization for UAV Trajectory Planning | ARI Lab</title>
+<meta name="generator" content="Jekyll v4.2.0" />
+<meta property="og:title" content="A Self-Supervised Learning Approach with Differentiable Optimization for UAV Trajectory Planning" />
+<meta name="author" content="Yuanzhu Zhan" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="A Category-level Object 6D Pose and Shape Estimation Framework" />
+<meta property="og:description" content="A Category-level Object 6D Pose and Shape Estimation Framework" />
+<link rel="canonical" href="https://ari-psu.github.io/selfsupervised_planning/" />
+<meta property="og:url" content="https://ari-psu.github.io/selfsupervised_planning/" />
+<meta property="og:site_name" content="ARI Lab" />
+<meta property="og:image" content="https://ari-psu.github.io/img/posts/2025-03-08-self-supervised-planning/homepage2.gif" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-02-09T12:00:00+00:00" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta property="twitter:image" content="https://ari-psu.github.io/img/posts/2025-03-08-self-supervised-planning/homepage2.gif" />
+<meta property="twitter:title" content="A Self-Supervised Learning Approach with Differentiable Optimization for UAV Trajectory Planning" />
+<script type="application/ld+json">
+{"mainEntityOfPage":{"@type":"WebPage","@id":"https://ari-psu.github.io/selfsupervised_planning/"},"author":{"@type":"Person","name":"Yuanzhu Zhan"},"description":"A Category-level Object 6D Pose and Shape Estimation Framework","url":"https://ari-psu.github.io/selfsupervised_planning/","@type":"BlogPosting","image":"https://ari-psu.github.io/img/posts/2025-03-08-self-supervised-planning/homepage2.gif","headline":"A Self-Supervised Learning Approach with Differentiable Optimization for UAV Trajectory Planning","dateModified":"2026-02-09T12:00:00+00:00","datePublished":"2026-02-09T12:00:00+00:00","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<!-- head scripts --><!-- Added by Chen -->
+    <script type='text/javascript' src='https://platform-api.sharethis.com/js/sharethis.js#property=5ee902d30e78e50012567eb4&product=inline-follow-buttons&cms=sop' async='async'></script>
+
+    <!-- for mathjax support -->
+    
+
+</head>
+
+<body>
+    
+<nav class="navbar is-primary" >
+    <div class="container">
+        <div class="navbar-brand">
+            <a href="/" class="navbar-item navbar-logo">
+                ARI Lab
+            </a>
+            <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navMenu">
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+            </a>
+        </div>
+        <div class="navbar-menu" id="navMenu">
+            <div class="navbar-start">
+                <a href="/" class="navbar-item ">Home</a>
+                
+                
+                    
+                    <div class="navbar-item has-dropdown is-hoverable">
+                        <a href="/current-members/" class="navbar-link ">Team</a>
+                        <div class="navbar-dropdown">
+                            
+                            <a href="/current-members/" class="navbar-item ">Current Members</a>
+                            
+                            <a href="/alumni/" class="navbar-item ">Alumni</a>
+                            
+                        </div>
+                    </div>
+                    
+                
+                    
+                    <a href="/research/" class="navbar-item ">Research</a>
+                    
+                
+                    
+                    <a href="/publications/" class="navbar-item ">Publications</a>
+                    
+                
+                    
+                    <a href="/news/" class="navbar-item ">News</a>
+                    
+                
+                    
+                    <a href="/contact/" class="navbar-item ">Contact</a>
+                    
+                
+                
+            </div>
+        </div>
+    </div>
+</nav>
+  <section class="hero  is-medium  is-bold is-primary" >
+    <div class="hero-body">
+        <div class="container">
+            
+                <p class="title is-2">A Self-Supervised Learning Approach with Differentiable Optimization for UAV Trajectory Planning</p>
+                <p class="subtitle is-3"></p>
+                <p class="subtitle is-3">
+            
+            
+            
+        </p>
+        </div>
+    </div>
+</section>
+
+<style>
+    .button.is-info {
+     background-color:#0F173D;
+     border-color:transparent;
+     color:#fff
+    }
+    .button.is-info.is-hovered {
+     background-color:#0F173D;
+     border-color:transparent;
+     color:#fff
+    }
+</style>
+  
+
+
+    <section class="section">
+        <div class="container">
+            <div class="columns">
+                
+
+                
+                <div class="column is-8">
+                      
+	
+
+
+<!-- Figure out the relative link to the author -->
+
+
+
+
+
+
+<div class="content">
+
+    <p><div style="font-size: 13px">Published: 
+		<time datetime="2026-02-09T12:00:00+00:00">Feb 9, 2026</time> by 
+		<div style="font-weight: bold; color: #3399ff; display: inline">
+		
+			Yuanzhu Zhan
+		
+		</div>
+	</div></p>
+
+    <h1>A Self-Supervised Learning Approach with Differentiable Optimization for UAV Trajectory Planning</h1>
+
+    <p>While Unmanned Aerial Vehicles (UAVs) have gained significant traction across various fields, path planning in 3D environments remains a critical challenge, particularly under size, weight, and power (SWAP) constraints. Traditional modular planning systems often introduce latency and suboptimal performance due to limited information sharing and local minima issues. End-to-end learning approaches streamline the pipeline by mapping sensory observations directly to actions but require large-scale datasets, face significant simto-real gaps, or lack dynamical feasibility. In this project, we propose a self-supervised UAV trajectory planning pipeline that integrates a learning-based depth perception with differentiable trajectory optimization. A 3D cost map guides UAV behavior without expert demonstrations or human labels. Additionally, we incorporate a neural network-based time allocation strategy to improve the efficiency and optimality. The system thus combines robust learning-based perception with reliable physicsbased optimization for improved generalizability and interpretability. Both simulation and real-world experiments validate our approach across various environments, demonstrating its effectiveness and robustness. Our method achieves a 31.33% improvement in position tracking error and 49.37% reduction in control effort compared to the state-of-the-art.</p>
+
+<h2 id="planning-pipeline">Planning Pipeline</h2>
+<figure>
+ <img src="/img/posts/2025-03-08-self-supervised-planning/pipeline.png" />
+ <figcaption>
+       Pipeline of the proposed planning method
+ </figcaption>
+</figure>
+
+<p>Our method takes only depth images as input, and directly outputs trajectories through end-to-end pipeline. Each module is fully differentiable, enabling gradient backpropagation through effective joint training. Specifically, a front-end network first predicts key waypoints from the input depth image. Then, back-end trajectory optimization module generates an optimal trajectory based on these waypoints. Additionally, we introduced a time allocation network to handle the challenging timing problem, ensuring both real-time performance and trajectory optimality.
+Compared to other approaches, our method is fully self-supervised thanks to our 3D cost map. Moreover, with iterative trajectory optimization, we can incorporate inequality constraints, further enhancing its practical applicability.</p>
+
+<h2 id="experiment-results">Experiment Results</h2>
+<p>Navigation in various simulation environments</p>
+<video controls="" autoplay="" loop="" muted="" playsinline="" src="/img/posts/2025-03-08-self-supervised-planning/simulation.mp4" type="video/mp4">
+</video>
+
+<p>Real-world obstacle avoidance in 3D complex environment</p>
+<figure>
+  <img src="/img/posts/2025-03-08-self-supervised-planning/exp_stack.png" />
+  <figcaption>
+       A sequence of snapshots of real-world flight experiments in complex environment
+  </figcaption>
+</figure>
+
+<video controls="" autoplay="" loop="" muted="" playsinline="" src="/img/posts/2025-03-08-self-supervised-planning/real_world.mp4" type="video/mp4">
+</video>
+
+<h2 id="video">Video</h2>
+
+<!-- <div class="video-wrapper"><iframe src="http://www.youtube.com/embed/3AMcM3uUaUw" frameborder="0" allowfullscreen></iframe></div> -->
+<video controls="" autoplay="" loop="" muted="" playsinline="" src="/img/posts/2025-03-08-self-supervised-planning/full_video.mp4" type="video/mp4">
+</video>
+
+<div class="container">
+  <h2 class="title is-2" id="press-coverage">Media</h2>
+  <br />
+  <div class="columns is-centered">
+    <div class="column is-centered has-text-centered">
+      <a target="_blank" href="https://aerospaceamerica.aiaa.org/year-in-review/intelligent-systems-advance-in-communication-planning-perception-and-safety/">
+        <img src="https://aiaa.org/wp-content/uploads/2025/05/AIAA-New-Logo-SMC.png" width="90%" />
+      </a>
+    </div>
+</div>
+
+<!-- ### Publication -->
+<section class="section" id="Publication">
+  <div class="container is-max-desktop content">
+    <h2 class="title">BibTeX</h2>
+    <pre><code>@inproceedings{jiang2025selfsupervised,
+      title={A Self-Supervised Learning Approach with Differentiable Optimization for UAV Trajectory Planning}, 
+      author={Yufei Jiang and Yuanzhu Zhan and Harsh Vardhan Gupta and Chinmay Borde and Junyi Geng},  
+      booktitle={IEEE International Conference on Robotics and Automation (ICRA)},
+      pages={Accepted},
+      url={https://arxiv.org/abs/2504.04289}, 
+      year={2026},
+      organization={IEEE}
+}
+</code></pre>
+  </div>
+</section>
+</div>
+
+</div>
+
+<div class="tags">
+    
+</div>
+
+
+  
+
+  <div id="disqus_thread"></div>
+  <script>
+    var disqus_config = function () {
+      this.page.url = 'https://ari-psu.github.io/selfsupervised_planning/';
+      this.page.identifier = 'https://ari-psu.github.io/selfsupervised_planning/';
+    };
+    (function() {
+      var d = document, s = d.createElement('script');
+      s.src = 'https://jennygeng.disqus.com/embed.js';
+      s.setAttribute('data-timestamp', +new Date());
+      (d.head || d.body).appendChild(s);
+    })();
+  </script>
+  <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+
+
+
+                </div>
+                
+                <div class="column is-4-desktop is-12-tablet">
+                    <p class="title is-4">Latest Research</p>
+
+
+<div class="columns is-multiline">
+    
+    <div class="column is-12">
+        <a href="/contact-aware-vio/">
+<div class="card" style="height: 100%; display: flex; flex-direction: column; align-items: center;">
+    
+        <div style="height: 200px;">
+            <img src="/img/posts/2026-02-09-contact-aware-vio/real_world.gif" alt="Aerial Manipulation with Contact-Aware Onboard Perception and Hybrid Control" style="object-fit: contain; height: 100%;">
+        </div>
+    
+    <div class="card-content" style="flex-grow: 3;">
+        <div class="content">
+            
+            <div class="title is-5">Aerial Manipulation with Contact-Aware Onboard Perception and Hybrid Control</div>
+            
+            <p>Aerial manipulation (AM) promises to move Unmanned Aerial Vehicles (UAVs) beyond passive inspecti...</p>
+        </div>
+    </div>
+    <footer class="card-footer">
+        <p class="card-footer-item">Published: Feb 9, 2026</p>
+    </footer>
+</div>
+</a>
+
+    </div>
+    
+    <div class="column is-12">
+        <a href="/selfsupervised_planning/">
+<div class="card" style="height: 100%; display: flex; flex-direction: column; align-items: center;">
+    
+        <div style="height: 200px;">
+            <img src="/img/posts/2025-03-08-self-supervised-planning/homepage2.gif" alt="A Self-Supervised Learning Approach with Differentiable Optimization for UAV Trajectory Planning" style="object-fit: contain; height: 100%;">
+        </div>
+    
+    <div class="card-content" style="flex-grow: 3;">
+        <div class="content">
+            
+            <div class="title is-5">A Self-Supervised Learning Approach with Differentiable Optimization for UAV Trajectory Planning</div>
+            
+            <p>While Unmanned Aerial Vehicles (UAVs) have gained significant traction across various fields, pat...</p>
+        </div>
+    </div>
+    <footer class="card-footer">
+        <p class="card-footer-item">Published: Feb 9, 2026</p>
+    </footer>
+</div>
+</a>
+
+    </div>
+    
+</div>
+
+
+
+
+                </div>
+                
+            </div>
+        </div>
+    </section>
+     <style>
+  #blocks {
+      width:100%;
+      height:60px;
+      margin:0 auto;
+      /* background-color: #ffe; */
+  }
+  #block1 {
+      height:33.33%;
+      width:30%;
+      /* background: red; */
+      float: left;
+      padding-left: 50px;
+  }
+  #block2 {
+      height:33.33%;
+      width:40%;
+      /* background: yellow; */
+      float: left;
+  }
+  #block3 {
+      height:33.33%;
+      width:30%;
+      /* background: green; */
+      float: right;
+      padding-top: 30px;
+  }
+</style>
+
+<footer class="footer">
+    <div class="container">
+        <!-- 
+        <div class="columns is-multiline">
+            
+            <div class="column has-text-centered">
+                <div>
+                    <a href="/" class="link">Home</a>
+                </div>
+            </div>
+            
+            <div class="column has-text-centered">
+                <div>
+                    <a href="/blog/" class="link">Blog</a>
+                </div>
+            </div>
+            
+            <div class="column has-text-centered">
+                <div>
+                    <a href="/products/" class="link">Products</a>
+                </div>
+            </div>
+            
+            <div class="column has-text-centered">
+                <div>
+                    <a href="/privacy-policy/" class="link">Privacy Policy</a>
+                </div>
+            </div>
+            
+        </div>
+         -->
+        <div id="blocks">
+          <div id="block1"><img src="/img/logos/Horizontal@2x.png" alt="ARI Lab Logo" style="width:100%; margin-top: -5%;"></div>
+          <div id="block2">
+            <center>
+              <!-- <a class="button" itemprop="email" href="https://www.facebook.com" target="_blank">
+                <i class="fab fa-github"></i>
+              </a> -->
+              <!-- <a class="button" itemprop="email" href="https://www.facebook.com" target="_blank">
+                <i class="fab fa-facebook"</i>
+              </a> -->
+              <a class="button" itemprop="google scholar" href="https://scholar.google.com/citations?user=psUhJgcAAAAJ&hl=en&oi=sra" target="_blank">
+                <i class="fab fa-google scholar fa-lg"></i>
+              </a>
+              <a class="button" itemprop="github" href="https://github.com/aerogjy" target="_blank">
+                <i class="fab fa-github fa-lg"></i>
+              </a>
+              <a class="button" itemprop="linkedin" href="https://www.linkedin.com/in/junyi-geng-ph-d-9823a3b5/" target="_blank">
+                <i class="fab fa-linkedin fa-lg"></i>
+              </a>
+              <br>
+              <br>
+              <p class="">&copy; 2021 | Built using the <a href="https://github.com/chrisrhymes/bulma-clean-theme">Bulma Clean Theme</a></p>
+            </center>
+          </div>
+          <div id="block3"><img src="/img/logos/psuaero.png" alt="PSU Logo" style="width:100%; margin-top: -5%"></div>
+        </div>
+        <!-- <div>
+          <a href="" class="button is-large"><div class="icon"><i class="fab fa-facebook"</i></div></a>
+        </div> -->
+        <!-- <div class="content is-small has-text-centered">
+            <p class="">© 2020</p>
+        </div> -->
+    </div>
+
+
+</footer>
+ 
+    <script src="/assets/js/app.js" type="text/javascript"></script><!-- footer scripts --></body>
+
+</html>
