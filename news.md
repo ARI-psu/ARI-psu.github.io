@@ -9,6 +9,37 @@ hide_footer: false
 <div class="news-container">
   <!-- news of 2026 -->
   <div class="year-header">2026</div>
+  <!-- Dr.Geng received the NSF Career Award! -->
+  <div class="news-item" data-aos="fade-up" data-aos-duration="1000">
+    <div class="date-box">
+      <span class="date-day">20</span>
+      <span class="date-month">April</span>
+    </div>
+    <div class="news-content">
+      <h2>Dr.Geng received the <a href="https://www.nsf.gov/awardsearch/show-award?AWD_ID=2541976" target="_blank">NSF Career Award</a>!</h2>
+    </div>
+  </div>
+  <!-- Yufei received the Harry G. Miller Fellowships in Engineering! -->
+  <div class="news-item" data-aos="fade-up" data-aos-duration="1000">
+    <div class="date-box">
+      <span class="date-day">15</span>
+      <span class="date-month">April</span>
+    </div>
+    <div class="news-content">
+      <h2>Congratulations to Yufei on receiving the Harry G. Miller Fellowships in Engineering!</a>!</h2>
+    </div>
+  </div>
+  <!-- Alex received the NSF GRFP! -->
+  <div class="news-item" data-aos="fade-up" data-aos-duration="1000">
+    <div class="date-box">
+      <span class="date-day">10</span>
+      <span class="date-month">April</span>
+    </div>
+    <div class="news-content">
+      <h2>Congratulations to Alex on receiving the NSF Graduate Research Fellowship!</a>!</h2>
+    </div>
+  </div>
+
   <!-- Congratulations to Yufei and Yuanzhu on passing their PhD qualifying exam! -->
   <div class="news-item" data-aos="fade-right" data-aos-duration="1000">
     <div class="date-box">
