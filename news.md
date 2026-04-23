@@ -1,6 +1,6 @@
 ---
 title: Latest News
-subtitle: Recent udates
+subtitle: Recent updates
 layout: dyn_page
 show_sidebar: false
 hide_footer: false
