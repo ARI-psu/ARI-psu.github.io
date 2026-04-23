@@ -26,7 +26,7 @@ hide_footer: false
       <span class="date-month">April</span>
     </div>
     <div class="news-content">
-      <h2>Congratulations to Yufei on receiving the Harry G. Miller Fellowships in Engineering!</a>!</h2>
+      <h2>Congratulations to Yufei on receiving the Harry G. Miller Fellowships in Engineering!</h2>
     </div>
   </div>
   <!-- Alex received the NSF GRFP! -->
@@ -36,7 +36,7 @@ hide_footer: false
       <span class="date-month">April</span>
     </div>
     <div class="news-content">
-      <h2>Congratulations to Alex on receiving the NSF Graduate Research Fellowship!</a>!</h2>
+      <h2>Congratulations to Alex on receiving the NSF Graduate Research Fellowship!</h2>
     </div>
   </div>
 
