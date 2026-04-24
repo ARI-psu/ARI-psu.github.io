@@ -22,6 +22,20 @@ Work Phone: (814) 865-3677
 
 # Recent News
 
+* <span style="color:red">04/2026:</span> Honored to receive the [NSF Career Award](https://www.nsf.gov/awardsearch/show-award?AWD_ID=2541976).
+
+* <span style="color:red">10/2025:</span> I gave a talk for IEEE RSJ International Conference on Intelligent Robots and Systems (IROS) 2025 Workshop on [Adcancements in Aerial Physical Interaction](https://sites.google.com/view/iros2025-aerialrobot-workshop/home).
+
+* <span style="color:red">07/2025:</span> I served on a NSF review panel.
+
+* <span style="color:red">06/2025:</span> I served on a NSF review panel.
+
+* <span style="color:red">05/2025:</span> I served as a session Chair for IEEE International Conference of Rbotics & Automation (ICRA) 2025.
+
+* <span style="color:red">01/2025:</span> I served as a session Chair for AIAA Intellegent System in Scitech 2025.
+
+* <span style="color:red">01/2025:</span> I served on a NSF review panel.
+
 * <span style="color:red">05/2024:</span> I gave a talk for [Penn State industryXchange 2024: Robotics](https://www.engr.psu.edu/industryxchange/index.aspx).
 
 * <span style="color:red">04/2024:</span> I started serving as an Associate Editor (AE) for IEEE Robotics and Automation Letters (RA-L), one of the top robotics journals.
