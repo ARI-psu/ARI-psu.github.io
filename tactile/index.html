@@ -1,0 +1,437 @@
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <title>Aerial Interaction with Tactile Sensing - ARI Lab</title>
+    
+    <link rel="stylesheet" href="/assets/css/app.css">
+
+    <link rel="shortcut icon" type="image/ico" href="/img/favicon/favicon.ico" />
+
+    <link rel="apple-touch-icon" sizes="180x180" href="/img/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/img/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/img/favicon/favicon-16x16.png">
+    <link rel="manifest" href="/img/favicon/site.webmanifest">
+    <link rel="mask-icon" href="/img/favicon/safari-pinned-tab.svg" color="#0F173D">
+    <meta name="msapplication-TileColor" content="#b91d47">
+    <meta name="theme-color" content="#ffffff">
+
+    <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  
+  <!-- Include the standard DataTables bits -->
+  <link rel="stylesheet" type="text/css" href="//cdn.datatables.net/1.10.13/css/jquery.dataTables.css">
+  <script type="text/javascript" charset="utf8" src="//cdn.datatables.net/1.10.13/js/jquery.dataTables.js"></script>
+  <script>
+    $(document).ready(function () {
+      $('div.datatable-begin').nextUntil('div.datatable-end', 'table').addClass('display');
+      $('table.display').DataTable({
+        paging: false,
+        stateSave: true,
+        searching: true
+      });
+    });
+  </script>
+  
+  
+    <script>
+      $(document).ready(function () {
+          $('.content a').attr({'target':'_blank', 'rel':'noopener noreferrer'});
+        });
+    </script>
+  
+
+    <!-- Begin Jekyll SEO tag v2.7.1 -->
+<title>Aerial Interaction with Tactile Sensing | ARI Lab</title>
+<meta name="generator" content="Jekyll v4.2.0" />
+<meta property="og:title" content="Aerial Interaction with Tactile Sensing" />
+<meta name="author" content="Xiaofeng Guo" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Aerial Interaction with Tactile Sensing" />
+<meta property="og:description" content="Aerial Interaction with Tactile Sensing" />
+<link rel="canonical" href="https://ari-psu.github.io/tactile/" />
+<meta property="og:url" content="https://ari-psu.github.io/tactile/" />
+<meta property="og:site_name" content="ARI Lab" />
+<meta property="og:image" content="https://ari-psu.github.io/img/posts/2024-05-01-tactile/tactile-title.gif" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2024-05-01T12:00:00+00:00" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta property="twitter:image" content="https://ari-psu.github.io/img/posts/2024-05-01-tactile/tactile-title.gif" />
+<meta property="twitter:title" content="Aerial Interaction with Tactile Sensing" />
+<script type="application/ld+json">
+{"mainEntityOfPage":{"@type":"WebPage","@id":"https://ari-psu.github.io/tactile/"},"author":{"@type":"Person","name":"Xiaofeng Guo"},"description":"Aerial Interaction with Tactile Sensing","url":"https://ari-psu.github.io/tactile/","@type":"BlogPosting","image":"https://ari-psu.github.io/img/posts/2024-05-01-tactile/tactile-title.gif","headline":"Aerial Interaction with Tactile Sensing","dateModified":"2024-05-01T12:00:00+00:00","datePublished":"2024-05-01T12:00:00+00:00","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<!-- head scripts --><!-- Added by Chen -->
+    <script type='text/javascript' src='https://platform-api.sharethis.com/js/sharethis.js#property=5ee902d30e78e50012567eb4&product=inline-follow-buttons&cms=sop' async='async'></script>
+
+    <!-- for mathjax support -->
+    
+
+</head>
+
+<body>
+    
+<nav class="navbar is-primary" >
+    <div class="container">
+        <div class="navbar-brand">
+            <a href="/" class="navbar-item navbar-logo">
+                ARI Lab
+            </a>
+            <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navMenu">
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+            </a>
+        </div>
+        <div class="navbar-menu" id="navMenu">
+            <div class="navbar-start">
+                <a href="/" class="navbar-item ">Home</a>
+                
+                
+                    
+                    <div class="navbar-item has-dropdown is-hoverable">
+                        <a href="/current-members/" class="navbar-link ">Team</a>
+                        <div class="navbar-dropdown">
+                            
+                            <a href="/current-members/" class="navbar-item ">Current Members</a>
+                            
+                            <a href="/alumni/" class="navbar-item ">Alumni</a>
+                            
+                        </div>
+                    </div>
+                    
+                
+                    
+                    <a href="/research/" class="navbar-item ">Research</a>
+                    
+                
+                    
+                    <a href="/publications/" class="navbar-item ">Publications</a>
+                    
+                
+                    
+                    <a href="/news/" class="navbar-item ">News</a>
+                    
+                
+                    
+                    <a href="/contact/" class="navbar-item ">Contact</a>
+                    
+                
+                
+            </div>
+        </div>
+    </div>
+</nav>
+  <section class="hero  is-medium  is-bold is-primary" >
+    <div class="hero-body">
+        <div class="container">
+            
+                <p class="title is-2">Aerial Interaction with Tactile Sensing</p>
+                <p class="subtitle is-3"></p>
+                <p class="subtitle is-3">
+            
+            
+            
+        </p>
+        </div>
+    </div>
+</section>
+
+<style>
+    .button.is-info {
+     background-color:#0F173D;
+     border-color:transparent;
+     color:#fff
+    }
+    .button.is-info.is-hovered {
+     background-color:#0F173D;
+     border-color:transparent;
+     color:#fff
+    }
+</style>
+  
+
+
+    <section class="section">
+        <div class="container">
+            <div class="columns">
+                
+
+                
+                <div class="column is-8">
+                      
+	
+
+
+<!-- Figure out the relative link to the author -->
+
+
+
+
+
+
+<div class="content">
+
+    <p><div style="font-size: 13px">Published: 
+		<time datetime="2024-05-01T12:00:00+00:00">May 1, 2024</time> by 
+		<div style="font-weight: bold; color: #3399ff; display: inline">
+		
+			Xiaofeng Guo
+		
+		</div>
+	</div></p>
+
+    <h1>Aerial Interaction with Tactile Sensing</h1>
+
+    <p>While autonomous Uncrewed Aerial Vehicles (UAVs) have grown rapidly, most applications only focus on passive visual tasks. Aerial interaction aims to execute tasks involving physical interactions, which offers a way to assist humans in high-risk, high-altitude operations, thereby reducing cost, time, and potential hazards. The coupled dynamics between the aerial vehicle and manipulator, however, pose challenges for precision control. Previous research has typically employed either position control, which often fails to meet mission accuracy, or force control using expensive, heavy, and cumbersome force/torque sensors that also lack local semantic information. Conversely, tactile sensors, being both cost-effective and lightweight, are capable of sensing contact information including force distribution, as well as recognizing local textures. Existing work on tactile sensing mainly focuses on tabletop manipulation tasks within a quasi-static process. In this paper, we pioneer the use of vision-based tactile sensors on a fully-actuated UAV to improve the accuracy of the more dynamic aerial manipulation tasks. We introduce a pipeline utilizing tactile feedback for real-time force tracking via a hybrid motion-force controller and a method for wall texture detection during aerial interactions. Our experiments demonstrate that our system can effectively replace or complement traditional force/torque sensors, improving flight performance by approximately 16% in position tracking error when using the fused force estimate compared to relying on a single sensor. Our tactile sensor achieves 93.4% accuracy in real-time texture recognition and 100% post-contact. To the best of our knowledge, this is the first work to incorporate a vision-based tactile sensor into aerial interaction tasks.</p>
+
+<h2 id="approach-overview">Approach Overview</h2>
+
+<figure>
+ <img src="/img/posts/2024-05-01-tactile/tactile-diagram.png" />
+ <figcaption>
+        Aerial Interaction with Tactile Sensing.
+ </figcaption>
+</figure>
+
+<p>We developed a pipeline that leverages the vision-based tactile sensor GelSight with the fully actuated UAV. The tactile sensor estimates the contact force and recognizes the wall texture during the flight. The estimated contact force, together with the indirect measurement from the base F/T sensor, is then fused via the Kalman filter to estimate the external contact force for force tracking using a hybrid motion-force controller.</p>
+
+<h2 id="simulator">Simulator</h2>
+<video width="1280" height="960" controls="">
+  <source src="/img/posts/2024-05-01-tactile/simulator.mp4" type="video/mp4" />
+  Your browser does not support the video tag.
+</video>
+
+<p>We developed the simulator of our hexrotor model in Gazebo. We deploy Taxim, an example-based simulation model for GelSight tactile sensors, to Gazebo and incorporate it with our hexrotor simulator in Gazebo. The tactile simulation consists of two parts: contact image simulation, and the markers motion simulation (illustrated as white arrows in the video), corresponding to the GelSight.  In terms of contact image simulation, we get the sensor position and contacted surface position to calculate the contact depth. Then the total contact force is read from the Gazebo physical simulator (here we use ODE) to adjust the gel pad deformation depth.  The contacted object model, the GelSight-embedded camera, and the LEDs are imposed into Pyrender to render the contact depth image. The image is blurred by Gaussian noise to mimic the real gel deformation and out as the contact tactile image results. In terms of the markers’ motion simulation. We read the contact force and the contact point from the Gazebo physics simulator and use the Taxim example-based method to calculate the force distribution on top of the gel pad surface. The markers’ motions are sampled based on their initial position.</p>
+
+<p>In the future, the simulation will help develop more aggressive control methods for our system.</p>
+
+<h2 id="experiment">Experiment</h2>
+<h3 id="hybrid-motion-force-controller">Hybrid motion-force controller</h3>
+<p>We compare the performance of our hybrid force-motion controller across three scenarios: (1) relying solely on F/T sensor readings, (2) using only vision-based tactile sensor measurements, and (3) employing sensor fusion that combines both types of measurements. The vehicle is directed to approach a wall and sustain a contact force of 5 N upon making contact.</p>
+
+<p>We utilize both the force tracking and the position error to quantify the controller performance. Notably, Scenarios relying solely on either the F/T sensor or the vision-based tactile sensor showed similar ranges of error variance, and using fused force data leads to about a 16% improvement in key performance indicators like RMSE, and standard deviation, compared to only relying on the F/T sensor. In summary, the results strongly indicate that the vision-based tactile sensor can effectively serve as a replacement for, or complement to, traditional F/T sensors, yielding comparable or enhanced flight performance.</p>
+
+<video width="1280" height="960" controls="">
+  <source src="/img/posts/2024-05-01-tactile/controller_performance.mp4" type="video/mp4" />
+  Your browser does not support the video tag.
+</video>
+
+<h3 id="online-texture-detection">Online texture detection</h3>
+<p>We evaluate the system’s ability to identify wall textures during flight and contact. We focus on identifying the following specific textures: 1) wood grain, 2) marble mosaic, 3) quartz stone, 4) diamond vinyl, and 5) foam mat. Additionally, we include a sixth texture: a printed imitation of a brick pattern on flat paper. Our method achieves 93.4% accuracy in real-time texture recognition. Importantly, the predictions stabilize and self-correct over time, ultimately achieving a post-contact accuracy of 100% for all textures. These results demonstrate that the vision-based tactile sensor can effectively identify 3D textures during aerial contact, suggesting its potential utility in defect detection tasks, such as identifying wing cracks. The tactile sensor works well even when the external lighting condition changes, which is challenging for vision.</p>
+
+<video width="1280" height="960" controls="">
+  <source src="/img/posts/2024-05-01-tactile/texture_detection.mp4" type="video/mp4" />
+  Your browser does not support the video tag.
+</video>
+
+<h3 id="publication">Publication</h3>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>@inproceedings{guo2024aerial,
+  title={Aerial interaction with tactile sensing},
+  author={Guo, Xiaofeng and He, Guanqi and Mousaei, Mohammadreza and Geng, Junyi and Shi, Guanya and Scherer, Sebastian},
+  booktitle={2024 IEEE International Conference on Robotics and Automation (ICRA)},
+  pages={1576--1582},
+  year={2024},
+  organization={IEEE}
+}
+
+</code></pre></div></div>
+
+</div>
+
+<div class="tags">
+    
+</div>
+
+
+  
+
+  <div id="disqus_thread"></div>
+  <script>
+    var disqus_config = function () {
+      this.page.url = 'https://ari-psu.github.io/tactile/';
+      this.page.identifier = 'https://ari-psu.github.io/tactile/';
+    };
+    (function() {
+      var d = document, s = d.createElement('script');
+      s.src = 'https://jennygeng.disqus.com/embed.js';
+      s.setAttribute('data-timestamp', +new Date());
+      (d.head || d.body).appendChild(s);
+    })();
+  </script>
+  <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+
+
+
+                </div>
+                
+                <div class="column is-4-desktop is-12-tablet">
+                    <p class="title is-4">Latest Research</p>
+
+
+<div class="columns is-multiline">
+    
+    <div class="column is-12">
+        <a href="/contact-aware-vio/">
+<div class="card" style="height: 100%; display: flex; flex-direction: column; align-items: center;">
+    
+        <div style="height: 200px;">
+            <img src="/img/posts/2026-02-09-contact-aware-vio/real_world.gif" alt="Aerial Manipulation with Contact-Aware Onboard Perception and Hybrid Control" style="object-fit: contain; height: 100%;">
+        </div>
+    
+    <div class="card-content" style="flex-grow: 3;">
+        <div class="content">
+            
+            <div class="title is-5">Aerial Manipulation with Contact-Aware Onboard Perception and Hybrid Control</div>
+            
+            <p>Aerial manipulation (AM) promises to move Unmanned Aerial Vehicles (UAVs) beyond passive inspecti...</p>
+        </div>
+    </div>
+    <footer class="card-footer">
+        <p class="card-footer-item">Published: Feb 9, 2026</p>
+    </footer>
+</div>
+</a>
+
+    </div>
+    
+    <div class="column is-12">
+        <a href="/selfsupervised_planning/">
+<div class="card" style="height: 100%; display: flex; flex-direction: column; align-items: center;">
+    
+        <div style="height: 200px;">
+            <img src="/img/posts/2025-03-08-self-supervised-planning/homepage2.gif" alt="A Self-Supervised Learning Approach with Differentiable Optimization for UAV Trajectory Planning" style="object-fit: contain; height: 100%;">
+        </div>
+    
+    <div class="card-content" style="flex-grow: 3;">
+        <div class="content">
+            
+            <div class="title is-5">A Self-Supervised Learning Approach with Differentiable Optimization for UAV Trajectory Planning</div>
+            
+            <p>While Unmanned Aerial Vehicles (UAVs) have gained significant traction across various fields, pat...</p>
+        </div>
+    </div>
+    <footer class="card-footer">
+        <p class="card-footer-item">Published: Feb 9, 2026</p>
+    </footer>
+</div>
+</a>
+
+    </div>
+    
+</div>
+
+
+
+
+                </div>
+                
+            </div>
+        </div>
+    </section>
+     <style>
+  #blocks {
+      width:100%;
+      height:60px;
+      margin:0 auto;
+      /* background-color: #ffe; */
+  }
+  #block1 {
+      height:33.33%;
+      width:30%;
+      /* background: red; */
+      float: left;
+      padding-left: 50px;
+  }
+  #block2 {
+      height:33.33%;
+      width:40%;
+      /* background: yellow; */
+      float: left;
+  }
+  #block3 {
+      height:33.33%;
+      width:30%;
+      /* background: green; */
+      float: right;
+      padding-top: 30px;
+  }
+</style>
+
+<footer class="footer">
+    <div class="container">
+        <!-- 
+        <div class="columns is-multiline">
+            
+            <div class="column has-text-centered">
+                <div>
+                    <a href="/" class="link">Home</a>
+                </div>
+            </div>
+            
+            <div class="column has-text-centered">
+                <div>
+                    <a href="/blog/" class="link">Blog</a>
+                </div>
+            </div>
+            
+            <div class="column has-text-centered">
+                <div>
+                    <a href="/products/" class="link">Products</a>
+                </div>
+            </div>
+            
+            <div class="column has-text-centered">
+                <div>
+                    <a href="/privacy-policy/" class="link">Privacy Policy</a>
+                </div>
+            </div>
+            
+        </div>
+         -->
+        <div id="blocks">
+          <div id="block1"><img src="/img/logos/Horizontal@2x.png" alt="ARI Lab Logo" style="width:100%; margin-top: -5%;"></div>
+          <div id="block2">
+            <center>
+              <!-- <a class="button" itemprop="email" href="https://www.facebook.com" target="_blank">
+                <i class="fab fa-github"></i>
+              </a> -->
+              <!-- <a class="button" itemprop="email" href="https://www.facebook.com" target="_blank">
+                <i class="fab fa-facebook"</i>
+              </a> -->
+              <a class="button" itemprop="google scholar" href="https://scholar.google.com/citations?user=psUhJgcAAAAJ&hl=en&oi=sra" target="_blank">
+                <i class="fab fa-google scholar fa-lg"></i>
+              </a>
+              <a class="button" itemprop="github" href="https://github.com/aerogjy" target="_blank">
+                <i class="fab fa-github fa-lg"></i>
+              </a>
+              <a class="button" itemprop="linkedin" href="https://www.linkedin.com/in/junyi-geng-ph-d-9823a3b5/" target="_blank">
+                <i class="fab fa-linkedin fa-lg"></i>
+              </a>
+              <br>
+              <br>
+              <p class="">&copy; 2021 | Built using the <a href="https://github.com/chrisrhymes/bulma-clean-theme">Bulma Clean Theme</a></p>
+            </center>
+          </div>
+          <div id="block3"><img src="/img/logos/psuaero.png" alt="PSU Logo" style="width:100%; margin-top: -5%"></div>
+        </div>
+        <!-- <div>
+          <a href="" class="button is-large"><div class="icon"><i class="fab fa-facebook"</i></div></a>
+        </div> -->
+        <!-- <div class="content is-small has-text-centered">
+            <p class="">© 2020</p>
+        </div> -->
+    </div>
+
+
+</footer>
+ 
+    <script src="/assets/js/app.js" type="text/javascript"></script><!-- footer scripts --></body>
+
+</html>
