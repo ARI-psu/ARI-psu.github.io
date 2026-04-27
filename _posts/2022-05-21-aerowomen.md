@@ -2,7 +2,7 @@
 layout: post
 title: "Contributing to the Diversity"
 date: 2022-05-21 12:00:00
-categories: highlights
+# categories: highlights
 description: "I'm contributing to the diversity, equity and inclusion."
 author: "Junyi Geng"
 published: true

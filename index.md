@@ -45,12 +45,19 @@ We are proud to be part of the [Deparment of Aerospace Engineering](https://www.
 </p> -->
 
 <ul>
-  {% assign news = site.posts | where: "categories", "news" | sort: "date" | reverse | slice: 0, 5 %}
+  {% assign news = site.posts | where: "categories", "news" | sort: "date" | reverse | slice: 0, 10 %}
   {% for post in news %}
     <li>
-      <strong style="color: red;">{{ post.date | date: "%m/%Y" }}</strong>: 
-      {{ post.title | strip_html | truncatewords: 30 }} 
-      <!-- {% if post.url %}<a href="{{ post.url }}" target="_blank">🔗</a>{% endif %} -->
+      <strong style="color: red;">{{ post.date | date: "%m/%Y" }}</strong>:
+      {% if post.external_url %}
+        <a href="{{ post.external_url }}" target="_blank" rel="noopener">
+          {{ post.title | strip_html | truncatewords: 30 }}
+        </a>
+      {% else %}
+        <a href="{{ post.url | relative_url }}">
+          {{ post.title | strip_html | truncatewords: 30 }}
+        </a>
+      {% endif %}
     </li>
   {% endfor %}
 </ul>
