@@ -54,9 +54,7 @@ We are proud to be part of the [Deparment of Aerospace Engineering](https://www.
           {{ post.title | strip_html | truncatewords: 30 }}
         </a>
       {% else %}
-        <a href="{{ post.url | relative_url }}">
-          {{ post.title | strip_html | truncatewords: 30 }}
-        </a>
+        {{ post.title | strip_html | truncatewords: 30 }}
       {% endif %}
     </li>
   {% endfor %}
