@@ -2,8 +2,10 @@
 layout: post
 title: "Aerial Manipulation with Contact-Aware Onboard Perception and Hybrid Control"
 date: 2026-02-09 12:00:00
-categories: research
-description: "A Category-level Object 6D Pose and Shape Estimation Framework"
+categories: 
+  - research
+  - highlights
+description: "Aerial Manipulation with Contact-Aware Onboard Perception and Hybrid Control"
 author: "Yuanzhu Zhan"
 published: true
 sidebar:  false
