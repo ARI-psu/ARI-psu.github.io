@@ -2,7 +2,7 @@
 layout: post
 title: "Perception and Manipulation"
 date: 2022-05-21 12:00:00
-categories: highlights
+# categories: highlights
 description: "Perception and Manipulation"
 author: "Junyi Geng"
 published: true
