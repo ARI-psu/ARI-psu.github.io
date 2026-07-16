@@ -3,8 +3,10 @@ title: Alexandria Rhoads
 subtitle: Undergraduate Student
 job_title: Undergraduate Student
 category: past_undergraduate
-layout: team_member_personal_page
+layout: team_past_member_personal_page
 image: /img/team/alexandria_rhoads.JPG
+starting_year: 2024
+graduation_year: 2026
 link-new-tab: true
 ---
 
