@@ -9,8 +9,30 @@ hide_footer: false
 <div class="news-container">
   <!-- news of 2026 -->
   <div class="year-header">2026</div>
-  <!-- Dr.Geng received the NSF Career Award! -->
+  <!-- Congratulations to Yufei and Yuanzhu on passing the Ph.D. comprehensive exam! -->
   <div class="news-item" data-aos="fade-up" data-aos-duration="1000">
+    <div class="date-box">
+      <span class="date-day">20</span>
+      <span class="date-month">August</span>
+    </div>
+    <div class="news-content">
+      <h2>Congratulations to Yufei and Yuanzhu on passing the Ph.D. comprehensive exam!</h2>
+      <p>We are pleased to share that Yuanzhu passed the Ph.D. comprehensive exam on August 18 and Yufei on August 20. Congratulations to both on this major milestone!</p>
+    </div>
+  </div>
+  <!-- Congradulations to Jackson Fezell, Jack Pence, Yufei Jiang, and Yuanzhu Zhan on graduating with their Master of Science degrees！ -->
+  <div class="news-item" data-aos="fade-right" data-aos-duration="1000">
+    <div class="date-box">
+      <span class="date-day">15</span>
+      <span class="date-month">August</span>
+    </div>
+    <div class="news-content">
+      <h2>Congradulations to Jackson Fezell, Jack Pence, Yufei Jiang, and Yuanzhu Zhan on graduating with their Master of Science degrees！</h2>
+      <p>Best wishes for their next chapters!</p>
+    </div>
+  </div>
+  <!-- Dr.Geng received the NSF Career Award! -->
+  <div class="news-item" data-aos="fade-down" data-aos-duration="1000">
     <div class="date-box">
       <span class="date-day">20</span>
       <span class="date-month">April</span>
@@ -20,7 +42,7 @@ hide_footer: false
     </div>
   </div>
   <!-- Yufei received the Harry G. Miller Fellowships in Engineering! -->
-  <div class="news-item" data-aos="fade-up" data-aos-duration="1000">
+  <div class="news-item" data-aos="fade-left" data-aos-duration="1000">
     <div class="date-box">
       <span class="date-day">15</span>
       <span class="date-month">April</span>

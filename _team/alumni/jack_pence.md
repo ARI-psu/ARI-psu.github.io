@@ -2,9 +2,12 @@
 title: Jack Pence
 subtitle: M.S. Student
 job_title: Graduate Student
-category: graduate_student
+category: past_master
 layout: team_member_personal_page
 image: /img/team/jackpence.jpg
+starting_year: 2024
+graduation_year: 2026
+graduation_month: August
 link-new-tab: true
 ---
 
