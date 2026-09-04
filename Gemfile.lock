@@ -72,7 +72,7 @@ GEM
     kramdown-parser-gfm (1.1.0)
       kramdown (~> 2.0)
     latex-decode (0.3.2)
-    liquid (4.0.3)
+    liquid (4.0.4)
     listen (3.5.1)
       rb-fsevent (~> 0.10, >= 0.10.3)
       rb-inotify (~> 0.9, >= 0.9.10)
@@ -93,11 +93,13 @@ GEM
     terminal-table (2.0.0)
       unicode-display_width (~> 1.1, >= 1.1.1)
     unicode-display_width (1.7.0)
+    webrick (1.9.2)
 
 PLATFORMS
   ruby
   universal-darwin-20
   x86_64-linux
+  x86_64-linux-gnu
 
 DEPENDENCIES
   bulma-clean-theme!
@@ -110,6 +112,7 @@ DEPENDENCIES
   kramdown (>= 2.3.0)
   kramdown-parser-gfm
   rake (~> 12.0)
+  webrick (~> 1.9)
 
 BUNDLED WITH
    2.2.2

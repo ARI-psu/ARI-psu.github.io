@@ -9,6 +9,16 @@ hide_footer: false
 <div class="news-container">
   <!-- news of 2026 -->
   <div class="year-header">2026</div>
+  <!-- Our Paper AM-Bench Was Accepted to the CoRL 2026！ -->
+  <div class="news-item" data-aos="fade-left" data-aos-duration="1000">
+    <div class="date-box">
+      <span class="date-day">04</span>
+      <span class="date-month">September</span>
+    </div>
+    <div class="news-content">
+      <h2>Our Paper <a href="/AM-Bench/" target="_blank">AM-Bench</a> Was Accepted to the CoRL 2026！</h2>
+    </div>
+  </div>
   <!-- Congratulations to Yufei and Yuanzhu on passing the Ph.D. comprehensive exam! -->
   <div class="news-item" data-aos="fade-up" data-aos-duration="1000">
     <div class="date-box">
