@@ -16,7 +16,7 @@ hide_footer: false
       <span class="date-month">September</span>
     </div>
     <div class="news-content">
-      <h2>Our Paper <a href="/AM-Bench/" target="_blank">AM-Bench</a> Was Accepted to the CoRL 2026！</h2>
+      <h2>Our Paper <a href="https://ambench.github.io/" target="_blank" rel="noopener">AM-Bench</a> Was Accepted to the CoRL 2026！</h2>
     </div>
   </div>
   <!-- Congratulations to Yufei and Yuanzhu on passing the Ph.D. comprehensive exam! -->
