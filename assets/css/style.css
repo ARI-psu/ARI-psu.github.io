@@ -1,0 +1,76 @@
+.year-header {
+    font-size: 24px;
+    font-weight: bold;
+    color: #041E42; 
+    margin: 30px 0 10px;
+    padding: 10px 0;
+    border-bottom: 2px solid #2F2F2F; 
+  }
+  
+  .news-item {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 20px;
+    background: #f5f5f5;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 10px;
+  }
+  
+  .date-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: #2F2F2F;
+    color: white;
+    width: 90px;
+    height: 90px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    text-align: center;
+    font-weight: bold;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+  }
+  
+  .date-day {
+    font-size: 24px;
+    font-weight: bold;
+    background: #041E42;
+    width: 100%;
+    padding: 5px 0;
+  }
+  
+  .date-month {
+    font-size: 14px;
+    // text-transform: uppercase;
+    padding-top: 5px;
+  }
+  
+
+  .news-content {
+    flex: 2;
+  }
+  
+  .news-content h2 {
+    margin: 0;
+    font-size: 22px;
+    color: #041E42;
+  }
+  
+  .news-content p {
+    margin: 5px 0 0;
+    font-size: 16px;
+    color: #333;
+  }
+  
+  .news-image {
+    flex: 1; 
+  }
+  
+  .news-image img {
+    border-radius: 8px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+  }

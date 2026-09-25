@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.0">Jekyll</generator><link href="https://ari-psu.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://ari-psu.github.io/" rel="alternate" type="text/html" /><updated>2026-09-25T15:30:34+00:00</updated><id>https://ari-psu.github.io/feed.xml</id><title type="html">ARI Lab</title><subtitle>Advancing aerial autonomy
+</subtitle><entry><title type="html">AM-Bench: A Modular Simulation Suite and Benchmark for Aerial Manipulation Policy Learning</title><link href="https://ari-psu.github.io/AM-Bench/" rel="alternate" type="text/html" title="AM-Bench: A Modular Simulation Suite and Benchmark for Aerial Manipulation Policy Learning" /><published>2026-09-18T12:00:00+00:00</published><updated>2026-09-18T12:00:00+00:00</updated><id>https://ari-psu.github.io/AM-Bench</id><content type="html" xml:base="https://ari-psu.github.io/AM-Bench/">&lt;p&gt;Standardized benchmarks have played a central role in advancing robot manipulation learning, yet most focus on ground-supported manipulation systems, which limits their applicability to dynamics-critical domains such as aerial manipulation (AM). AM presents distinct system-level challenges, including environmental disturbances, coupled dynamics between the manipulator and floating base, and constrained degrees of freedom. Consequently, task performance depends jointly on robot embodiment, low-level control, and high-level policy design.&lt;/p&gt;
+
+&lt;p&gt;We introduce &lt;strong&gt;AM-Bench&lt;/strong&gt;, a modular simulation suite and benchmark for multirotor-based AM policy learning. AM-Bench includes representative embodiments spanning underactuated, fully actuated, and overactuated systems, 12 tasks across contact, transport, and constrained interaction, configurable aerodynamic disturbances and actuator saturation, standard low-level controllers, and baseline policy-learning algorithms. Unlike prior manipulation benchmarks that primarily emphasize end-to-end policy performance, AM-Bench enables system-level evaluation of how embodiment, control, disturbances, and policy choices interact.&lt;/p&gt;
+
+&lt;p&gt;Visit the &lt;a href=&quot;https://ambench.github.io/&quot;&gt;project website&lt;/a&gt; for the overview video, task suite, robot embodiments, baseline results, and documentation.&lt;/p&gt;
+
+&lt;h2 id=&quot;overview&quot;&gt;Overview&lt;/h2&gt;
+
+&lt;figure&gt;
+  &lt;a href=&quot;https://ambench.github.io/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;
+    &lt;img src=&quot;/img/posts/2026-09-18-AM-Bench/teaser.png&quot; alt=&quot;AM-Bench system overview&quot; /&gt;
+  &lt;/a&gt;
+  &lt;figcaption&gt;
+    AM-Bench system architecture. Click to visit the project website.
+  &lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;h2 id=&quot;publication&quot;&gt;Publication&lt;/h2&gt;
+
+&lt;section class=&quot;section&quot; id=&quot;Publication&quot;&gt;
+  &lt;div class=&quot;container is-max-desktop content&quot;&gt;
+    &lt;h2 class=&quot;title&quot;&gt;BibTeX&lt;/h2&gt;
+    &lt;pre&gt;&lt;code&gt;@inproceedings{wang2026ambench,
+  title={AM-Bench: A Modular Simulation Suite and Benchmark for Aerial Manipulation Policy Learning},
+  author={Yutong Wang and Dongjae Lee and Xiaofeng Guo and Yuanzhu Zhan and Yufei Jiang and Bavin Saravanan and Muqing Cao and Jia Xie and Chenyang Mao and Sebastian Scherer and Junyi Geng and Guanya Shi},
+  year={2026},
+  booktitle={Conference on Robot Learning (CoRL)},
+  pages={Accepted},
+  eprint={2609.00641},
+  archivePrefix={arXiv},
+  primaryClass={cs.RO},
+  url={https://arxiv.org/abs/2609.00641}
+}&lt;/code&gt;&lt;/pre&gt;
+  &lt;/div&gt;
+&lt;/section&gt;</content><author><name>Yuanzhu Zhan</name></author><category term="research" /><category term="highlights" /><summary type="html">Standardized benchmarks have played a central role in advancing robot manipulation learning, yet most focus on ground-supported manipulation systems, which limits their applicability to dynamics-critical domains such as aerial manipulation (AM). AM presents distinct system-level challenges, including environmental disturbances, coupled dynamics between the manipulator and floating base, and constrained degrees of freedom. Consequently, task performance depends jointly on robot embodiment, low-level control, and high-level policy design.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://ari-psu.github.io/img/posts/2026-09-18-AM-Bench/teaser.png" /><media:content medium="image" url="https://ari-psu.github.io/img/posts/2026-09-18-AM-Bench/teaser.png" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Our Paper AM-Bench Was Accepted to the CoRL 2026！</title><link href="https://ari-psu.github.io/news/2026/09/04/news-AM-Bench/" rel="alternate" type="text/html" title="Our Paper AM-Bench Was Accepted to the CoRL 2026！" /><published>2026-09-04T16:00:00+00:00</published><updated>2026-09-04T16:00:00+00:00</updated><id>https://ari-psu.github.io/news/2026/09/04/news-AM-Bench</id><content type="html" xml:base="https://ari-psu.github.io/news/2026/09/04/news-AM-Bench/"></content><author><name>Yuanzhu Zhan</name></author><category term="news" /><summary type="html"></summary></entry><entry><title type="html">Congratulations to Yufei and Yuanzhu on passing the Ph.D. comprehensive exam!</title><link href="https://ari-psu.github.io/news/2026/08/20/news-yufei-yuanzhu-comp/" rel="alternate" type="text/html" title="Congratulations to Yufei and Yuanzhu on passing the Ph.D. comprehensive exam!" /><published>2026-08-20T12:00:00+00:00</published><updated>2026-08-20T12:00:00+00:00</updated><id>https://ari-psu.github.io/news/2026/08/20/news-yufei-yuanzhu-comp</id><content type="html" xml:base="https://ari-psu.github.io/news/2026/08/20/news-yufei-yuanzhu-comp/">&lt;p&gt;We are pleased to share that Yuanzhu passed the Ph.D. comprehensive exam on August 18 and Yufei on August 20. Congratulations to both on this major milestone!&lt;/p&gt;</content><author><name>Yuanzhu Zhan</name></author><category term="news" /><summary type="html">We are pleased to share that Yuanzhu passed the Ph.D. comprehensive exam on August 18 and Yufei on August 20. Congratulations to both on this major milestone!</summary></entry><entry><title type="html">Congradulations to Jackson Fezell, Jack Pence, Yufei Jiang, and Yuanzhu Zhan on graduating with their Master of Science degrees！</title><link href="https://ari-psu.github.io/news/2026/08/15/news-congrats-jack-jackson-yufei-yuanzhu-graduation/" rel="alternate" type="text/html" title="Congradulations to Jackson Fezell, Jack Pence, Yufei Jiang, and Yuanzhu Zhan on graduating with their Master of Science degrees！" /><published>2026-08-15T12:00:00+00:00</published><updated>2026-08-15T12:00:00+00:00</updated><id>https://ari-psu.github.io/news/2026/08/15/news-congrats-jack-jackson-yufei-yuanzhu-graduation</id><content type="html" xml:base="https://ari-psu.github.io/news/2026/08/15/news-congrats-jack-jackson-yufei-yuanzhu-graduation/">&lt;p&gt;Best wishes for their next chapters!&lt;/p&gt;</content><author><name>Yuanzhu Zhan</name></author><category term="news" /><summary type="html">Best wishes for their next chapters!</summary></entry><entry><title type="html">Dr.Geng received the NSF Career Award!</title><link href="https://ari-psu.github.io/news/2026/04/20/news-Geng-NSF-Career/" rel="alternate" type="text/html" title="Dr.Geng received the NSF Career Award!" /><published>2026-04-20T19:00:00+00:00</published><updated>2026-04-20T19:00:00+00:00</updated><id>https://ari-psu.github.io/news/2026/04/20/news-Geng-NSF-Career</id><content type="html" xml:base="https://ari-psu.github.io/news/2026/04/20/news-Geng-NSF-Career/"></content><author><name>Junyi Geng</name></author><category term="news" /><summary type="html"></summary></entry><entry><title type="html">Congratulations to Yufei on receiving the Harry G. Miller Fellowships in Engineering!</title><link href="https://ari-psu.github.io/news/2026/04/15/news-Yufei-travel-grant/" rel="alternate" type="text/html" title="Congratulations to Yufei on receiving the Harry G. Miller Fellowships in Engineering!" /><published>2026-04-15T16:00:00+00:00</published><updated>2026-04-15T16:00:00+00:00</updated><id>https://ari-psu.github.io/news/2026/04/15/news-Yufei-travel-grant</id><content type="html" xml:base="https://ari-psu.github.io/news/2026/04/15/news-Yufei-travel-grant/"></content><author><name>Junyi Geng</name></author><category term="news" /><summary type="html"></summary></entry><entry><title type="html">Congratulations to Alex on receiving the NSF Graduate Research Fellowship!</title><link href="https://ari-psu.github.io/news/2026/04/10/news-Alex-NSF-GRFP/" rel="alternate" type="text/html" title="Congratulations to Alex on receiving the NSF Graduate Research Fellowship!" /><published>2026-04-10T17:00:00+00:00</published><updated>2026-04-10T17:00:00+00:00</updated><id>https://ari-psu.github.io/news/2026/04/10/news-Alex-NSF-GRFP</id><content type="html" xml:base="https://ari-psu.github.io/news/2026/04/10/news-Alex-NSF-GRFP/"></content><author><name>Junyi Geng</name></author><category term="news" /><summary type="html"></summary></entry><entry><title type="html">Congratulations to Yufei and Yuanzhu on passing the Ph.D. qualifying exam!</title><link href="https://ari-psu.github.io/news/2026/02/20/news-yufei-yuanzhu-qualify/" rel="alternate" type="text/html" title="Congratulations to Yufei and Yuanzhu on passing the Ph.D. qualifying exam!" /><published>2026-02-20T19:00:00+00:00</published><updated>2026-02-20T19:00:00+00:00</updated><id>https://ari-psu.github.io/news/2026/02/20/news-yufei-yuanzhu-qualify</id><content type="html" xml:base="https://ari-psu.github.io/news/2026/02/20/news-yufei-yuanzhu-qualify/">&lt;p&gt;Big congratulations to Yufei and Yuanzhu on passing their Ph.D. qualifying exam taken on February 7, 2026! Now they are official Doctoral students in the Ph.D. program of the Aerospace Engineering Program.&lt;/p&gt;</content><author><name>Yuanzhu Zhan</name></author><category term="news" /><summary type="html">Big congratulations to Yufei and Yuanzhu on passing their Ph.D. qualifying exam taken on February 7, 2026! Now they are official Doctoral students in the Ph.D. program of the Aerospace Engineering Program.</summary></entry><entry><title type="html">Yufei presented our new work on this week’s aerospace seminar series</title><link href="https://ari-psu.github.io/news/2026/02/12/news-yufei-seminar/" rel="alternate" type="text/html" title="Yufei presented our new work on this week’s aerospace seminar series" /><published>2026-02-12T12:00:00+00:00</published><updated>2026-02-12T12:00:00+00:00</updated><id>https://ari-psu.github.io/news/2026/02/12/news-yufei-seminar</id><content type="html" xml:base="https://ari-psu.github.io/news/2026/02/12/news-yufei-seminar/">&lt;p&gt;Yufei presented our new paper just got accepted by ICRA 2026 on this weeks’ aerospace seminar series, titled in “A Self-Supervised Learning Approach with Differentiable Optimization for UAV Trajectory Planning”.&lt;/p&gt;</content><author><name>Yuanzhu Zhan</name></author><category term="news" /><summary type="html">Yufei presented our new paper just got accepted by ICRA 2026 on this weeks’ aerospace seminar series, titled in “A Self-Supervised Learning Approach with Differentiable Optimization for UAV Trajectory Planning”.</summary></entry><entry><title type="html">Aerial Manipulation with Contact-Aware Onboard Perception and Hybrid Control</title><link href="https://ari-psu.github.io/contact-aware-vio/" rel="alternate" type="text/html" title="Aerial Manipulation with Contact-Aware Onboard Perception and Hybrid Control" /><published>2026-02-09T12:00:00+00:00</published><updated>2026-02-09T12:00:00+00:00</updated><id>https://ari-psu.github.io/contact-aware-vio</id><content type="html" xml:base="https://ari-psu.github.io/contact-aware-vio/">&lt;p&gt;Aerial manipulation (AM) promises to move Unmanned Aerial Vehicles (UAVs) beyond passive inspection to contact-rich tasks such as grasping, assembly, and in-situ maintenance. Most prior AM demonstrations rely on external motion capture (MoCap) and emphasize position control for coarse interactions, limiting deployability. We present a fully onboard perception–control pipeline for contact-rich AM that achieves accurate motion tracking and regulated contact wrenches without MoCap. The main components are (1) an augmented visual–inertial odometry (VIO) estimator with contact-consistency factors that activate only during interaction, tightening uncertainty around the contact frame and reducing drift, and (2) image-based visual servoing (IBVS) to mitigate perception–control coupling, together with a hybrid force–motion controller that regulates contact wrenches and lateral motion for stable contact. Experiments show that our approach closes the perception-to-wrench loop using only onboard sensing, yielding an velocity estimation improvement of 66.01% at contact, reliable target approach, and stable force holding—pointing toward deployable, in-the-wild aerial manipulation.&lt;/p&gt;
+
+&lt;h2 id=&quot;proposed-pipeline&quot;&gt;Proposed Pipeline&lt;/h2&gt;
+&lt;figure&gt;
+ &lt;img src=&quot;/img/posts/2026-02-09-contact-aware-vio/Pipeline.png&quot; /&gt;
+ &lt;figcaption&gt;
+       Overview of the proposed pipeline
+ &lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;The proposed pipeline has three key components: (1) A contact-aware VIO processes stereo imagery to produce vehicle/end-effector state estimates, activating contact factors only during interaction. (2) During approach, image-based visual servoing (IBVS) drives the platform using only the VIO-estimated body velocity. (3) Upon contact, a hybrid force–motion controller regulates the normal wrench while IBVS continues to track lateral motion, closing the perception-to-wrench loop with onboard sensing.&lt;/p&gt;
+
+&lt;h2 id=&quot;contact-aware-visual-inertial-odometry&quot;&gt;Contact-Aware Visual-Inertial Odometry&lt;/h2&gt;
+&lt;figure&gt;
+ &lt;img src=&quot;/img/posts/2026-02-09-contact-aware-vio/pose_graph.png&quot; /&gt;
+ &lt;figcaption&gt;
+       Pose graph of the proposed contact-aware VIO
+ &lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;Our method builds upon VINS-Fusion, where visual–inertial state estimation is expressed within a factor graph framework, and the system state is recovered through joint optimization of camera reprojection errors and IMU pre-integration constraints. While this formulation achieves high accuracy in general scenarios, it may suffer from drift when external interactions occur. To mitigate this issue, we extend it by introducing contact factors that leverage robot–environment interactions. In particular, when the system is in contact with a wall, the relative motion at the contact point is constrained, and this information is encoded as an additional factor in the graph. By incorporating such constraints, the estimator gains improved robustness and reduced drift, especially in environments with limited visual features or long-term operation.&lt;/p&gt;
+
+&lt;h2 id=&quot;experiment&quot;&gt;Experiment&lt;/h2&gt;
+&lt;div class=&quot;container is-max-desktop&quot;&gt;
+    &lt;div class=&quot;columns is-centered&quot;&gt;
+      &lt;div class=&quot;column is-12&quot;&gt;
+        &lt;div class=&quot;title is-4&quot;&gt;
+          &lt;p&gt;
+            Peg-in-hole simulation
+          &lt;/p&gt;  
+        &lt;/div&gt;
+        &lt;div class=&quot;columns is-centered&quot;&gt;
+          &lt;div class=&quot;column is-6&quot;&gt;
+            &lt;figure&gt; 
+              &lt;img src=&quot;/img/posts/2026-02-09-contact-aware-vio/peginhole_view.png&quot; /&gt;
+            &lt;/figure&gt;
+            &lt;div class=&quot;content has-text-centered&quot;&gt;
+              &lt;p&gt;peg in hole Gazebo sim&lt;/p&gt;        
+            &lt;/div&gt;
+          &lt;/div&gt;
+          &lt;div class=&quot;column is-6&quot;&gt;
+            &lt;figure&gt; 
+              &lt;img src=&quot;/img/posts/2026-02-09-contact-aware-vio/peginhole_vs_error.png&quot; /&gt;
+            &lt;/figure&gt;
+            &lt;div class=&quot;content has-text-centered&quot;&gt;
+              &lt;p&gt;alignment error&lt;/p&gt;        
+            &lt;/div&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;columns is-centered&quot;&gt;
+          &lt;div class=&quot;column is-6&quot;&gt;
+            &lt;figure&gt; 
+              &lt;img src=&quot;/img/posts/2026-02-09-contact-aware-vio/peginhole_vs_radius_error.png&quot; /&gt;
+            &lt;/figure&gt;
+            &lt;div class=&quot;content has-text-centered&quot;&gt;
+              &lt;p&gt;scaling error&lt;/p&gt;        
+            &lt;/div&gt;
+          &lt;/div&gt;
+          &lt;div class=&quot;column is-6&quot;&gt;
+            &lt;figure&gt; 
+              &lt;img src=&quot;/img/posts/2026-02-09-contact-aware-vio/peginhole_force.png&quot; /&gt;
+            &lt;/figure&gt;
+            &lt;div class=&quot;content has-text-centered&quot;&gt;
+              &lt;p&gt;force measurement&lt;/p&gt;        
+            &lt;/div&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+
+&lt;p&gt;Real-world experiment&lt;/p&gt;
+&lt;figure&gt;
+  &lt;img src=&quot;/img/posts/2026-02-09-contact-aware-vio/realshooting_stack.png&quot; /&gt;
+  &lt;figcaption&gt;
+       Snapshots of real-world experiments. (a) Visual servoing initialized. (b) Approaching the target. (c) Force holding.
+  &lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;figure&gt; 
+  &lt;img src=&quot;/img/posts/2026-02-09-contact-aware-vio/realshooting_force.png&quot; /&gt;
+  &lt;figcaption&gt;
+    force measurement
+  &lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;figure&gt; 
+  &lt;img src=&quot;/img/posts/2026-02-09-contact-aware-vio/realshooting_vx.png&quot; /&gt;
+  &lt;figcaption&gt;
+    velocity estimation error in contact direction
+  &lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;h2 id=&quot;video&quot;&gt;Video&lt;/h2&gt;
+
+&lt;!-- &lt;div class=&quot;video-wrapper&quot;&gt;&lt;iframe src=&quot;http://www.youtube.com/embed/3AMcM3uUaUw&quot; frameborder=&quot;0&quot; allowfullscreen&gt;&lt;/iframe&gt;&lt;/div&gt; --&gt;
+&lt;video controls=&quot;&quot; autoplay=&quot;&quot; loop=&quot;&quot; muted=&quot;&quot; playsinline=&quot;&quot; src=&quot;/img/posts/2026-02-09-contact-aware-vio/full-video.mp4&quot; type=&quot;video/mp4&quot;&gt;
+&lt;/video&gt;
+
+&lt;!-- ### Publication --&gt;
+&lt;section class=&quot;section&quot; id=&quot;Publication&quot;&gt;
+  &lt;div class=&quot;container is-max-desktop content&quot;&gt;
+    &lt;h2 class=&quot;title&quot;&gt;BibTeX&lt;/h2&gt;
+    &lt;pre&gt;&lt;code&gt;@misc{zhan2026aerialmanipulationcontactawareonboard,
+      title={Aerial Manipulation with Contact-Aware Onboard Perception and Hybrid Control}, 
+      author={Yuanzhu Zhan and Yufei Jiang and Muqing Cao and Junyi Geng},
+      year={2026},
+      eprint={2602.08251},
+      archivePrefix={arXiv},
+      primaryClass={cs.RO},
+      url={https://arxiv.org/abs/2602.08251},
+    }
+&lt;/code&gt;&lt;/pre&gt;
+  &lt;/div&gt;
+&lt;/section&gt;</content><author><name>Yuanzhu Zhan</name></author><category term="research" /><category term="highlights" /><summary type="html">Aerial manipulation (AM) promises to move Unmanned Aerial Vehicles (UAVs) beyond passive inspection to contact-rich tasks such as grasping, assembly, and in-situ maintenance. Most prior AM demonstrations rely on external motion capture (MoCap) and emphasize position control for coarse interactions, limiting deployability. We present a fully onboard perception–control pipeline for contact-rich AM that achieves accurate motion tracking and regulated contact wrenches without MoCap. The main components are (1) an augmented visual–inertial odometry (VIO) estimator with contact-consistency factors that activate only during interaction, tightening uncertainty around the contact frame and reducing drift, and (2) image-based visual servoing (IBVS) to mitigate perception–control coupling, together with a hybrid force–motion controller that regulates contact wrenches and lateral motion for stable contact. Experiments show that our approach closes the perception-to-wrench loop using only onboard sensing, yielding an velocity estimation improvement of 66.01% at contact, reliable target approach, and stable force holding—pointing toward deployable, in-the-wild aerial manipulation.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://ari-psu.github.io/img/posts/2026-02-09-contact-aware-vio/real_world.gif" /><media:content medium="image" url="https://ari-psu.github.io/img/posts/2026-02-09-contact-aware-vio/real_world.gif" xmlns:media="http://search.yahoo.com/mrss/" /></entry></feed>
