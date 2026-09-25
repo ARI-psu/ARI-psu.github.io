@@ -1,4 +1,14 @@
-<section class="hero {% if page.hero_height %} {{ page.hero_height }} {% elsif layout.hero_height %} {{ layout.hero_height }} {% else %} is-medium {% endif %} is-bold is-primary" {% if page.hero_image %} style="background: linear-gradient(180deg, rgba(204,0,44,.1),rgba(204,0,44,0)), url('{{ page.hero_image }}') no-repeat center center; background-size: cover;" {% endif %}>
+<section class="hero {% if page.hero_height %} {{ page.hero_height }} {% elsif layout.hero_height %} {{ layout.hero_height }} {% else %} is-medium {% endif %} is-bold is-primary{% if page.hero_videos %} has-background-video{% endif %}" {% if page.hero_image %} style="background: linear-gradient(180deg, rgba(204,0,44,.1),rgba(204,0,44,0)), url('{{ page.hero_image }}') no-repeat center center; background-size: cover;" {% endif %}>
+    {% if page.hero_videos %}
+        <div class="hero-background-videos" aria-hidden="true">
+            {% for hero_video in page.hero_videos %}
+                <video class="hero-background-video" autoplay muted loop playsinline preload="auto">
+                    <source src="{{ hero_video }}" type="video/mp4">
+                </video>
+            {% endfor %}
+        </div>
+        <div class="hero-video-overlay"></div>
+    {% endif %}
     <div class="hero-body">
         <div class="container">
             {% unless page.remove_hero_title %}
@@ -18,6 +28,33 @@
 </section>
 
 <style>
+    .hero.has-background-video {
+     position:relative;
+     overflow:hidden;
+     background-color:#0F173D;
+    }
+    .hero-background-videos {
+     position:absolute;
+     inset:0;
+     display:grid;
+     grid-template-columns:repeat(2, minmax(0, 1fr));
+     background-color:#000;
+    }
+    .hero-background-video {
+     width:100%;
+     height:100%;
+     object-fit:cover;
+     display:block;
+    }
+    .hero-video-overlay {
+     position:absolute;
+     inset:0;
+     background:linear-gradient(180deg, rgba(204,0,44,.1),rgba(204,0,44,0));
+    }
+    .hero.has-background-video .hero-body {
+     position:relative;
+     z-index:1;
+    }
     .button.is-info {
      background-color:#0F173D;
      border-color:transparent;

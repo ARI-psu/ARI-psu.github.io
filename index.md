@@ -5,7 +5,9 @@ layout: page
 show_sidebar: false
 hide_footer: false
 hero_height: is-large
-hero_image: /img/posts/2020-12-19-multilift/outdoor_short.gif
+hero_videos:
+  - /img/posts/MPC_outdoor_hero.mp4
+  - /img/posts/2020-12-19-multilift/outdoor_short.mp4
 hero_link: /research/
 hero_link_text: See Our Research
 
