@@ -10,13 +10,23 @@ hide_footer: false
   <!-- news of 2026 -->
   <div class="year-header">2026</div>
   <!-- Our Paper AM-Bench Was Accepted to the CoRL 2026！ -->
-  <div class="news-item" data-aos="fade-left" data-aos-duration="1000">
+  <div class="news-item" data-aos="fade-down" data-aos-duration="1000">
     <div class="date-box">
       <span class="date-day">04</span>
       <span class="date-month">September</span>
     </div>
     <div class="news-content">
-      <h2>Our Paper <a href="https://ambench.github.io/" target="_blank" rel="noopener">AM-Bench</a> Was Accepted to the CoRL 2026！</h2>
+      <h2>Our paper <a href="https://ambench.github.io/" target="_blank" rel="noopener">AM-Bench</a> was accepted to the CoRL 2026！</h2>
+    </div>
+  </div>
+  <!-- Our Paper Was Accepted to the IROS 2026 Workshop！ -->
+  <div class="news-item" data-aos="fade-left" data-aos-duration="1000">
+    <div class="date-box">
+      <span class="date-day">31</span>
+      <span class="date-month">August</span>
+    </div>
+    <div class="news-content">
+      <h2>Our Paper <a href="https://arxiv.org/abs/2609.30521" target="_blank" rel="noopener">AM-in-the-Wild</a> was accepted to the IROS 2026 workshop！</h2>
     </div>
   </div>
   <!-- Congratulations to Yufei and Yuanzhu on passing the Ph.D. comprehensive exam! -->
