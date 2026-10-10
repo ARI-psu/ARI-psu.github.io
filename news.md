@@ -9,6 +9,16 @@ hide_footer: false
 <div class="news-container">
   <!-- news of 2026 -->
   <div class="year-header">2026</div>
+  <!-- Congratulations to Yuanzhu on receiving the CoRL 2026 Travel Award! -->
+  <div class="news-item" data-aos="fade-left" data-aos-duration="1000">
+    <div class="date-box">
+      <span class="date-day">10</span>
+      <span class="date-month">October</span>
+    </div>
+    <div class="news-content">
+      <h2>Congratulations to Yuanzhu on receiving the CoRL 2026 Travel Award!</h2>
+    </div>
+  </div>
   <!-- Our Paper AM-Bench Was Accepted to the CoRL 2026！ -->
   <div class="news-item" data-aos="fade-down" data-aos-duration="1000">
     <div class="date-box">
