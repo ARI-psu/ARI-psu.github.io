@@ -2,9 +2,12 @@
 title: Xiangqin Chen
 subtitle: Undergraduate Student
 job_title: Undergraduate Student
-category: undergraduate
+category: past_undergraduate
 layout: team_member_personal_page
 image: /img/team/xiangqin_chen.jpg
+starting_year: 2023
+graduation_year: 2025
+graduation_month: May
 link-new-tab: true
 ---
 
